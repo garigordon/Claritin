@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<HTML>
+<HEAD>
+	<TITLE>Test</TITLE>
+	<META http-equiv=Content-Type content="text/html; charset=windows-1251">
+	<META content="Автор" name=Author>
+	<META content="MSHTML 6.00.2800.1106" name=GENERATOR>
+	<link rel="stylesheet" type="text/css" href="styles/answerStyle.css">
+	<script src="js/checkResultTest.js"></script>
+	<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</HEAD>
+<BODY bgColor=white onload=scroll()>
+
+<FORM name=test>
+	<div class="container">
+		<div class="tile">
+			<div class="pics">
+				<div class="image"><input id="pic01" type="checkbox" name=Q1 value = 1><label for="pic01" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<div class="image"><input id="pic02" type="checkbox" name=Q1 value = 2><label for="pic02" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<br>
+				<div class="image"><input id="pic03" type="checkbox" name=Q1 value = 3><label for="pic03" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<div class="image"><input id="pic04" type="checkbox" name=Q1 value = 4><label for="pic04" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="tile">
+			<div class="pics">
+				<div class="image"><input id="pic05" type="checkbox" name=Q2  value = 1><label for="pic05" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+				<div class="image"><input id="pic06" type="checkbox" name=Q2  value = 2><label for="pic06" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+				<br>
+				<div class="image"><input id="pic07" type="checkbox" name=Q2  value = 3><label for="pic07" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+				<div class="image"><input id="pic08" type="checkbox" name=Q2  value = 4><label for="pic08" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="tile">
+			<div class="pics">
+				<div class="image"><input id="pic09" type="checkbox" name=Q3  value = 1><label for="pic09" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<div class="image"><input id="pic10" type="checkbox" name=Q3  value = 2><label for="pic10" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<br>
+				<div class="image"><input id="pic11" type="checkbox" name=Q3  value = 3><label for="pic11" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<div class="image"><input id="pic12" type="checkbox" name=Q3  value = 4><label for="pic12" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="tile">
+			<div class="pics">
+				<div class="image"><input id="pic13" type="checkbox" name=Q4  value = 1><label for="pic13" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+				<div class="image"><input id="pic14" type="checkbox" name=Q4  value = 2><label for="pic14" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+				<br>
+				<div class="image"><input id="pic15" type="checkbox" name=Q4  value = 3><label for="pic15" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+				<div class="image"><input id="pic16" type="checkbox" name=Q4  value = 4><label for="pic16" style="background-image: url('http://webiconspng.com/wp-content/uploads/2017/09/Butterfly-PNG-Image-72833.png');"></label></div>
+			</div>
+		</div>
+	</div>
+	<br>
+	<div class="container">
+		<div class="tile">
+			<div class="pics">
+				<div class="image"><input id="pic17" type="checkbox" name=Q5  value = 1><label for="pic17" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<div class="image"><input id="pic18" type="checkbox" name=Q5  value = 2><label for="pic18" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<br>
+				<div class="image"><input id="pic19" type="checkbox" name=Q5  value = 3><label for="pic19" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+				<div class="image"><input id="pic20" type="checkbox" name=Q5  value = 4><label for="pic20" style="background-image: url('http://convertimage.net/frontframe/images/cute_ball_info.png');"></label></div>
+			</div>
+		</div>
+	</div>
+	
+	<BR>
+	<CENTER>
+		<P>
+		</P><INPUT onclick= "check_me()" type=button  id="btnClick"  value="Показать результат">&nbsp;&nbsp;&nbsp;&nbsp;
+	</CENTER><BR><BR>
+	<div id="log"></div></FORM>
+<P>
+<P></P></FONT>
+<script>
+	
+	$(function(){
+		$('#btnClick').click(function(){
+			var val = [];
+			var answ1 = 0,answ2 = 0,answ3 = 0,answ4 = 0,answ5 = 0;
+			$(':checkbox:checked').each(function(i){
+				val[i] = $(this).val();
+				answ1 = val[0];
+				answ2 = val[1];
+				answ3 = val[2];
+				answ4 = val[3];
+				answ5 = val[4];
+			});
+
+			var arr = [answ1, answ2, answ3, answ4, answ5];
+
+			var ks=[];
+			for(var value of arr){
+				ks[value] = (ks[value]||0)+1;
+			}
+			var arr2 =[];
+			var arr3 =[];
+			for(var i in arr) {
+
+				if (  ks[ arr[i] ] > 2 ){
+					arr3.push(arr[i]);
+					ks[ arr[i] ] = 0;
+					break;
+				}else if ( ks[ arr[i] ] > 1 && ks[ arr[i] ] != 3 ){
+					arr2.push(arr[i]);
+					ks[ arr[i] ] = 0;
+				}
+			}
+			if(arr2.length > 1 && arr3.length == 0){
+				for (var i = 0; i < arr2.length; i++) {
+					if(arr2[i] < arr2[0]){
+						arr2[0] = arr2[i];
+					}
+				}
+				localStorage.setItem("lastname", "Your result "+arr2[0]+"");
+			}else {
+				if (arr3.length > 0) {
+					localStorage.setItem("lastname", "Your result "+arr3[0]+"");
+				} else {
+					localStorage.setItem("lastname", "Your result "+arr2[0]+"");
+				}
+			}
+			
+			var first_name = localStorage.getItem('first_name');
+			var last_name = localStorage.getItem('last_name');
+			var email = localStorage.getItem('email');
+			var phone = localStorage.getItem('phone');
+			var age = localStorage.getItem('age');
+
+			var newFile = new FormData();
+			newFile.append('first_name', first_name);
+			newFile.append('last_name', last_name);
+			newFile.append('email', email);
+			newFile.append('phone', phone);
+			newFile.append('age', age);
+			newFile.append('ans_1', answ1);
+			newFile.append('ans_2', answ2);
+			newFile.append('ans_3', answ3);
+			newFile.append('ans_4', answ4);
+			newFile.append('ans_5', answ5);
+			
+			var opts = {
+				url: 'http://localhost:3000/api/fileupload/create',
+				data:   newFile,
+				cache: false,
+				contentType: false,
+				processData: false,
+				type: 'POST',
+				success: function(data) {
+					document.location = './answerTest.html';
+				},
+				error: function(data) {
+					//console.log(data.file_upload.phone);
+					document.location = './answerTest.html';
+					
+				}
+			};
+			jQuery.ajax(opts);
+			
+		});
+	});
+</script>
+</BODY></HTML>
