@@ -2,22 +2,125 @@
   "name": "check",
   "version": "0.0.0",
   "private": true,
+  "keywords": [
+    "css",
+    "postcss",
+    "rework",
+    "preprocessor",
+    "parser",
+    "source map",
+    "transform",
+    "manipulation",
+    "transpiler"
+  ],
   "dependencies": {
     "async": "2.1.4",
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.2.1",
+    "babel-plugin-add-module-exports": "^0.2.1",
+    "babel-plugin-precompile-charcodes": "^1.1.0",
+    "babel-preset-env": "^1.6.1",
+    "chalk": "^2.3.0",
+    "concat-with-sourcemaps": "^1.0.5",
+    "cssnano": "^3.10.0",
+    "cssnext": "^1.8.4",
+    "csswring": "^6.0.2",
+    "del": "^3.0.0",
+    "docdash": "^0.4.0",
     "dotenv": "4.0.0",
+    "eslint": "^4.16.0",
+    "eslint-ci": "^0.1.1",
+    "eslint-config-postcss": "^2.0.2",
     "express": "^4.16.2",
+    "fs-extra": "^5.0.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-json-editor": "^2.2.1",
+    "gulp-postcss": "^7.0.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.4",
+    "jest": "^22.1.4",
+    "jest-cli": "^22.1.4",
+    "jsdoc": "^3.5.5",
     "keystone": "git+https://github.com/VTSingle/keystone.git",
+    "lint-staged": "^6.0.1",
     "localStorage": "^1.0.3",
     "lodash": "^4.13.1",
-    "pug": "2.0.0-beta11"
+    "postcss-assets": "^5.0.0",
+    "postcss-cssnext": "^3.1.0",
+    "postcss-nested": "^3.0.0",
+    "postcss-parser-tests": "^6.1.0",
+    "postcss-preset-env": "^2.1.0",
+    "postcss-short": "^4.1.0",
+    "pre-commit": "^1.2.2",
+    "pug": "2.0.0-beta11",
+    "run-sequence": "^2.2.1",
+    "size-limit": "^0.14.0",
+    "source-map": "^0.6.1",
+    "strip-ansi": "^4.0.0",
+    "supports-color": "^5.1.0",
+    "yaspeller-ci": "^1.0.0"
   },
   "devDependencies": {
     "eslint": "3.15.0",
     "eslint-config-keystone": "3.0.0",
-    "eslint-plugin-react": "^5.1.1"
+    "eslint-plugin-react": "^5.1.1",
+    "gulp-imagemin": "^4.1.0",
+    "postcss-color-function": "^4.0.1",
+    "postcss-custom-media": "^6.0.0",
+    "postcss-focus": "^3.0.0",
+    "postcss-pxtorem": "^4.0.1"
   },
   "scripts": {
-    "lint": "eslint .",
-    "start": "node keystone.js"
+    "lint": "eslint-ci *.js lib/*.es6 test/*.js",
+    "start": "node keystone.js",
+    "lint-staged": "lint-staged",
+    "spell": "yarn docs && yaspeller-ci api/*.html *.md docs/{**/,}*.md",
+    "docs": "jsdoc -c .jsdocrc lib/*.es6",
+    "test": "gulp && jest && yarn lint && yarn spell && size-limit"
+  },
+  "main": "lib/postcss",
+  "types": "lib/postcss.d.ts",
+  "lint-staged": {
+    "test/*.js": "eslint",
+    "lib/*.es6": "eslint",
+    "*.md": "yaspeller-ci"
+  },
+  "pre-commit": [
+    "lint-staged"
+  ],
+  "browser": {
+    "supports-color": false,
+    "chalk": false,
+    "fs": false
+  },
+  "size-limit": [
+    {
+      "path": "lib/postcss.js",
+      "limit": "29 KB"
+    }
+  ],
+  "jest": {
+    "testEnvironment": "node",
+    "modulePathIgnorePatterns": [
+      "<rootDir>/build"
+    ]
+  },
+  "eslintConfig": {
+    "parser": "babel-eslint",
+    "extends": "eslint-config-postcss",
+    "rules": {
+      "consistent-return": "off",
+      "valid-jsdoc": "error",
+      "complexity": "off",
+      "no-new": "off"
+    },
+    "env": {
+      "browser": true,
+      "jest": true
+    }
   }
 }
