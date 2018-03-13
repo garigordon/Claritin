@@ -35,10 +35,10 @@ function uploadFile() {
 	})
 	.then(function (response) {
 		console.log(response.data.collections);
-		if(response.data.collections < 1){
+		if(response.data.collections < 1) {
 			document.location = './test.html';
-		}else{
-			alert("already")
+		} else {
+			alert("already");
 		}
 	})
 	.catch(function (error) {
