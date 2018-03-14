@@ -1,15 +1,112 @@
 var now = new Date();
-console.log( "Day: " + now.getDate())
-function myFunction() {
-	var email;
-	email = document.getElementById("Email").value;
+console.log( "Day: " + now.getDate());
+
+function Validate() {
+	var checkEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+	var first_name = document.forms['myForm']['first_name'];
+	var name_error = document.getElementById('name_error');
+	first_name.addEventListener('blur', nameVerify, true);
+	
+	var last_name = document.forms['myForm']['last_name'];
+	var lastname_error = document.getElementById('lastname_error');
+	last_name.addEventListener('blur', lastVerify, true);
+	
+	var Email = document.forms['myForm']['Email'];
+	var email_error = document.getElementById('email_error');
+	Email.addEventListener('blur', emailVerify, true);
+
+	var phone = document.forms['myForm']['phone'];
+	var phone_error = document.getElementById('phone_error');
+	phone.addEventListener('blur', phoneVerify, true);
+	
+	var age = document.forms['myForm']['age'];
+	var age_error = document.getElementById('age_error');
+	age.addEventListener('blur', ageVerify, true);
+
+	if (first_name.value == "") {
+		first_name.style.border = "1px solid red";
+		document.getElementById('username_div').style.color = "red";
+		name_error.textContent = "Username is required";
+		first_name.focus();
+		return false;
+	}
+	
+	if (last_name.value == "") {
+		last_name.style.border = "1px solid red";
+		document.getElementById('lastname_div').style.color = "red";
+		lastname_error.textContent = "Lastname is required";
+		last_name.focus();
+		return false;
+	}
+	if (checkEmail.test(Email.value) === false) {
+		Email.style.border = "1px solid red";
+		document.getElementById('email_div').style.color = "red";
+		email_error.textContent = "Email is required";
+		Email.focus();
+		return false;
+	}
+	if (phone.value == "") {
+		phone.style.border = "1px solid red";
+		document.getElementById('phone_div').style.color = "red";
+		phone_error.textContent = "phone is required";
+		phone.focus();
+		return false;
+	}
+	if (age.value == "") { 
+		age.style.border = "1px solid red";
+		document.getElementById('age_div').style.color = "red";
+		age_error.textContent = "age is required";
+		age.focus();
+		return false;
+	}
+	
+	var chbox;
+	chbox = document.getElementById('Accept');
+	if(first_name.value != "" && last_name.value != "" && phone.value != "" && age.value != "" && checkEmail.test(Email.value) === true && chbox.checked){
+		uploadFile();
+	}
+}
+function nameVerify() {
+	if (first_name.value != "") {
+		first_name.style.border = "1px solid green";
+		document.getElementById('username_div').style.color = "green";
+		name_error.textContent = "";
+		return true; 
+	}
+}
+function lastVerify() {
+	if (last_name.value != "") {
+		last_name.style.border = "1px solid green";
+		document.getElementById('lastname_div').style.color = "green";
+		lastname_error.textContent = "";
+		return true;
+	}
+}
+function phoneVerify() {
+	if (phone.value != "") {
+		phone.style.border = "1px solid green";
+		document.getElementById('phone_div').style.color = "green";
+		phone_error.textContent = "";
+		return true;
+	}
+}
+function ageVerify() {
+	if (age.value != "") {
+		age.style.border = "1px solid green";
+		document.getElementById('age_div').style.color = "green";
+		age_error.textContent = "";
+		return true;
+	}
+}
+function emailVerify() {
 	var reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
 	if (reg.test(Email.value) === false) {
-		document.getElementById("demo").style.color = "red";
-		document.getElementById("demo").innerHTML ="EMail is not correct";
-		return false;
+		Email.style.border = "1px solid red";
+		document.getElementById('email_div').style.color = "red";
+		Email.textContent = "Email is not correct";
 	} else {
-		uploadFile();
+		Email.style.border = "1px solid green";
+		document.getElementById('email_div').style.color = "green";
 	}
 	return true;
 }
@@ -36,13 +133,14 @@ function uploadFile() {
 	.then(function (response) {
 		console.log(response.data.collections);
 		if(response.data.collections < 1) {
-			document.location = './test.html';
+			document.location = 'secondPage';
 		} else {
-			alert("already");
+			Email.style.border = "1px solid red";
+			document.getElementById('email_div').style.color = "red";
+			email_error.textContent = "This email has already been used today";
 		}
 	})
 	.catch(function (error) {
-		alert('fsdfdsf');
 		console.log(error);
 	});
 

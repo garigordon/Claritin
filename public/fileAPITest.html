@@ -6,12 +6,18 @@
     <title>Title</title>
 	<script src="js/mainPage.js"></script>
 	<link rel="stylesheet" type="text/css" href="styles/style.css">
-	<link href="CSS/style_tut.css" rel="stylesheet" type="text/css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="fonts/stylesheet-fonts.css">
 	<script src="js/alert_tut.js"></script>
 	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 <body>
+
 <form name ="myForm" id="form2" action="http://localhost:3000/api/fileupload/list" method="POST" enctype='multipart/form-data'>
+
+	
+ <form name ="myForm" id="form2" action="http://localhost:3000/api/fileupload/list" method="POST" enctype='multipart/form-data'>
+
 	<div>
 		<br>
 		<input type="text" name="first_name"  id="first_name" placeholder="First Name*" />
@@ -53,7 +59,7 @@
 </div>
 <br>
 
-<p id="demo" style="color: red;"></p>
+<p id="demo" style="color: red;"></p> 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
 <script>
 	document.getElementById("age").onkeypress = function(event){
