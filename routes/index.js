@@ -37,8 +37,9 @@ exports = module.exports = function (app) {
 	// Views
 	app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
-	app.get('/secondPage', routes.views.secondPage);
+	app.get('/Quiz', routes.views.Quiz);
 	app.get('/result', routes.views.result);
+	app.get('/thanks', routes.views.thanks);
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);
 	app.post('/api/fileupload/list', keystone.middleware.api, routes.api.fileupload.list);

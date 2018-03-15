@@ -19,9 +19,9 @@ keystone.init({
 	'views': 'templates/views',
 	'view engine': 'pug',
 
-	'auto update': true,
-	'session': true,
-	'auth': true,
+	'auto update': true, 
+	'session': true, 
+	'auth': true, 
 	'user model': 'User',
 	'cookie secret': 'you api',
 });

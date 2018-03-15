@@ -1,5 +1,4 @@
 var now = new Date();
-console.log( "Day: " + now.getDate());
 
 function Validate() {
 	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
@@ -133,11 +132,9 @@ function uploadFile() {
 	.then(function (response) {
 		console.log(response.data.collections);
 		if(response.data.collections < 1) {
-			document.location = 'secondPage';
+			document.location = 'Quiz';
 		} else {
-			Email.style.border = "1px solid red";
-			document.getElementById('email_div').style.color = "red";
-			email_error.textContent = "This email has already been used today";
+			document.location = 'thanks';
 		}
 	})
 	.catch(function (error) {

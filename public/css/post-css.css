@@ -97,7 +97,9 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078b9', endColorstr='#b6d1eb',GradientType=0 );
 	overflow: hidden;
 	position: relative;
-	min-height: 100%;
+	display: table;
+	height: 100%;
+	width: 100%;
 	&::after{
 		content:"";
 		background: url(../img/img-cloud.png) no-repeat;
@@ -117,6 +119,8 @@ body{
 main{
 	position: relative;
 	z-index: 2;
+	display: table-row;
+	height: 100%;
 }
 
 .container{
@@ -314,6 +318,10 @@ Layout
 		font-size: 12.5px;
 		line-height: 18px;
 	}
+}
+
+.tooltip_templates {
+	display: none;
 }
 
 @media (--ipadMin) and (--ipadMax){
@@ -695,12 +703,20 @@ Result page
 	}
 	&__text{
 		padding: 0 25px;
+	 	&--center{
+			text-align: center;  
+			padding-bottom: 50px;
+		}
 		p{
 			color: var(--colorYellow);
 			font-family: var(--fontLTStd);
 			font-weight: 500;
 			font-size: 24px;
 			line-height: 30px;
+			margin: 0 0 10px;
+			a{
+				color: var(--colorYellow);
+			}
 		}
 	}
 	&__title{

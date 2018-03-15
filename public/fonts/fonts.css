@@ -50,18 +50,6 @@
 
 @font-face {
     font-family: 'Helvetica';
-    src: url('Helvetica-Bold.eot');
-    src: url('Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
-        url('Helvetica-Bold.woff2') format('woff2'),
-        url('Helvetica-Bold.woff') format('woff'),
-        url('Helvetica-Bold.ttf') format('truetype'),
-        url('Helvetica-Bold.svg#Helvetica-Bold') format('svg');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Helvetica';
     src: url('Helvetica-Black.eot');
     src: url('Helvetica-Black.eot?#iefix') format('embedded-opentype'),
         url('Helvetica-Black.woff2') format('woff2'),
