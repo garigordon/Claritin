@@ -2,7 +2,7 @@ var now = new Date();
 console.log( "Day: " + now.getDate());
 
 function Validate() {
-	var checkEmail = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	var first_name = document.forms['myForm']['first_name'];
 	var name_error = document.getElementById('name_error');
 	first_name.addEventListener('blur', nameVerify, true);
@@ -99,7 +99,7 @@ function ageVerify() {
 	}
 }
 function emailVerify() {
-	var reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
+	var reg = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	if (reg.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "red";
