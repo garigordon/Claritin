@@ -1,5 +1,3 @@
-var now = new Date();
-
 function Validate() {
 	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	var first_name = document.forms['myForm']['first_name'];
@@ -122,25 +120,16 @@ function uploadFile() {
 	localStorage.setItem("email", email);
 	localStorage.setItem("phone", phone);
 	localStorage.setItem("age", age);
-
-	//document.location = './test.html';
+	 
 	axios({
 		method: 'post',
-		url: 'http://13.59.224.151/api/fileupload/list',
+		url: 'http://localhost:3000/api/fileupload/list',
 		data: email,
-	})
-	.then(function (response) {
-		console.log(response.data.collections);
-		if(response.data.collections < 1) {
-			document.location = 'Quiz';
-		} else {
-			document.location = 'thanks';
-		}
-	})
-	.catch(function (error) {
+	}).then(function (response) {
+		document.location = ""+response.data.day+"";
+	}).catch(function (error) {
 		console.log(error);
 	});
-
 }
 
 //

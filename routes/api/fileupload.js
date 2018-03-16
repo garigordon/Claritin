@@ -4,29 +4,42 @@ var exec = require('child_process').exec;
 var FileData = keystone.list('FileUpload');
 const router = require('express').Router();
 var express = require('express');
-var app     = express();
+var app = express();
 
-exports.list = function(req, res) {
+exports.list = function (req, res) {
 	var data = req.body;
 	console.log((Object.keys(data)));
-	FileData.model.find({email: (Object.keys(data))},function(err, items) {
+	FileData.model.find({ email: (Object.keys(data)) }, function (err, items) {
 		console.log(items.length);
+		var now = new Date();
+		var month = now.getMonth() + 1;
+		var day = now.getDate();
+		console.log(day)
+		var answer = '';
+		if (month === 3 && day - items.length >= 16) {
+			answer =  'Quiz';
+		} else if (month === 4 && (day + 30) - items.length >= 16) {
+			answer =  'Quiz';
+		} else {
+			answer = 'thanks';
+		}
+		console.log(answer);
 		if (err) return res.apiError('database error', err);
 		res.apiResponse({
-			collections: items.length,
+			day: answer,
 		});
 	});
 }
 
-exports.get = function(req, res){
+exports.get = function (req, res) {
 	console.log(req.params);
 	var data = req.query;
 	console.log(data);
-	FileData.model.find(req.params.email).exec(function(err, item) {
+	FileData.model.find(req.params.email).exec(function (err, item) {
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
 		res.apiResponse({
-			collection: item
+			collection: item,
 		});
 
 	});
