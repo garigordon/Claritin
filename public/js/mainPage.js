@@ -122,7 +122,7 @@ function uploadFile () {
 	 
 	axios({
 		method: 'post',
-		url: 'http://localhost:3000/api/fileupload/list',
+		url: 'http://13.59.224.151/api/fileupload/list',
 		data: email,
 	}).then(function (response) {
 		if (response.data.day === "Quiz") {
