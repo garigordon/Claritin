@@ -6,6 +6,7 @@ html(lang='en')
 		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
 		link(rel='stylesheet', href='css/style.css')
+		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
 		link(rel='stylesheet', href='fonts/fonts.css')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
@@ -27,11 +28,11 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='#') HOME
+								a.header-menu__link(href='/') HOME
 							li.header-menu__item
-								a.header-menu__link(href='#') ENTER
+								a.header-menu__link(href='/#form-block') ENTER
 							li.header-menu__item
-								a.header-menu__link(href='#') PRIZES
+								a.header-menu__link(href='/#prizes') PRIZES
 							li.header-menu__item
 								a.header-menu__link(href='#') RULES
 							li.header-menu__item
@@ -45,7 +46,9 @@ html(lang='en')
 					.single-test__description
 						| While everyone enjoys being outside, there are many different types of outdoor activities to choose from. So, which type of “outsider” are you? 
 						strong
-							| Take our quiz to see just what kind of outsider you are, and how Claritin® can help you get out there!
+							| Take our quiz to see just what kind of outsider you are, and how Claritin
+							sup ® 
+							|  can help you get out there!
 					.single-test__block
 						h4 It’s Saturday morning. Where would you rather be?
 						.row-line.start
@@ -155,13 +158,19 @@ html(lang='en')
 						li
 							a.footer-menu__link(href='http://bayer.ca/en/general-conditions-of-use/') Terms & Conditions
 						li
-							a.footer-menu__link(href='#') Site Owner
+							a.footer-menu__link.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Site Owner
+							.tooltip_templates
+								#tooltip_content
+									p Bayer Inc.,
+									p Mississauga, ON
+									p L5W 5R6
 						li
 							a.footer-menu__link(href='https://www.claritin.ca/') Claritin
 					img.footer__logo(src='img/bayer-icon.png', alt='')
 					p.footer__description To be sure this product is right for you, always read and follow the label.
 					p.footer__description ©2018 Bayer Inc.
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+		script(type='text/javascript', src='js/tooltipster.bundle.min.js')
 		script(type='text/javascript', src='js/main.js')
 		script.
 			var now = new Date();

@@ -31,11 +31,11 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='#') HOME
+								a.header-menu__link(href='/') HOME
 							li.header-menu__item
-								a.header-menu__link(href='#') ENTER
+								a.header-menu__link(href='#form-block') ENTER
 							li.header-menu__item
-								a.header-menu__link(href='#') PRIZES
+								a.header-menu__link(href='#prizes') PRIZES
 							li.header-menu__item
 								a.header-menu__link(href='#') RULES
 							li.header-menu__item
@@ -111,7 +111,7 @@ html(lang='en')
 							.item
 								input.home-form__submit(type='button', value='SUBMIT', onclick='Validate()')
 							p#demo(style='color: red;')
-					.home-slider-banner
+					#prizes.home-slider-banner
 						.home-slider-banner__item
 							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image.png', alt='')
 							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob.png', alt='')
@@ -145,6 +145,7 @@ html(lang='en')
 					p.footer__description ©2018 Bayer Inc.
 					p.footer__description L.CA.MKT.CC.02.2018.1078
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
+		script(type='text/javascript', src='js/tooltipster.bundle.min.js')
 		script(type='text/javascript', src='js/main.js')
 		script.
 			document.getElementById("age").onkeypress = function (event) {
