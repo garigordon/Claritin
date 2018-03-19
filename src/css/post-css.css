@@ -121,6 +121,8 @@ body{
 main{
 	position: relative;
 	z-index: 2;
+	height: 100%;
+	display: table-row;
 }
 
 .container{
@@ -173,12 +175,13 @@ Layout
 	}
 	&__item{
 		position: relative;
+		padding: 0 4%;
 		&::after{
 			content:'';
 			size:2px 13px;
 			background: #275295;
 			display: block;
-			position: absolute 4px * * -34px;
+			position: absolute 4px * * 0;
 		}
 		&:first-child{
 			&::after{
@@ -696,6 +699,8 @@ Home
 Result page
 ========================================================================== */
 .single-result{
+	position: relative;
+	z-index: 2;
 	.column{
 		width: 50%;
 	}
@@ -705,12 +710,18 @@ Result page
 	}
 	&__text{
 		padding: 0 25px;
+	 	&--center{
+			 text-align:center;
+		}
 		p{
 			color: var(--colorYellow);
 			font-family: var(--fontLTStd);
 			font-weight: 500;
 			font-size: 24px;
 			line-height: 30px;
+			&.italic{
+				font-style: italic;
+			}
 		}
 	}
 	&__title{

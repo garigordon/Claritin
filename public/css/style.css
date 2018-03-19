@@ -149,6 +149,8 @@ body::before{
 main{
 	position: relative;
 	z-index: 2;
+	height: 100%;
+	display: table-row;
 }
 
 .container{
@@ -208,6 +210,7 @@ Layout
 
 .header-menu__item{
 		position: relative;
+		padding: 0 4%;
 	}
 
 .header-menu__item::after{
@@ -217,7 +220,7 @@ Layout
 			background: #275295;
 			display: block;
 			top: 4px;
-			left: -34px;
+			left: 0;
 			position: absolute;
 		}
 
@@ -747,6 +750,10 @@ Home
 /*!==========================================================================
 Result page
 ========================================================================== */
+.single-result{
+	position: relative;
+	z-index: 2;
+}
 .single-result .column{
 		width: 50%;
 	}
@@ -758,6 +765,9 @@ Result page
 .single-result__text{
 		padding: 0 25px;
 	}
+.single-result__text--center{
+			 text-align:center;
+		}
 .single-result__text p{
 			color: #ffee31;
 			font-family: 'Helvetica LT Std', sans-serif;
@@ -765,6 +775,9 @@ Result page
 			font-size: 1.5rem;
 			line-height: 1.875rem;
 		}
+.single-result__text p.italic{
+				font-style: italic;
+			}
 .single-result__title{
 		margin: 0 0 36px;
 		font-size: 2.1875rem;
