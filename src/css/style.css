@@ -157,6 +157,11 @@ main{
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+.tooltip_templates{
+	display: none;
+}
+
 @media (max-width: 767px) {
 		.wrapper::after{
 			background-size:cover;
@@ -416,7 +421,7 @@ Home
 			display: none;
 		}
 .home-slider__slogan{
-		margin: 0 0 15px;
+		margin: 0 0 5px;
 	}
 .home-slider__slogan--visible-mobile{
 			display: none;
@@ -437,7 +442,7 @@ Home
 		color: #047802;
 		font-size: 1.875rem;
 		font-weight: 400;
-		margin: 0 0 20px;
+		margin:0 0 6px;
 	}
 .home-slider__title strong{
 			font-weight: 900;
@@ -603,6 +608,7 @@ Home
 		font-family: 'Helvetica', sans-serif;
 		margin-right: auto;
 		margin-left: auto;
+		cursor: pointer;
 	}
 
 .checkbox {

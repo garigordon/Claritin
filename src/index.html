@@ -5,11 +5,9 @@
         <meta http-equiv="content-type" content="text/html; charset=utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="fonts/fonts.css">
-		
-		<link rel="stylesheet" type="text/css" href="../public/styles/style.css">
 		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/tooltipster.bundle.css" rel="stylesheet" type="text/css">
 
 		<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script src="../public/js/alert_tut.js"></script>
@@ -58,18 +56,18 @@
 							<div class="row-line">
 								<div class="column">
 									<h3 class="home-slider__title">For your chance to <strong>WIN</strong>* 1 of 3 $1,000 Shoppers Drug Mart gift cards!</h3>
-									<p class="home-slider__text">Allergies keeping you indoors? One non-drowsy Claritin® pill provides 24-hour relief from indoor** and outdoor† allergy symptoms. Take the Claritin® Outsider Quiz to find out what kind of outsider you are.</p>
-									<a href="#" class="btn-home-slider">ENTER</a>
+									<p class="home-slider__text">Allergies keeping you indoors? One non-drowsy Claritin<sup>®</sup> pill provides 24-hour relief from indoor** and outdoor<sup>†</sup> allergy symptoms. Take the Claritin<sup>®</sup> Outsider Quiz to find out what kind of outsider you are.</p>
+									<a href="#form-block" class="btn-home-slider">ENTER</a>
 								</div>
 							</div>
 						</div>
 						<div class="home-slider__txt">
 							<span>**dust, pets, mould</span>
-							<span>†pollen, trees, grass, ragweed</span>
+							<span><sup>†</sup>pollen, trees, grass, ragweed</span>
 						</div>
 					</div>
 				</div> 
-				<div class="home-form">
+				<div class="home-form" id="form-block">
 					<div class="home-form__title">
 						<h3><span>ENTER TO <strong>WIN</strong></span></h3>
 					</div>
@@ -149,19 +147,29 @@
 				<ul class="footer-menu row-line center">
 					<li><a href="#" class="footer-menu__link">Rules & Regulations</a></li>
 					<li><a href="#" class="footer-menu__link">Contact Us</a></li>
-					<li><a href="#" class="footer-menu__link">Privacy Policy</a></li>
-					<li><a href="#" class="footer-menu__link">Terms & Conditions</a></li>
-					<li><a href="#" class="footer-menu__link">Site Owner</a></li>
+					<li><a target="_blank" href="https://www.claritin.ca/en/privacy-statement/" class="footer-menu__link">Privacy Policy</a></li>
+					<li><a target="_blank" href="http://bayer.ca/en/general-conditions-of-use/" class="footer-menu__link">Terms & Conditions</a></li>
+					<li><a href="javascript:void(0);" class="footer-menu__link tooltip" data-tooltip-content="#tooltip_content">Site Owner</a>
+						<div class="tooltip_templates">
+							<div id="tooltip_content">
+								<p>Bayer Inc.,</p>
+								<p>Mississauga, ON</p>
+								<p>L5W 5R6</p>
+							</div>
+						</div>
+					</li>
 					<li><a href="#" class="footer-menu__link">Claritin</a></li>
 				</ul>
 				<span class="footer__text">*See official rules for full details</span>
 				<img src="img/bayer-icon.png" alt="" class="footer__logo" />
 				<p class="footer__description">To be sure this product is right for you, always read and follow the label.</p>
 				<p class="footer__description">©2018 Bayer Inc.</p>
+				<p class="footer__description">L.CA.MKT.CC.02.2018.1078</p>
 			</div>
 		</footer>
 	</div>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
 	<script>
 		document.getElementById("age").onkeypress = function(event){

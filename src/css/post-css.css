@@ -129,6 +129,11 @@ main{
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+.tooltip_templates{
+	display: none;
+}
+
 @media (--phone) {
 	.wrapper{
 		&::after{
@@ -384,7 +389,7 @@ Home
 		}
 	}
 	&__slogan{
-		margin: 0 0 15px;
+		margin: 0 0 5px;
 		&--visible-mobile{
 			display: none;
 		}
@@ -401,7 +406,7 @@ Home
 		color: var(--colorGreen);
 		font-size: 30px;
 		font-weight: normal;
-		margin: 0 0 20px;
+		margin:0 0 6px;
 		strong{
 			font-weight: 900;
 		}
@@ -560,6 +565,7 @@ Home
 		font-size: 21px;
 		font-family: var(--fontSite);
 		margin: * auto;
+		cursor: pointer;
 	}
 }
 
