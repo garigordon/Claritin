@@ -60,6 +60,28 @@ body{
 	font-family: 'Helvetica', sans-serif;
 }
 
+body::after{
+		content:"";
+		background: url(../img/img-cloud.png) no-repeat;
+		width:451px;
+		height: 176px;
+		top: 0;
+		right: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+body::before{
+		content: "";
+		background: url(../img/img-cloud-left.png) no-repeat;
+		width:185px;
+		height:124px;
+		top: 180px;
+		left: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
 .row-line {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -119,36 +141,14 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078b9', endColorstr='#b6d1eb',GradientType=0 );
 	overflow: hidden;
 	position: relative;
+	min-height: 100%;
 	display: table;
-	height: 100%;
 	width: 100%;
 }
-
-.wrapper::after{
-		content:"";
-		background: url(../img/img-cloud.png) no-repeat;
-		width:451px;
-		height: 176px;
-		top: 0;
-		right: 0;
-		position: absolute;
-	}
-
-.wrapper::before{
-		content: "";
-		background: url(../img/img-cloud-left.png) no-repeat;
-		width:185px;
-		height:124px;
-		top: 180px;
-		left: 0;
-		position: absolute;
-	}
 
 main{
 	position: relative;
 	z-index: 2;
-	display: table-row;
-	height: 100%;
 }
 
 .container{
@@ -157,6 +157,11 @@ main{
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+.tooltip_templates{
+	display: none;
+}
+
 @media (max-width: 767px) {
 		.wrapper::after{
 			background-size:cover;
@@ -355,10 +360,6 @@ Layout
 		line-height: 1.125rem;
 	}
 
-.tooltip_templates {
-	display: none;
-}
-
 @media (min-width: 768px) and (max-width: 992px){
 			.footer .footer-menu__link{
 				font-size: 0.75rem;
@@ -420,7 +421,7 @@ Home
 			display: none;
 		}
 .home-slider__slogan{
-		margin: 0 0 15px;
+		margin: 0 0 5px;
 	}
 .home-slider__slogan--visible-mobile{
 			display: none;
@@ -441,7 +442,7 @@ Home
 		color: #047802;
 		font-size: 1.875rem;
 		font-weight: 400;
-		margin: 0 0 20px;
+		margin:0 0 6px;
 	}
 .home-slider__title strong{
 			font-weight: 900;
@@ -607,6 +608,7 @@ Home
 		font-family: 'Helvetica', sans-serif;
 		margin-right: auto;
 		margin-left: auto;
+		cursor: pointer;
 	}
 
 .checkbox {
@@ -756,21 +758,13 @@ Result page
 .single-result__text{
 		padding: 0 25px;
 	}
-.single-result__text--center{
-			text-align: center;  
-			padding-bottom: 50px;
-		}
 .single-result__text p{
 			color: #ffee31;
 			font-family: 'Helvetica LT Std', sans-serif;
 			font-weight: 500;
 			font-size: 1.5rem;
 			line-height: 1.875rem;
-			margin: 0 0 10px;
 		}
-.single-result__text p a{
-				color: #ffee31;
-			}
 .single-result__title{
 		margin: 0 0 36px;
 		font-size: 2.1875rem;

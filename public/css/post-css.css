@@ -56,6 +56,22 @@ body{
 
 body{
 	font-family: var(--fontSite);
+	&::after{
+		content:"";
+		background: url(../img/img-cloud.png) no-repeat;
+		width:451px;
+		height: 176px;
+		position: absolute 0 0 * *;
+		z-index: 1;
+	}
+	&::before{
+		content: "";
+		background: url(../img/img-cloud-left.png) no-repeat;
+		width:185px;
+		height:124px;
+		position: absolute 180px * * 0;
+		z-index: 1;
+	}
 }
 
 .row-line {
@@ -97,30 +113,14 @@ body{
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0078b9', endColorstr='#b6d1eb',GradientType=0 );
 	overflow: hidden;
 	position: relative;
+	min-height: 100%;
 	display: table;
-	height: 100%;
 	width: 100%;
-	&::after{
-		content:"";
-		background: url(../img/img-cloud.png) no-repeat;
-		width:451px;
-		height: 176px;
-		position: absolute 0 0 * *;
-	}
-	&::before{
-		content: "";
-		background: url(../img/img-cloud-left.png) no-repeat;
-		width:185px;
-		height:124px;
-		position: absolute 180px * * 0;
-	}
 }
 
 main{
 	position: relative;
 	z-index: 2;
-	display: table-row;
-	height: 100%;
 }
 
 .container{
@@ -129,6 +129,11 @@ main{
 	padding: 0 15px;
 	margin: 0 auto;
 }
+
+.tooltip_templates{
+	display: none;
+}
+
 @media (--phone) {
 	.wrapper{
 		&::after{
@@ -320,10 +325,6 @@ Layout
 	}
 }
 
-.tooltip_templates {
-	display: none;
-}
-
 @media (--ipadMin) and (--ipadMax){
 	.footer{
 		.footer-menu{
@@ -388,7 +389,7 @@ Home
 		}
 	}
 	&__slogan{
-		margin: 0 0 15px;
+		margin: 0 0 5px;
 		&--visible-mobile{
 			display: none;
 		}
@@ -405,7 +406,7 @@ Home
 		color: var(--colorGreen);
 		font-size: 30px;
 		font-weight: normal;
-		margin: 0 0 20px;
+		margin:0 0 6px;
 		strong{
 			font-weight: 900;
 		}
@@ -564,6 +565,7 @@ Home
 		font-size: 21px;
 		font-family: var(--fontSite);
 		margin: * auto;
+		cursor: pointer;
 	}
 }
 
@@ -703,20 +705,12 @@ Result page
 	}
 	&__text{
 		padding: 0 25px;
-	 	&--center{
-			text-align: center;  
-			padding-bottom: 50px;
-		}
 		p{
 			color: var(--colorYellow);
 			font-family: var(--fontLTStd);
 			font-weight: 500;
 			font-size: 24px;
 			line-height: 30px;
-			margin: 0 0 10px;
-			a{
-				color: var(--colorYellow);
-			}
 		}
 	}
 	&__title{
