@@ -60,6 +60,28 @@ body{
 	font-family: 'Helvetica', sans-serif;
 }
 
+body::after{
+		content:"";
+		background: url(../img/img-cloud.png) no-repeat;
+		width:451px;
+		height: 176px;
+		top: 0;
+		right: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
+body::before{
+		content: "";
+		background: url(../img/img-cloud-left.png) no-repeat;
+		width:185px;
+		height:124px;
+		top: 180px;
+		left: 0;
+		position: absolute;
+		z-index: 1;
+	}
+
 .row-line {
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -120,27 +142,9 @@ body{
 	overflow: hidden;
 	position: relative;
 	min-height: 100%;
+	display: table;
+	width: 100%;
 }
-
-.wrapper::after{
-		content:"";
-		background: url(../img/img-cloud.png) no-repeat;
-		width:451px;
-		height: 176px;
-		top: 0;
-		right: 0;
-		position: absolute;
-	}
-
-.wrapper::before{
-		content: "";
-		background: url(../img/img-cloud-left.png) no-repeat;
-		width:185px;
-		height:124px;
-		top: 180px;
-		left: 0;
-		position: absolute;
-	}
 
 main{
 	position: relative;
