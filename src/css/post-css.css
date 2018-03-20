@@ -276,6 +276,16 @@ Layout
 			}
 		}
 	}
+	.header-menu{
+		&__link{
+			font-size:14px;
+		}
+		&__item{
+			&::after{
+				position: absolute 2px * * -4px;
+			}
+		 }
+	}
 }
 
 /************************************* Footer ************************************/
