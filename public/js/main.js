@@ -17,5 +17,13 @@ $( document ).ready(function() {
 	});
 
 	$('.tooltip').tooltipster();
+
+	$('a[href^="#"]').on('click', function(event){
+		event.preventDefault();
+		var id = $(this).attr('href');
+		$('html, body').animate({
+			scrollTop: $(id).offset().top
+		}, 1000);
+	})
 });	
 

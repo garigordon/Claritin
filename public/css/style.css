@@ -628,7 +628,10 @@ Home
 		font-family: 'Helvetica', sans-serif;
 		margin-right: auto;
 		margin-left: auto;
-		cursor: pointer;
+		cursor: pointer;  
+		-webkit-appearance: none;  
+		   -moz-appearance: none;  
+		        appearance: none;
 	}
 
 .checkbox {

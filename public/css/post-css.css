@@ -282,7 +282,7 @@ Layout
 		}
 		&__item{
 			&::after{
-				position: absolute 2px * * -4px;
+				position: absolute 2px * * -4px ;
 			}
 		 }
 	}
@@ -587,7 +587,8 @@ Home
 		font-size: 21px;
 		font-family: var(--fontSite);
 		margin: * auto;
-		cursor: pointer;
+		cursor: pointer;  
+		appearance: none;
 	}
 }
 
