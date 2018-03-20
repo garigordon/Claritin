@@ -48,6 +48,11 @@ input::placeholder {
   color: #808285;
 }
 
+sup{
+	margin:-4px 0 -1px;
+	display: inline-block;
+}
+
 
 html,
 body{
@@ -130,6 +135,8 @@ main{
 	max-width: 936px;
 	padding: 0 15px;
 	margin: 0 auto;
+	position: relative;
+	z-index: 22 ;
 }
 
 .tooltip_templates{
@@ -137,7 +144,7 @@ main{
 }
 
 @media (--phone) {
-	.wrapper{
+	body{
 		&::after{
 			background-size:cover;
 			size:282px 120px;
@@ -147,6 +154,7 @@ main{
 		}
 	}
 }
+
 /*!==========================================================================
 Layout
 ========================================================================== */
@@ -856,6 +864,7 @@ Test page
 		padding: 18px;
 	}
 	&__checkbox{
+		background-position: 50% 50%;
 		display: block;
 		size: 100% 310px;
 		position: relative;
@@ -864,7 +873,7 @@ Test page
 	&__label{
 		color: var(--colorBlue) #fff;
 		font-size: 17px;
-		line-height: 24px;
+		line-height: 20px;
 		position: absolute * 0 0 0;
 		text-align: center;
 		font-weight: 500;
