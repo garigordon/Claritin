@@ -1,25 +1,26 @@
 
 function Validate() {
+	var checkPhone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	var first_name = document.forms['myForm']['first_name'];
 	var name_error = document.getElementById('name_error');
-	first_name.addEventListener('blur', nameVerify, true);
+	first_name.addEventListener('keyup', nameVerify, true);
 
 	var last_name = document.forms['myForm']['last_name'];
 	var lastname_error = document.getElementById('lastname_error');
-	last_name.addEventListener('blur', lastVerify, true);
+	last_name.addEventListener('keyup', lastVerify, true);
 
 	var Email = document.forms['myForm']['Email'];
 	var email_error = document.getElementById('email_error');
-	Email.addEventListener('blur', emailVerify, true);
+	Email.addEventListener('keyup', emailVerify, true);
 
 	var phone = document.forms['myForm']['phone'];
 	var phone_error = document.getElementById('phone_error');
-	phone.addEventListener('blur', phoneVerify, true);
+	phone.addEventListener('keyup', phoneVerify, true);
 
 	var age = document.forms['myForm']['age'];
 	var age_error = document.getElementById('age_error');
-	age.addEventListener('blur', ageVerify, true);
+	age.addEventListener('keyup', ageVerify, true);
 	
 	var checkbox_error = document.getElementById('checkbox_error');
 
@@ -46,7 +47,7 @@ function Validate() {
 		Email.focus();
 
 	}
-	if (phone.value === "") {
+	if (checkPhone.test(phone.value) === false) {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "red";
 		phone_error.textContent = "Phone is required";
@@ -67,7 +68,7 @@ function Validate() {
 		document.getElementById('checkbox_div').style.color = "red";
 		checkbox_error.textContent = "That checkbox is required";
 	}
-	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+	if(first_name.value !== "" && last_name.value !== "" && checkPhone.test(phone.value) === true && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
 }
@@ -97,12 +98,17 @@ function lastVerify () {
 	}
 }
 function phoneVerify () {
-	if (phone.value !== "") {
+	var checkPhone = /^\(?([0-9]{3}-)\)?[-. ]?([0-9]{3}-)[-. ]?([0-9]{4})$/;
+	if (checkPhone.test(phone.value) === false) {
+		phone.style.border = "1px solid red";
+		document.getElementById('phone_div').style.color = "red";
+		phone_error.textContent = "Phone is required";
+	} else {
 		phone.style.border = "1px solid green";
 		document.getElementById('phone_div').style.color = "green";
 		phone_error.textContent = "";
-		return true;
 	}
+	return true;
 }
 function ageVerify () {
 	if (age.value !== "" && age.value > 17) {

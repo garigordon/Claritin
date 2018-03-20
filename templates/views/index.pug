@@ -151,11 +151,6 @@ html(lang='en')
 		script.
 			document.getElementById("age").onkeypress = function (event) {
 				event = event || window.event;
-				if (event.charCode && (event.charCode < 48 || event.charCode > 57))
-					return false;
-			};
-			document.getElementById("phone").onkeypress = function (event) {
-				event = event || window.event;
-				if (event.charCode && (event.charCode < 48 || event.charCode > 57))
+				if (event.charCode && (event.charCode < 48 || event.charCode > 57) )
 					return false;
 			};

@@ -184,7 +184,6 @@ html(lang='en')
 		script(type='text/javascript', src='js/tooltipster.bundle.min.js')
 		script(type='text/javascript', src='js/main.js')
 		script.
-			var now = new Date();
 			$(function(){
 				$('#btnClick').click(function(){
 					var val = [];
@@ -311,12 +310,12 @@ html(lang='en')
 					newFile.append('ans_3', answ3);
 					newFile.append('ans_4', answ4);
 					newFile.append('ans_5', answ5);
-					newFile.append('day', now.getDate());
 					axios({
 						method: 'post',
 						url: 'http://13.59.224.151/api/fileupload/list',
 						data: email,
 					}).then(function (response) {
+						newFile.append('day', response.data.date);
 						if (response.data.day === "Quiz") {
 							var opts = {
 								url: 'http://13.59.224.151/api/fileupload/create',
