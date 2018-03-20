@@ -1,6 +1,5 @@
 
 function Validate() {
-	var checkPhone = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
 	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	var first_name = document.forms['myForm']['first_name'];
 	var name_error = document.getElementById('name_error');
@@ -21,33 +20,27 @@ function Validate() {
 	var age = document.forms['myForm']['age'];
 	var age_error = document.getElementById('age_error');
 	age.addEventListener('keyup', ageVerify, true);
-	
 	var checkbox_error = document.getElementById('checkbox_error');
-
 	checkboxVerify()
-	
 	if (first_name.value === "") {
 		first_name.style.border = "1px solid red";
 		document.getElementById('username_div').style.color = "red";
 		name_error.textContent = "First Name is required";
 		first_name.focus();
-	
 	}
 	if (last_name.value === "") {
 		last_name.style.border = "1px solid red";
 		document.getElementById('lastname_div').style.color = "red";
 		lastname_error.textContent = "Last Name is required";
 		last_name.focus();
-
 	}
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "red";
 		email_error.textContent = "Email is required";
 		Email.focus();
-
 	}
-	if (checkPhone.test(phone.value) === false) {
+	if (phone.value === "") {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "red";
 		phone_error.textContent = "Phone is required";
@@ -68,7 +61,7 @@ function Validate() {
 		document.getElementById('checkbox_div').style.color = "red";
 		checkbox_error.textContent = "That checkbox is required";
 	}
-	if(first_name.value !== "" && last_name.value !== "" && checkPhone.test(phone.value) === true && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
 }
@@ -98,17 +91,12 @@ function lastVerify () {
 	}
 }
 function phoneVerify () {
-	var checkPhone = /^\(?([0-9]{3}-)\)?[-. ]?([0-9]{3}-)[-. ]?([0-9]{4})$/;
-	if (checkPhone.test(phone.value) === false) {
-		phone.style.border = "1px solid red";
-		document.getElementById('phone_div').style.color = "red";
-		phone_error.textContent = "Phone is required";
-	} else {
+	if (phone.value !== "") {
 		phone.style.border = "1px solid green";
 		document.getElementById('phone_div').style.color = "green";
 		phone_error.textContent = "";
+		return true;
 	}
-	return true;
 }
 function ageVerify () {
 	if (age.value !== "" && age.value > 17) {
