@@ -18,11 +18,10 @@ keystone.init({
 	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
-
 	'auto update': true, 
 	'session': true, 
 	'auth': true, 
-	'user model': 'User',
+	'user model': 'User', 
 	'port': 80,
 	'cookie secret': 'you api',
 });

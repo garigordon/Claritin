@@ -10,6 +10,15 @@ html(lang='en')
 		link(rel='stylesheet', href='fonts/fonts.css')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
+		script.
+			var first_name = localStorage.getItem('first_name');
+			var last_name = localStorage.getItem('last_name');
+			var email = localStorage.getItem('email');
+			var phone = localStorage.getItem('phone');
+			var age = localStorage.getItem('age');
+			if (email === null && phone === null && first_name === null && last_name === null && age === null) {
+				document.location = "/";
+			}
 		.wrapper
 			header.header
 				.container.row-line.center
@@ -110,3 +119,4 @@ html(lang='en')
 					}
 				}, false);
 			}(window, location));
+			localStorage.clear();

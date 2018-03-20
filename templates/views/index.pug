@@ -9,7 +9,6 @@ html(lang='en')
 		link(href='css/style.css', rel='stylesheet', type='text/css')
 		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
 		script(src='https://unpkg.com/axios/dist/axios.min.js')
-		script(src='js/alert_tut.js')
 		script(src='js/mainPage.js')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
@@ -75,7 +74,7 @@ html(lang='en')
 								span
 									| ENTER TO 
 									strong WIN
-						form#form2(name='myForm', action='http://localhost:3000/api/fileupload/list', method='POST', enctype='multipart/form-data')
+						form#form2(name='myForm', action='http://13.59.224.151/api/fileupload/list', method='POST', enctype='multipart/form-data')
 							.row-line
 								.column
 									#username_div
@@ -99,8 +98,10 @@ html(lang='en')
 										#age_error
 							.item
 								label.checkbox(for='Accept')
-									input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
-									span.checkbox__label I accept the official rules and regulations
+									#checkbox_div
+										input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
+										span.checkbox__label I accept the official rules and regulations
+										#checkbox_error
 							.item
 								label.checkbox(for='Yes')
 									input#Yes.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
@@ -139,7 +140,7 @@ html(lang='en')
 									p L5W 5R6
 						li
 							a.footer-menu__link(href='#') Claritin
-					span.footer__text *See official rules for full details
+					span.footer__text *See official rules for full details.
 					img.footer__logo(src='img/bayer-icon.png', alt='')
 					p.footer__description To be sure this product is right for you, always read and follow the label.
 					p.footer__description ©2018 Bayer Inc.

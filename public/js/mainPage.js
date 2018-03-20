@@ -21,17 +21,21 @@ function Validate() {
 	var age_error = document.getElementById('age_error');
 	age.addEventListener('blur', ageVerify, true);
 	
+	var checkbox_error = document.getElementById('checkbox_error');
+
+	checkboxVerify()
+	
 	if (first_name.value === "") {
 		first_name.style.border = "1px solid red";
 		document.getElementById('username_div').style.color = "red";
-		name_error.textContent = "Username is required";
+		name_error.textContent = "First Name is required";
 		first_name.focus();
 	
 	}
 	if (last_name.value === "") {
 		last_name.style.border = "1px solid red";
 		document.getElementById('lastname_div').style.color = "red";
-		lastname_error.textContent = "Lastname is required";
+		lastname_error.textContent = "Last Name is required";
 		last_name.focus();
 
 	}
@@ -45,18 +49,24 @@ function Validate() {
 	if (phone.value === "") {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "red";
-		phone_error.textContent = "phone is required";
+		phone_error.textContent = "Phone is required";
 		phone.focus();
 	}
 	if (age.value === "" || age.value < 18) { 
 		age.style.border = "1px solid red";
 		document.getElementById('age_div').style.color = "red";
-		age_error.textContent = "age is required";
+		age_error.textContent = "Age is required";
 		age.focus();
 	}
 	
 	var chbox;
 	chbox = document.getElementById('Accept');
+
+	if(!chbox.checked){
+		age.style.border = "1px solid red";
+		document.getElementById('checkbox_div').style.color = "red";
+		checkbox_error.textContent = "That checkbox is required";
+	}
 	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
@@ -67,6 +77,15 @@ function nameVerify() {
 		document.getElementById('username_div').style.color = "green";
 		name_error.textContent = "";
 		return true; 
+	}
+}
+function checkboxVerify() {
+	var chbox;
+	chbox = document.getElementById('Accept');
+	if (chbox.checked) {
+		document.getElementById('checkbox_div').style.color = "green";
+		checkbox_error.textContent = "";
+		return true;
 	}
 }
 function lastVerify () {
@@ -128,6 +147,7 @@ function uploadFile () {
 		if (response.data.day === "Quiz") {
 			document.location = "" + response.data.day + "";
 		}else{
+			localStorage.clear();
 			Email.style.border = "1px solid red";
 			document.getElementById('email_div').style.color = "red";
 			email_error.textContent = "You have already played today. Please try again tomorrow.";
