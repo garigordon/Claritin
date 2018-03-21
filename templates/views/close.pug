@@ -26,35 +26,44 @@ html(lang='en')
 							i
 							i
 					.header-menu
-						ul.header-menu__list
-							li.header-menu__item
-								a.header-menu__link(href='#') HOME
-							li.header-menu__item
-								a.header-menu__link(href='#') ENTER
-							li.header-menu__item
-								a.header-menu__link(href='#') PRIZES
-							li.header-menu__item
-								a.header-menu__link(href='#') RULES
+						ul.header-menu__list.header-menu__list--right
 							li.header-menu__item
 								a.header-menu__link(href='#') Français
 			main.page__main.main
 				.container
+					.home-slider__top.home-slider__top
+						.home-slider__item
+							img.home-slider__image.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
+							img.home-slider__image.home-slider__image--visible-mobile(src='img/banner-mob.png', alt='houdini')
+							.home-slider__content
+								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk.png', alt='')
+								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob.png', alt='')
+								.row-line
+									.column
+										.home-slider__info
+											p 
+												| Allergies keeping you indoors? One non-drowsy Claritin
+												sup ®
+												| pill provides 24-hour relief from indoor** and outdoor
+												sup †
+												| allergy symptoms.
+											p 
+												| For more information on Claritin
+												sup ™
+												|  brands visit us on 
+												a(href='https://www.claritin.ca/') our website.
+							.home-slider__txt
+								span **dust, pets, mould
+								span
+									sup †
+									| pollen, trees, grass, ragweed
+					.single__description.single__description--large.row-line.center
+						h3  This contest is now closed.
 					.single-result
-						.single-result__title
-							span
-								| Thank you for visiting the Claritin
-								sup ®
-								|  Get Outside Contest.
 						.single-result__text.single-result__text--center
-							p This contest is now closed.
-							p
-								| For more information on Claritin™ brands visit us on 
-								a(href='https://www.claritin.ca') our website
-								| .
-							p
-								| *See 
-								a(href='#') Official Rules
-								|  for full details and prize descriptions
+							p.single-result__text--white
+								strong *NO PURCHASE NECESSARY TO ENTER OR WIN.
+								|  Contest starts April 16, 2018 and ends May 25, 2018. Open only to legal Canadian residents 18 and older. To enter, go to www.claritincontest.com, complete the online registration form, take the quiz and click “submit”. There are 3 Prizes available to be won. Each prize consists of 1 x $1,000 Shoppers Drug Mart Gift Card (ARV $1000.00). Limit one entry per day, per person. Draw Date: June 1, 2018. Correct skill testing question required. Limit of one prize per household.
 			footer.footer
 				.container
 					ul.footer-menu.row-line.center

@@ -26,25 +26,43 @@ html(lang='en')
 							i
 							i
 					.header-menu
-						ul.header-menu__list
-							li.header-menu__item
-								a.header-menu__link(href='#') HOME
-							li.header-menu__item
-								a.header-menu__link(href='#') ENTER
-							li.header-menu__item
-								a.header-menu__link(href='#') PRIZES
-							li.header-menu__item
-								a.header-menu__link(href='#') RULES
+						ul.header-menu__list.header-menu__list--right
 							li.header-menu__item
 								a.header-menu__link(href='#') Français
 			main.page__main.main
 				.container
+					.home-slider__top.home-slider__top
+						.home-slider__item
+							img.home-slider__image.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
+							img.home-slider__image.home-slider__image--visible-mobile(src='img/banner-mob.png', alt='houdini')
+							.home-slider__content
+								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk.png', alt='')
+								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob.png', alt='')
+								.row-line
+									.column
+										h3.home-slider__title.home-slider__title--indentation
+											| For your chance to 
+											strong WIN
+											| * 1 of 3 $1,000 Shoppers Drug Mart gift cards!
+										p.home-slider__text.home-slider__text--indentation
+											| Allergies keeping you indoors? One non-drowsy Claritin
+											sup ®
+											|  pill provides 24-hour relief from indoor** and outdoor
+											sup †
+											|  allergy symptoms. Take the Claritin
+											sup ®
+											|  Outsider Quiz to find out what kind of outsider you are.
+							.home-slider__txt
+								span **dust, pets, mould
+								span
+									sup †
+									| pollen, trees, grass, ragweed
+					.single__description.single__description--large
+						h3 COMING SOON
+						p  Contest starts April 16, 2018
 					.single-result
-						.single-result__title
-							span COMING SOON
 						.single-result__text.single-result__text--center
-							p Contest starts April 16, 2018.
-							p
+							p.single-result__text--white
 								strong *NO PURCHASE NECESSARY TO ENTER OR WIN.
 								|  Contest starts April 16, 2018 and ends May 25, 2018. Open only to legal Canadian residents 18 and older. To enter, go to www.claritincontest.com, complete the online registration form, take the quiz and click “submit”. There are 3 Prizes available to be won. Each prize consists of 1 x $1,000 Shoppers Drug Mart Gift Card (ARV $1000.00). Limit one entry per day, per person. Draw Date: June 1, 2018. Correct skill testing question required. Limit of one prize per household.
 			footer.footer
@@ -67,7 +85,7 @@ html(lang='en')
 									p L5W 5R6
 						li
 							a.footer-menu__link(href='https://www.claritin.ca/') Claritin
-					span.footer__text *See official rules for full details
+					span.footer__text *See official rules for full details.
 					img.footer__logo(src='img/bayer-icon.png', alt='')
 					p.footer__description To be sure this product is right for you, always read and follow the label.
 					p.footer__description ©2018 Bayer Inc.

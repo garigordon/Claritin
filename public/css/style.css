@@ -216,6 +216,12 @@ Layout
 		display: flex;
 	}
 
+.header-menu__list--right{
+			-webkit-box-pack:end;
+			    -ms-flex-pack:end;
+			        justify-content:flex-end;
+		}
+
 .header-menu__item{
 		position: relative;
 		padding: 0 4%;
@@ -427,9 +433,6 @@ Layout
 /*!==========================================================================
 Home
 ========================================================================== */
-.home-slider__top{
-
-	}
 .home-slider__item{
 		overflow: hidden;
 		position: relative;
@@ -437,6 +440,7 @@ Home
 .home-slider__image{
 		width: 100%;
 		height: auto;
+	 	display:block;
 	}
 .home-slider__image--visible-mobile{
 			display: none;
@@ -465,6 +469,9 @@ Home
 		font-weight: 400;
 		margin:0 0 6px;
 	}
+.home-slider__title--indentation{
+			 margin: 25px 0 25px;
+		}
 .home-slider__title strong{
 			font-weight: 900;
 		}
@@ -482,6 +489,19 @@ Home
 			color: #808285;
 			display: block;
 			font-size: 0.625rem;
+		}
+.home-slider__info{
+		padding-right: 20%;
+		padding-left: 20%;
+		margin-top: 30px;
+	}
+.home-slider__info p{
+			font-size: 1.0625rem;
+			color: #275295;
+			margin: 0 0 15px;
+		}
+.home-slider__info a{
+	 		color: #275295;
 		}
 
 .btn-home-slider{
@@ -552,6 +572,16 @@ Home
 			.home-slider__txt span{
 				color: #fff;
 				font-size: 0.4375rem;
+			}
+		.home-slider__info{
+			padding-right: 5%;
+			padding-left: 5%;
+			margin-top: 20px;
+		}
+			.home-slider__info p{
+				font-size: 0.6875rem;
+				color: #275295;
+				margin: 0 0 5px;
 			}
 	.btn-home-slider{
 		right: 0;
@@ -785,20 +815,21 @@ Result page
 	}
 .single-result__text{
 		padding: 0 25px;
+		color: #ffee31;
+		font-family: 'Helvetica LT Std', sans-serif;
+		font-weight: 500;
+		font-size: 1.5rem;
+		line-height: 1.875rem;
 	}
 .single-result__text--center{
 			 text-align:center;
 		}
-.single-result__text p{
-			color: #ffee31;
-			font-family: 'Helvetica LT Std', sans-serif;
-			font-weight: 500;
-			font-size: 1.5rem;
-			line-height: 1.875rem;
+.single-result__text--white{
+			font-size: 1.0625rem;
+			color:#fff;  
+			line-height:1.25rem;
+			margin-bottom:30px;
 		}
-.single-result__text p.italic{
-				font-style: italic;
-			}
 .single-result__title{
 		margin: 0 0 36px;
 		font-size: 2.1875rem;
@@ -818,9 +849,10 @@ Result page
 
 .single__description{
 		background: #ffee31;
-		padding: 15px;
-		margin: 0 0 30px;
+		padding: 15px 2000px;
+		margin: -2px -2000px 30px;
 		text-align: center;
+		min-height: 100px;
 	}
 
 .single__description h4{
@@ -834,7 +866,6 @@ Result page
 .single__description h3{
 			color: #275295;
 			font-weight: 700;
-			text-transform: uppercase;
 			font-size: 2.3125rem;
 		}
 
@@ -845,6 +876,14 @@ Result page
 			font-size: 1.5625rem;
 			line-height: 1;
 		}
+
+.single__description--large h3{
+				font-size: 3.5625rem;
+		 	}
+
+.single__description--large p{
+				font-size: 2.375rem;
+		 	}
 
 @media (max-width: 767px) {
 	.single-result{
@@ -864,7 +903,8 @@ Result page
 				line-height: 1.75rem;
 			}
 			.single-result__text p{
-				font-size: 1.25rem;
+				font-size: 1.125rem;
+				line-height: 1.625rem;
 			}
 			.single__description h4{
 				font-size: 0.9375rem;

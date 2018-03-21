@@ -180,6 +180,9 @@ Layout
 		margin: 0;
 		justify-content:space-around;
 		display: flex;
+		&--right{
+			justify-content:flex-end;
+		}
 	}
 	&__item{
 		position: relative;
@@ -398,15 +401,13 @@ Layout
 Home
 ========================================================================== */
 .home-slider{
-	&__top{
-
-	}
 	&__item{
 		overflow: hidden;
 		position: relative;
 	}
 	&__image{
 		size: 100% auto;
+	 	display:block;
 		&--visible-mobile{
 			display: none;
 		}
@@ -430,6 +431,9 @@ Home
 		font-size: 30px;
 		font-weight: normal;
 		margin:0 0 6px;
+		&--indentation{
+			 margin: 25px 0 25px;
+		}
 		strong{
 			font-weight: 900;
 		}
@@ -445,6 +449,18 @@ Home
 			color: #808285;
 			display: block;
 			font-size: 10px;
+		}
+	}
+	&__info{
+		padding: * 20%;
+		margin: 30px * *;
+		p{
+			font-size: 17px;
+			color: var(--colorBlue);
+			margin: 0 0 15px;
+		}
+		a{
+	 		color: var(--colorBlue);
 		}
 	}
 }
@@ -518,6 +534,15 @@ Home
 			span{
 				color: #fff;
 				font-size: 7px;
+			}
+		}
+		&__info{
+			padding: * 5%;
+			margin: 20px * *;
+			p{
+				font-size: 11px;
+				color: var(--colorBlue);
+				margin: 0 0 5px;
 			}
 		}
 	}
@@ -731,18 +756,19 @@ Result page
 	}
 	&__text{
 		padding: 0 25px;
+		color: var(--colorYellow);
+		font-family: var(--fontLTStd);
+		font-weight: 500;
+		font-size: 24px;
+		line-height: 30px;
 	 	&--center{
 			 text-align:center;
 		}
-		p{
-			color: var(--colorYellow);
-			font-family: var(--fontLTStd);
-			font-weight: 500;
-			font-size: 24px;
-			line-height: 30px;
-			&.italic{
-				font-style: italic;
-			}
+		&--white{
+			font-size: 17px;
+			color:#fff;  
+			line-height:20px;
+			margin:* * 30px;
 		}
 	}
 	&__title{
@@ -763,9 +789,10 @@ Result page
 .single{
 	&__description{
 		background: var(--colorYellow);
-		padding: 15px;
-		margin: 0 0 30px;
+		padding: 15px 2000px;
+		margin: -2px -2000px 30px;
 		text-align: center;
+		min-height: 100px;
 		h4{
 			color: var(--colorBlue);
 			font-weight: 400;
@@ -776,7 +803,6 @@ Result page
 		h3{
 			color: var(--colorBlue);
 			font-weight: 700;
-			text-transform: uppercase;
 			font-size: 37px;
 		}
 		p{
@@ -786,6 +812,14 @@ Result page
 			font-size: 25px;
 			line-height: 1;
 		}
+		&--large{
+			h3{
+				font-size: 57px;
+		 	}
+			p{
+				font-size: 38px;
+		 	}
+		 }
 	}
 }
 
@@ -807,7 +841,8 @@ Result page
 		}
 		&__text{
 			p{
-				font-size: 20px;
+				font-size: 18px;
+				line-height: 26px;
 			}
 		}
 	}
