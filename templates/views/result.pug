@@ -51,7 +51,9 @@ html(lang='en')
 					.single-result
 						.single-result__title
 							span
-								| You’re an 
+								script.
+									var retrievedObject = localStorage.getItem('number');
+									document.write(retrievedObject);
 								strong
 									script.
 										var retrievedObject = localStorage.getItem('lastname');
