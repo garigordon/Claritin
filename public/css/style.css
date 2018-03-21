@@ -241,6 +241,7 @@ Layout
 		font-weight: 700;
 		color: #275295;
 		display: block;
+		text-transform: uppercase;
 	}
 
 @media (max-width: 767px) {
@@ -332,7 +333,7 @@ Layout
 		content: "";
 		background:url(../img/footer-bg.png) no-repeat;
 		background-size: cover;
-		height: 227px; 
+		height: 293px; 
 		right: 0; 
 		bottom: 0; 
 		left: 0; 
@@ -371,7 +372,7 @@ Layout
 	}
 .footer__logo{
 		display: block;
-		margin: 0 auto 15px;
+		margin:92px auto 15px;
 	}
 .footer__description{
 		text-align: center;
@@ -949,7 +950,8 @@ Test page
 		position: absolute;
 		text-align: center;
 		font-weight: 500;
-		padding: 5px 0;
+		padding: 5px 0;  
+		min-height: 30px;
 	}
 .single-test__hidden {
 	    display: none;

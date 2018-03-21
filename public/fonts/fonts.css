@@ -13,15 +13,28 @@
 }
 
 @font-face {
-    font-family: 'Helvetica';
-    src: url('Helvetica-Regular.eot');
-    src: url('Helvetica-Regular.eot?#iefix') format('embedded-opentype'),
-        url('Helvetica-Regular.woff2') format('woff2'),
-        url('Helvetica-Regular.woff') format('woff'),
-        url('Helvetica-Regular.ttf') format('truetype'),
-        url('Helvetica-Regular.svg#Helvetica-Regular') format('svg');
-    font-weight: normal;
-    font-style: normal;
+	font-family: 'Helvetica';
+	src: url('Helvetica-Regular.eot');
+	src: url('Helvetica-Regular.eot?#iefix') format('embedded-opentype'),
+	url('Helvetica-Regular.woff2') format('woff2'),
+	url('Helvetica-Regular.woff') format('woff'),
+	url('Helvetica-Regular.ttf') format('truetype'),
+	url('Helvetica-Regular.svg#Helvetica-Regular') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+@font-face {
+	font-family: 'Helvetica';
+	src: url('Helvetica-Bold.eot');
+	src: url('Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
+	url('Helvetica-Bold.woff2') format('woff2'),
+	url('Helvetica-Bold.woff') format('woff'),
+	url('Helvetica-Bold.ttf') format('truetype'),
+	url('Helvetica-Bold.svg#Helvetica-Bold') format('svg');
+	font-weight: 700;
+	font-style: normal;
 }
 
 @font-face {

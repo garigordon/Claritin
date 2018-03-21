@@ -24,22 +24,22 @@ gulp.task('css', function () {
 		pxtorem,
 		colorFunction(),
 		assets({
-			loadPaths: ['src/img/'],
-			relativeTo: 'src/css/'
+			loadPaths: ['public/img/'],
+			relativeTo: 'public/css/'
 		})
         //cssnano()
 	];
-    return gulp.src('./src/css/post-css.css')
+    return gulp.src('./public/css/post-css.css')
         .pipe(postcss(processors))
         .pipe(rename('style.css'))
-        .pipe(gulp.dest('./src/css/'));
+        .pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('default', function(){
-	gulp.watch('./src/css/post-css.css', function(){
+	gulp.watch('./public/css/post-css.css', function(){
 		gulp.run('css');
 	})
-	gulp.src('src/img/*')
+	gulp.src('public/img/*')
 		.pipe(imagemin())
-		.pipe(gulp.dest('src/img/'))
+		.pipe(gulp.dest('public/img/'))
 })
