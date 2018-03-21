@@ -870,6 +870,7 @@ Test page
 			font-weight: 700;
 			text-align: center;
 			margin: 0 0 20px;
+			text-transform: uppercase;
 		}
 	}
 	&__image{

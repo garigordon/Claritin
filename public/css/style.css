@@ -926,6 +926,7 @@ Test page
 			font-weight: 700;
 			text-align: center;
 			margin: 0 0 20px;
+			text-transform: uppercase;
 		}
 .single-test__image{
 		width: 50%;
