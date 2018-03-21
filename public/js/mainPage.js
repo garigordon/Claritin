@@ -40,7 +40,7 @@ function Validate() {
 		email_error.textContent = "Email is required";
 		Email.focus();
 	}
-	if (phone.value === "") {
+	if (phone.value === "" || phone.value.length<15) {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
 		phone_error.textContent = "Phone is required";
@@ -96,7 +96,7 @@ function lastVerify () {
 	}
 }
 function phoneVerify () {
-	if (phone.value !== "") {
+	if (phone.value !== "" && phone.value.length > 14) {
 		phone.style.border = "1px solid green";
 		document.getElementById('phone_div').style.color = "green";
 		phone_error.textContent = "";
