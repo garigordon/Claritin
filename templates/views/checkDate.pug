@@ -10,7 +10,7 @@ html(lang='en')
 		script.
 			axios({
 				method: 'get',
-				url: 'http://localhost:80/api/fileupload/get',
+				url: 'http://13.59.224.151/api/fileupload/get',
 			}).then(function (response) {
 				document.location = "" + response.data.collection + "";
 			}).catch(function (error) {
