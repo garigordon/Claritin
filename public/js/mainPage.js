@@ -37,13 +37,19 @@ function Validate() {
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
-		email_error.textContent = "Email is required";
+		email_error.textContent = "Invalid Email.";
 		Email.focus();
 	}
-	if (phone.value === "" || phone.value.length<15) {
+	if (phone.value === "") {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
-		phone_error.textContent = "Phone is required";
+		phone_error.textContent = "Invalid Phone number.";
+		phone.focus();
+	}
+	if (phone.value !== "" && phone.value.length < 15) {
+		phone.style.border = "1px solid red";
+		document.getElementById('phone_div').style.color = "yellow";
+		phone_error.textContent = "Phone number must be 10 digits.";
 		phone.focus();
 	}
 	if (age.value === "") { 
@@ -66,7 +72,7 @@ function Validate() {
 		document.getElementById('checkbox_div').style.color = "yellow";
 		checkbox_error.textContent = "That checkbox is required";
 	}
-	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone.value.length === 15 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
 }
@@ -116,7 +122,7 @@ function emailVerify () {
 	if (reg.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
-		email_error.textContent = "Email is required";
+		email_error.textContent = "Invalid Email.";
 	} else {
 		Email.style.border = "1px solid green";
 		document.getElementById('email_div').style.color = "green";
