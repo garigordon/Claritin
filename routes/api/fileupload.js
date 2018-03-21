@@ -39,18 +39,26 @@ exports.list = function (req, res) {
 }
 
 exports.get = function (req, res) {
-	console.log(req.params);
-	var data = req.query;
-	console.log(data);
-	FileData.model.find(req.params.email).exec(function (err, item) {
-		if (err) return res.apiError('database error', err);
-		if (!item) return res.apiError('not found');
-		res.apiResponse({
-			collection: item,
-		});
+	var now = new Date();
+	var month = now.getMonth() + 1;
+	var day = now.getDate();
 
+	var answer = '';
+	if (month < 4 || (month === 4 && day < 16)) {
+		answer =  'coming';
+	} else if (month === 4 && day >= 16 && day <= 30) {
+		answer =  '/';
+	} else if (month === 5 && day <= 25) {
+		answer = '/';
+	} else if ((month === 5 && day > 25) || month > 5) {
+		answer = 'close';
+	}
+	console.log(answer);
+	
+	res.apiResponse({
+		collection: answer,
 	});
-}
+};
 
 exports.update = function(req, res) {
 	FileData.model.findById(req.params.id).exec(function(err, item) {

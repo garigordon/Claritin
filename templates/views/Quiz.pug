@@ -312,13 +312,13 @@ html(lang='en')
 					newFile.append('ans_5', answ5);
 					axios({
 						method: 'post',
-						url: 'http://13.59.224.151/api/fileupload/list',
+						url: 'http://localhost:80/api/fileupload/list',
 						data: email,
 					}).then(function (response) {
 						newFile.append('day', response.data.date);
 						if (response.data.day === "Quiz") {
 							var opts = {
-								url: 'http://13.59.224.151/api/fileupload/create',
+								url: 'http://localhost:80/api/fileupload/create',
 								data: newFile,
 								cache: false,
 								contentType: false,

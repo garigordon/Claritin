@@ -1,0 +1,18 @@
+doctype html
+html(lang='en')
+	head
+		title Claritin
+		meta(http-equiv='content-type', content='text/html; charset=utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+		meta(http-equiv='x-ua-compatible', content='ie=edge')
+		script(src='https://unpkg.com/axios/dist/axios.min.js')
+	body
+		script.
+			axios({
+				method: 'get',
+				url: 'http://localhost:80/api/fileupload/get',
+			}).then(function (response) {
+				document.location = "" + response.data.collection + "";
+			}).catch(function (error) {
+				
+			});

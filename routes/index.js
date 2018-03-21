@@ -37,6 +37,9 @@ exports = module.exports = function (app) {
 	// Views
 	app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
+	app.get('/checkDate', routes.views.checkDate);
+	app.get('/coming', routes.views.coming);
+	app.get('/close', routes.views.close);
 	app.get('/Quiz', routes.views.Quiz);
 	app.get('/result', routes.views.result);
 	app.get('/thanks', routes.views.thanks);
