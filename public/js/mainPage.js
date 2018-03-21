@@ -24,41 +24,46 @@ function Validate() {
 	checkboxVerify()
 	if (first_name.value === "") {
 		first_name.style.border = "1px solid red";
-		document.getElementById('username_div').style.color = "red";
+		document.getElementById('username_div').style.color = "yellow";
 		name_error.textContent = "First Name is required";
 		first_name.focus();
 	}
 	if (last_name.value === "") {
 		last_name.style.border = "1px solid red";
-		document.getElementById('lastname_div').style.color = "red";
+		document.getElementById('lastname_div').style.color = "yellow";
 		lastname_error.textContent = "Last Name is required";
 		last_name.focus();
 	}
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
-		document.getElementById('email_div').style.color = "red";
+		document.getElementById('email_div').style.color = "yellow";
 		email_error.textContent = "Email is required";
 		Email.focus();
 	}
 	if (phone.value === "") {
 		phone.style.border = "1px solid red";
-		document.getElementById('phone_div').style.color = "red";
+		document.getElementById('phone_div').style.color = "yellow";
 		phone_error.textContent = "Phone is required";
 		phone.focus();
 	}
-	if (age.value === "" || age.value < 18) { 
+	if (age.value === "") { 
 		age.style.border = "1px solid red";
-		document.getElementById('age_div').style.color = "red";
+		document.getElementById('age_div').style.color = "yellow";
 		age_error.textContent = "Age is required";
 		age.focus();
 	}
-	
+	if (age.value !== "" && age.value < 18) {
+		age.style.border = "1px solid red";
+		document.getElementById('age_div').style.color = "yellow";
+		age_error.textContent = "You must be 18 or older to participate.";
+		age.focus();
+	}
 	var chbox;
 	chbox = document.getElementById('Accept');
 
 	if(!chbox.checked){
 		age.style.border = "1px solid red";
-		document.getElementById('checkbox_div').style.color = "red";
+		document.getElementById('checkbox_div').style.color = "yellow";
 		checkbox_error.textContent = "That checkbox is required";
 	}
 	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
@@ -110,7 +115,7 @@ function emailVerify () {
 	var reg = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	if (reg.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
-		document.getElementById('email_div').style.color = "red";
+		document.getElementById('email_div').style.color = "yellow";
 		email_error.textContent = "Email is required";
 	} else {
 		Email.style.border = "1px solid green";
@@ -143,7 +148,7 @@ function uploadFile () {
 		}else{
 			localStorage.clear();
 			Email.style.border = "1px solid red";
-			document.getElementById('email_div').style.color = "red";
+			document.getElementById('email_div').style.color = "yellow";
 			email_error.textContent = "You have already played today. Please try again tomorrow.";
 		}
 	}).catch(function (error) {
