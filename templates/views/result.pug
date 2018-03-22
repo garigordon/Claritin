@@ -108,7 +108,7 @@ html(lang='en')
 		script.
 			window.onload = function () {
 				document.getElementById("image").src = localStorage.getItem('imgRes');
-			}
+			};
 			(function (window, location) {
 				history.replaceState(null, document.title, location.pathname + "#!/stealingyourhistory");
 				history.pushState(null, document.title, location.pathname);
@@ -121,4 +121,3 @@ html(lang='en')
 					}
 				}, false);
 			}(window, location));
-			localStorage.clear();
