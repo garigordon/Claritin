@@ -18,7 +18,7 @@ html(lang='en')
 			var phone = localStorage.getItem('phone');
 			var age = localStorage.getItem('age');
 			if (email === null && phone === null && first_name === null && last_name === null && age === null){
-				document.location = "/";
+				document.location = "/fr";
 			}
 		.wrapper
 			header.header
@@ -46,7 +46,7 @@ html(lang='en')
 							li.header-menu__item
 								a.header-menu__link(href='#') RULES
 							li.header-menu__item
-								a.header-menu__link(href='/concours') Français
+								a.header-menu__link(href='/Quiz') English
 			main.page__main.main
 				.container
 					.single-test__title
@@ -340,11 +340,11 @@ html(lang='en')
 								processData: false,
 								type: 'POST',
 								success: function (data) {
-									document.location = 'result';
-								},
+									document.location = 'resultat';
+								},  
 								error: function (data) {
 									//console.log(data.file_upload.phone);
-									document.location = 'result';
+									document.location = 'resultat';
 								}
 							};
 							jQuery.ajax(opts);

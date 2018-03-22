@@ -37,11 +37,14 @@ exports = module.exports = function (app) {
 	// Views
 	app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
+	app.get('/fr', routes.views.fr);
 	app.get('/checkDate', routes.views.checkDate);
 	app.get('/coming', routes.views.coming);
 	app.get('/close', routes.views.close);
 	app.get('/Quiz', routes.views.Quiz);
+	app.get('/concours', routes.views.concours);
 	app.get('/result', routes.views.result);
+	app.get('/resultat', routes.views.resultat);
 	app.get('/thanks', routes.views.thanks);
 	// NOTE: To protect a route so that only admins can see it, use the requireUser middleware:
 	// app.get('/protected', middleware.requireUser, routes.views.protected);

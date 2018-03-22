@@ -17,7 +17,7 @@ html(lang='en')
 			var phone = localStorage.getItem('phone');
 			var age = localStorage.getItem('age');
 			if (email === null && phone === null && first_name === null && last_name === null && age === null) {
-				document.location = "/";
+				document.location = "/fr";
 			}
 		.wrapper
 			header.header
@@ -44,8 +44,8 @@ html(lang='en')
 								a.header-menu__link(href='/#prizes') PRIZES
 							li.header-menu__item
 								a.header-menu__link(href='#') RULES
-							li.header-menu__item 
-								a.header-menu__link(href='/resultat') Français
+							li.header-menu__items
+								a.header-menu__link(href='/result') English
 			main.page__main.main
 				.container
 					.single-result
@@ -115,8 +115,8 @@ html(lang='en')
 				window.addEventListener("popstate", function () {
 					if (location.hash === "#!/stealingyourhistory") {
 						history.replaceState(null, document.title, location.pathname);
-						setTimeout(function () {
-							location.replace("http://13.59.224.151/");
+						setTimeout(function () { 
+							location.replace("http://13.59.224.151/fr");
 						}, 0);
 					}
 				}, false);

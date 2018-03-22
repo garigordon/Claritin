@@ -1,4 +1,3 @@
-
 function Validate() {
 	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	var first_name = document.forms['myForm']['first_name'];
@@ -150,7 +149,7 @@ function uploadFile () {
 		data: email,
 	}).then(function (response) {
 		if (response.data.day === "Quiz") {
-			document.location = "" + response.data.day + "";
+			document.location = "concours";
 		}else{
 			localStorage.clear();
 			Email.style.border = "1px solid red";

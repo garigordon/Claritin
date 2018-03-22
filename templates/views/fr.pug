@@ -9,7 +9,7 @@ html(lang='en')
 		link(href='css/style.css', rel='stylesheet', type='text/css')
 		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
 		script(src='https://unpkg.com/axios/dist/axios.min.js')
-		script(src='js/mainPage.js')
+		script(src='js/mainPageFr.js')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
 		.wrapper
@@ -38,7 +38,7 @@ html(lang='en')
 							li.header-menu__item
 								a.header-menu__link(href='#') RULES
 							li.header-menu__item
-								a.header-menu__link(href='/fr') Français
+								a.header-menu__link(href='/') English
 			main.page__main.main
 				.container
 					.home-slider__top
@@ -78,23 +78,23 @@ html(lang='en')
 							.row-line
 								.column
 									#username_div
-										input#first_name.form-control(type='text', name='first_name', placeholder='First Name*')
+										input#first_name.form-control(type='text', name='first_name', placeholder='Prénom*')
 										#name_error
 								.column
 									#lastname_div
-										input#last_name.form-control(type='text', name='last_name', placeholder='Last Name*')
+										input#last_name.form-control(type='text', name='last_name', placeholder='Nom de famille*')
 										#lastname_error
 								.full-width
 									#email_div
-										input#Email.form-control(placeholder='Email Address*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
+										input#Email.form-control(placeholder='Adresse e-mail*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
 										#email_error
 								.column
 									#phone_div
-										input#phone.form-control(type='text', name='phone', placeholder='Phone Number*')
+										input#phone.form-control(type='text', name='phone', placeholder='Numéro de téléphone*')
 										#phone_error
 								.column
 									#age_div
-										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Age*')
+										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Âge*')
 										#age_error
 							.item
 								label.checkbox(for='Accept')
@@ -151,7 +151,7 @@ html(lang='en')
 		script.
 			document.getElementById("age").onkeypress = function (event) {
 				event = event || window.event;
-				if (event.charCode && (event.charCode < 48 || event.charCode > 57) )
+				if (event.charCode && (event.charCode < 48 || event.charCode > 57))
 					return false;
 			};
 			document.getElementById('phone').addEventListener('input', function (e) {
