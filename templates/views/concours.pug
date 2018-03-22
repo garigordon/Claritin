@@ -20,6 +20,9 @@ html(lang='en')
 			if (email === null && phone === null && first_name === null && last_name === null && age === null){
 				document.location = "/fr";
 			}
+			if (localStorage.getItem('checkButton') === "check") {
+				document.location = "/";
+			}
 		.wrapper
 			header.header
 				.container.row-line.center
@@ -342,10 +345,12 @@ html(lang='en')
 								type: 'POST',
 								success: function (data) {
 									document.location = 'resultat';
+									localStorage.setItem("checkAnswerTest", "MOSTLY");
 								},  
 								error: function (data) {
 									//console.log(data.file_upload.phone);
 									document.location = 'resultat';
+									localStorage.setItem("checkAnswerTest", "MOSTLY");
 								}
 							};
 							jQuery.ajax(opts);

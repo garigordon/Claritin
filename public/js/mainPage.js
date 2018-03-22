@@ -143,7 +143,6 @@ function uploadFile () {
 	localStorage.setItem("email", email);
 	localStorage.setItem("phone", phone);
 	localStorage.setItem("age", age);
-	localStorage.setItem("checkButton", "done");
 	axios({
 		method: 'post',
 		url: 'http://13.59.224.151/api/fileupload/list',

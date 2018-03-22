@@ -16,7 +16,11 @@ html(lang='en')
 			var email = localStorage.getItem('email');
 			var phone = localStorage.getItem('phone');
 			var age = localStorage.getItem('age');
+			localStorage.setItem("checkButton", "check");
 			if (email === null && phone === null && first_name === null && last_name === null && age === null) {
+				document.location = "/";
+			}
+			if (localStorage.getItem('checkAnswerTest') !== "MOSTLY"){
 				document.location = "/";
 			}
 		.wrapper
