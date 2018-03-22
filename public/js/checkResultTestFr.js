@@ -136,7 +136,7 @@ $(function(){
 		newFile.append('ans_3', answ3);
 		newFile.append('ans_4', answ4);
 		newFile.append('ans_5', answ5);
-		newFile.append('language', "En");
+		newFile.append('language', "Fr");
 		axios({
 			method: 'post',
 			url: 'http://13.59.224.151/api/fileupload/list',
@@ -152,12 +152,12 @@ $(function(){
 					processData: false,
 					type: 'POST',
 					success: function (data) {
-						document.location = 'result';
+						document.location = 'resultat';
 						localStorage.setItem("checkAnswerTest", "MOSTLY");
 					},
 					error: function (data) {
 						//console.log(data.file_upload.phone);
-						document.location = 'result';
+						document.location = 'resultat';
 						localStorage.setItem("checkAnswerTest", "MOSTLY");
 					}
 				};
