@@ -21,8 +21,9 @@ FileUpload.add({
 	ans_4: { type: Number },
 	ans_5: { type: Number },
 	day: { type: Number },
+	language : { type: String },
 	createdAt: { type: Date, default: Date.now },
 });
 
-FileUpload.defaultColumns = 'name,first_name, last_name,email,phone,age,ans_1,ans_2,ans_3,ans_4,ans_5,day';
+FileUpload.defaultColumns = 'name,first_name, last_name,email,phone,age,ans_1,ans_2,ans_3,ans_4,ans_5,day,language';
 FileUpload.register();
