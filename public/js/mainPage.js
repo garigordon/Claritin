@@ -70,7 +70,7 @@ function Validate() {
 	if(!chbox.checked){
 		age.style.border = "1px solid red";
 		document.getElementById('checkbox_div').style.color = "yellow";
-		checkbox_error.textContent = "That checkbox is required";
+		checkbox_error.textContent = "This is a required field.";
 	}
 	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone.value.length === 15 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
