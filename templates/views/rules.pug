@@ -30,7 +30,7 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='/') HkkkkkkkOME
+								a.header-menu__link(href='/') Rules
 							li.header-menu__item
 								a.header-menu__link(href='#form-block') ENTER
 							li.header-menu__item
@@ -41,85 +41,143 @@ html(lang='en')
 								a.header-menu__link(href='/regles') Français
 			main.page__main.main
 				.container
-					.home-slider__top
-						.home-slider__item
-							img.home-slider__image.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
-							img.home-slider__image.home-slider__image--visible-mobile(src='img/banner-mob.png', alt='houdini')
-							.home-slider__content
-								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk.png', alt='')
-								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob.png', alt='')
-								.row-line
-									.column
-										h3.home-slider__title
-											| For your chance to 
-											strong WIN
-											| * 1 of 3 $1,000 Shoppers Drug Mart gift cards!
-										p.home-slider__text
-											| Allergies keeping you indoors? One non-drowsy Claritin
-											sup ®
-											|  pill provides 24-hour relief from indoor** and outdoor
-											sup †
-											|  allergy symptoms. Take the Claritin
-											sup ®
-											|  Outsider Quiz to find out what kind of outsider you are.
-										a.btn-home-slider(href='#form-block') ENTER
-							.home-slider__txt
-								span **dust, pets, mould
-								span
-									sup †
-									| pollen, trees, grass, ragweed
-					#form-block.home-form
-						.home-form__title
-							h3
-								span
-									| ENTER TO 
-									strong WIN
-						form#form2(name='myForm', action='http://13.59.224.151/api/fileupload/list', method='POST', enctype='multipart/form-data')
-							.row-line
-								.column
-									#username_div
-										input#first_name.form-control(type='text', name='first_name', placeholder='First Name*')
-										#name_error
-								.column
-									#lastname_div
-										input#last_name.form-control(type='text', name='last_name', placeholder='Last Name*')
-										#lastname_error
-								.full-width
-									#email_div
-										input#Email.form-control(placeholder='Email Address*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
-										#email_error
-								.column
-									#phone_div
-										input#phone.form-control(type='text', name='phone', placeholder='Phone Number*')
-										#phone_error
-								.column
-									#age_div
-										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Age*')
-										#age_error
-							.item
-								label.checkbox(for='Accept')
-									#checkbox_div
-										input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
-										span.checkbox__label I accept the official rules and regulations
-										#checkbox_error
-							.item
-								label.checkbox(for='Yes')
-									input#Yes.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
-									span.checkbox__label
-										| Yes, I would like to receive email communications about products and offerings from Bayer, Inc. and its affiliates. I understand I can unsubscribe at any time.
-							.item
-								p.home-form__fields *Fields are mandatory
-							.item
-								input.home-form__submit(type='button', value='SUBMIT', onclick='Validate()')
-							p#demo(style='color: red;')
-					#prizes.home-slider-banner
-						.home-slider-banner__item
-							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image.png', alt='')
-							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob.png', alt='')
-					.home-slider-banner
-						.home-slider-banner__item
-							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image_1.png', alt='')
-							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob_1.png', alt='')
+					.page
+						h3
+							| CLARITIN
+							sup ®
+							|  GET OUTSIDE CONTEST
+						h3 OFFICIAL RULES AND REGULATIONS
+						p
+							| THE 
+							b
+								| CLARITIN
+								sup ®
+								|  GET OUTSIDE CONTEST
+							|  (THE “
+							b CONTEST
+							| ”) IS INTENDED TO BE CONDUCTED IN CANADA ONLY AND SHALL BE CONSTRUED AND EVALUATED ACCORDING TO APPLICABLE CANADIAN LAW. 
+							b NO PURCHASE IS NECESSARY
+							| . PARTICIPANTS MUST BE EIGHTEEN (18) YEARS OF AGE OR OLDER AT THE TIME OF ENTRY. VOID IN WHOLE OR PART WHERE PROHIBITED BY LAW. ENTRY IN THIS CONTEST CONSTITUTES ACCEPTANCE OF THESE CONTEST RULES (THE “
+							b CONTEST RULES
+							| ”).  Learn more at 
+							a(href='www.claritincontest.com') www.claritincontest.com
+						ol
+							li
+								p
+									strong ELIGIBILITY
+									| . To be eligible for this Contest, an individual must:
+								ul.marg
+									li (a) be a legal resident of Canada;
+									li
+										| (b) be eighteen (18) years of age or older in his/her province or territory of residence or older at the time of entry;
+									li
+										| Employees of Bayer Inc. (the "
+										b Sponsor
+										| "), Shoppers Drug Mart/Pharmaprix (the “Participating Retailer”), their respective affiliates, subsidiaries, related companies, advertising and promotional agencies, representatives, the independent judging organization or persons with whom any of these are domiciled or a member of their immediate family (defined as mother, father, brothers, sisters, sons, daughters and husband or wife) of any of the above persons are not eligible to enter the Contest. Entries are limited to individuals only; commercial enterprise and business entities are not eligible to enter the Contest.
+									li
+										| The Sponsor shall have the right at any time to require proof of identity and/or eligibility to participate in the Contest. Failure to provide such proof may result in disqualification. All personal and other information requested by and supplied to the Sponsor for the purpose of the Contest must be truthful, complete, accurate and in no way misleading. The Sponsors reserve the right, in their sole discretion, to disqualify any entrant should such an entrant at any stage supply untruthful, incomplete, inaccurate or misleading personal details and/or information.
+							li
+								b CONTEST PERIOD
+								| . The Contest begins at 9:00 a.m. Eastern Daylight Time (“
+								b EDT
+								| ”) on Monday, April 16, 2018 and ends at 11:59 p.m. EDT on Friday, May 25, 2018 (the "
+								b Contest Period
+								| ").
+							li
+								p
+									b HOW TO ENTER: NO PURCHASE NECESSARY. To enter
+									| , visit 
+									a(href='www.claritincontest.com') www.claritincontest.com
+									|  (the “
+									b Contest Website
+									| ”) and complete the entry registration form by providing your first name, last name, e-mail address, telephone number and age.
+								ol(type='a')
+									li
+										| To enter into the contest, visit the Contest Website during the Contest Period, register, read and accept the Rules and click on “Submit”. Entrant will be taken to the Get Outside Quiz. Entrant must answer five (5) multiple choice questions. Entrant will be told what type of outsider they are based on their answers once the quiz is completed. Entrant will receive one (1) entry to the Grand Prize sweepstakes.
+									li
+										| Daily entry limit:  limit of one (1) entry per person, per day during the Contest Period. The same email address cannot be used by more than one person. The same ten-digit phone number cannot be used by more than one person. If it is discovered that you have registered or attempted to register more than once, or attempted to obtain more than the stated number of entries by using multiple/different email addresses, telephone numbers, identities, registrations or logins, or any other methods, all of your entries will be declared null and void, and you will not be eligible to receive or be awarded any prize.  Sponsor is not responsible for incomplete or incomprehensible contact information supplied by entrants.   Any attempted entry or registration form submission using electronic, computerized or any other type of means that go against the spirit of this Promotion (e.g.: hacking, mass e-mailing, etc.) will automatically be rejected and could be referred to the authorities. Any automated registration form will be detected and rejected.
+									li
+										| Entries must be received no later than the end of the Contest Period. Entries will be declared invalid if they are late, illegible, incomplete, damaged, irregular, mutilated, forged, garbled or mechanically or electronically reproduced. No communication or correspondence will be exchanged with entrants except with those selected for a prize.
+									li
+										| Entries received online shall be deemed to be submitted by the authorized account holder of the e-mail address associated with the entry. For the purpose of the Contest Rules, “authorized account holder" of an e-mail address is defined as the natural person who is assigned to an e-mail address by an Internet access provider, on-line service provider, or other organization responsible for assigning e-mail addresses for the domain associated with the submitted e-mail address. Each selected entrant may be required to provide the Sponsors with proof that the selected entrant is the authorized account holder of the e-mail address associated with the winning entry.
+							li
+								p
+									b PRIZES
+									| :  There are three (3) Grand Prizes (the “
+									b Grand Prize
+									| ”) available to be won at the outset of the promotion
+								ol(type='a')
+									li
+										p Each Grand Prize consists of:
+										ul
+											li
+												| 1 x $1,000 Shoppers Drug Mart Gift Card 
+												b Approx. Retail Value ($1000.00 CDN)
+											li
+												| Use of retailer gift card is subject to the terms and conditions set by the issuer of the gift card.
+									li Limit: one (1) prize per family/email/household
+									li
+										| Prizes must be accepted as awarded and cannot be reproduced, transferred, assigned, substituted or redeemed for cash, except at the sole discretion of the Sponsor. Any unused portion of a prize will be forfeited and have no cash value. The Sponsor reserves the right, in its sole discretion, to substitute a prize of equal or greater value if a prize (or any portion thereof) cannot be awarded for any reason, as determined by the Sponsor in its sole discretion.
+									li
+										| The Sponsors shall not assume any liability for lost, damaged or misdirected Prizes. In case of loss, theft, damage, degradation or non-authorized use, the prize will not be refunded or replaced.
+							li
+								p
+									strong GRAND PRIZE WINNER SELECTION:
+								p Three (3) Grand Prize winner shall be selected as follows:
+								ol(type='a')
+									li
+										| On or about June 1, 2018, 12:00 pm EDT in Toronto, Ontario, three (3) entrants will be selected as potential Grand Prize Winner by a random draw from all entries received during the Contest Period. The odds of being selected as a potential Grand Prize winner are dependent upon the number of entries received by the Sponsors. Before being declared a Grand Prize winner, each selected entrant shall be required to correctly answer, without assistance of any kind, whether mechanical or otherwise, a mathematical skill-testing question to be administered during a pre-arranged telephone call or by e-mail, to comply with the Contest Rules and sign and return the Release (described below).
+									li
+										| EACH SELECTED ENTRANT WILL BE NOTIFIED BY E-MAIL OR TELEPHONE NO LATER THAN June 8, 2018 AT 5:00 P.M. EDT AND MUST RESPOND WITHIN FIVE (5) BUSINESS DAYS OF NOTIFICATION. Upon notification, the selected entrant must respond by e-mail or telephone to the e-mail address or contact number provided in the notification, and the selected entrant’s response must be received by the Sponsor within five (5) business days of such notification. If the selected entrant does not respond in accordance with the Contest Rules, he/she will be disqualified and will not receive a Prize and another entrant may be selected in the Sponsor’s sole discretion until such time as an entrant satisfies the terms set out herein. The Sponsor is not responsible for the failure for any reason whatsoever of a selected entrant to receive notification or for the Sponsor to receive a selected entrant’s response.
+									li
+										| If, as a result of an error relating to the entry process, drawing or any other aspect of the Contest, there are more selected entrants than contemplated in these Contest Rules, there will be a random draw amongst all eligible Prize claimants after the Contest’s closing date to award the correct number of Prizes.
+									li
+										| Sponsor will not be held to award more Prizes than as set out in these Contest Rules.
+							li
+								p
+									b RELEASE
+									| . Prior to being declared a winner and receiving the Grand Prize, potential winners will be required to execute a legal agreement and release (“
+									b Release
+									| ”) that confirms Winners’: (i) eligibility for the Contest and compliance with these Contest Rules; (ii) acceptance of the Prize as offered; (iii) release of the Sponsor and its respective parent companies, subsidiaries, affiliates and/or related companies and each of their employees, directors, officers, suppliers, agents, sponsors, administrators, licensees, representatives, advertising, media buying and promotional agencies (collectively, the “
+									b Releasees
+									| ”) from any and all liability for any loss, harm, damages, cost or expense arising out of participation in the Contest, participation in any Contest-related activity or the acceptance, use, or misuse of any Prize, including but not limited to costs, injuries, losses related to personal injuries, death, damage to, loss or destruction of property, rights of publicity or privacy, defamation, or portrayal in a false light, or from any and all claims of third parties arising therefrom; and (iv) grant to the Sponsors of the unrestricted right, in the Sponsor’s collective or individual discretion, to produce, reproduce, publish, broadcast, communicate by telecommunication, exhibit, distribute, adapt and otherwise use or re-use the winner’s name, photograph, likeness, voice, province/territory and city of residence and/or statement regarding a prize, in any and all media now known or hereafter devised, in connection with the Contest and the promotion and exploitation thereof. The executed Release must be returned within ten (10) business days of the date indicated on the accompanying letter of notification or the verification as a Winner or the selected entrant will be disqualified and the Prize forfeited.
+								p
+									| The Potential winners may be required to furnish proof of identification that may include a driver’s license or other form of picture identification as part of the verification process. If any prize winner is not in compliance with these Contest Rules, incorrectly answers the skill-testing question, declines the prize, or if telephone/e-mail/mail communication between the Sponsor or its agent and potential winner’s telephone/e-mail/mail cannot be completed or is returned as undeliverable without a forwarding number or address, or if the winner fails to return the Declaration and Release/Waiver by the specified date, the prize may be forfeited. The signed Declaration and Release/Waiver, among other things, releases the Sponsor, its respective subsidiaries and associated companies, agents, including advertising and promotional agencies, and the Promotion Judges, from all liability relating to the Contest and acceptance and/or use of the prize and confirms the winner’s compliance with the Contest Rules.
+							li
+								b INDEMNIFICATION BY ENTRANT
+								| . By entering the Contest, entrant releases and holds Releasees harmless from any and all liability for any injuries, loss or damage of any kind to the entrant or any other person, including personal injury, death, or property damage, resulting in whole or in part, directly or indirectly, from acceptance, possession, use or misuse of any prize, participation in the Contest, any breach of the Contest Rules, or in any prize-related activity. The entrant agrees to fully indemnify Releasees from any and all claims by third parties relating to the Contest, without limitation.
+							li
+								b LIMITATION OF LIABILITY
+								| . The Sponsor assumes no responsibility or liability for lost, late, unintelligible/illegible, falsified, damaged, misdirected or incomplete entries, notifications, responses, replies or any Release, or for any computer, online, software, telephone, hardware or technical malfunctions that may occur, including but not limited to malfunctions that may affect the transmission or non-transmission of an entry. The Sponsor is not responsible for any incorrect or inaccurate information, whether caused by website users or by any of the equipment or programming associated with or utilized in the Contest or by any technical or human error which may occur in the administration of the Contest. The Sponsor assumes no responsibility for any error, omission, interruption, deletion, defect, delay in operation or transmission, communications line failure, theft or destruction or unauthorized access to, or alteration of, entries. The Sponsor is not responsible for any problems, failures or technical malfunction of any telephone network or lines, computer online systems, servers, providers, computer equipment, software, e-mail, players, or browsers, on account of technical problems or traffic congestion on the Internet, at any website, or on account of any combination of the foregoing or otherwise. The Sponsor is not responsible for any injury or damage to entrant or to any computer related to or resulting from participating or downloading materials in this Contest. Entrant assumes liability for injuries caused or claimed to be caused by participating in the Contest, or by the acceptance, possession, use of, or failure to receive any Prize. The Sponsor assumes no responsibility or liability in the event that the Contest cannot be conducted as planned for any reason, including those reasons beyond the control of the Sponsor, such as infection by computer virus, bugs, tampering, unauthorized intervention, fraud, technical failures, or corruption of the administration, security, fairness, integrity or proper conduct of this Contest and/or the Contest Website.
+							li
+								b CONDUCT
+								| . By participating in the Contest, each entrant agrees to be bound by the Contest Rules, which will be posted at the Contest Website and made available throughout the Contest Period. Entrant further agrees to be bound by the decisions of the Sponsor, which shall be final and binding in all respects, subject to approval by the Régie des alcools, des courses et des jeux du Québec (the “
+								b Régie
+								| ”), if required. The Sponsor reserves the right, in its sole discretion, to disqualify any entrant found to be: (a) violating the Contest Rules; (b) tampering or attempting to tamper with the entry process or the operation of the Contest and/or the Contest Website; and/or (c) acting in an unsportsmanlike or disruptive manner, or with intent to annoy, abuse, threaten or harass any other person. CAUTION: ANY ATTEMPT TO DELIBERATELY DAMAGE THE CONTEST WEBSITE OR ANY RELATED WEBSITE OR UNDERMINE THE LEGITIMATE OPERATION OF THE CONTEST MAY BE A VIOLATION OF CRIMINAL AND CIVIL LAWS. SHOULD SUCH AN ATTEMPT BE MADE, THE SPONSORS RESERVE THE RIGHT TO SEEK REMEDIES AND DAMAGES TO THE FULLEST EXTENT PERMITTED BY LAW, INCLUDING BUT NOT LIMITED TO CRIMINAL PROSECUTION. Winners must observe the Contest Rules and at all times behave appropriately when receiving their Prize. The Sponsors reserve the right to (i) remove themselves at any time from the premise of any winner if a winner fails to behave appropriately; and (ii) to disqualify such Winner.
+							li
+								p
+									b PRIVACY / USE OF PERSONAL INFORMATION.
+								p
+									| By participating in the Contest, entrant: (i) grants to the Sponsor the right to use his/her name, mailing address, telephone number and e-mail address (collectively the “
+									b Personal Information
+									| ”) for the purpose of administering the Contest, including but not limited to contacting and announcing the winners; (ii) if declared a winner, grants to the Sponsor the right to use his/her Personal Information for publicity and promotional purposes relating to the Contest, in any and all media now known or hereafter devised, without further compensation unless prohibited by law; and (iii) acknowledges that the Sponsor may disclose his/her Personal Information to third-party agents and service providers of any of the Sponsors in connection with any of the activities listed in (i) and (ii) above.
+							li
+								b INTELLECTUAL PROPERTY
+								| . All intellectual property, including but not limited to trade-marks, trade names, logos, designs, promotional materials, web pages, source code, drawings, illustrations, slogans and representations are owned by the Sponsor and/or their affiliates. All rights are reserved. Unauthorized copying or use of any copyrighted material or intellectual property without the express written consent of its owner is strictly prohibited.
+							li
+								b TERMINATION
+								| . Sponsor reserves the right, with the consent of the 
+								b Régie
+								|  in the Province of Québec, to terminate the Contest, in whole or in part, and/or modify, amend or suspend the Contest, and/or the Contest Rules in any way, at any time, for any reason without prior notice.
+							li
+								b LAW
+								| . These are the official Contest Rules. The Contest is subject to applicable federal, provincial and municipal laws and regulations. The Contest Rules are subject to change without notice in order to comply with any applicable federal, provincial and municipal laws or the policy of any other entity having jurisdiction over the Sponsor. All issues and questions concerning the construction, validity, interpretation and enforceability of the Contest Rules or the rights and obligations as between the entrant and the Sponsors in connection with the Contest shall be governed by and construed in accordance with the laws of the province of Ontario including procedural provisions without giving effect to any choice of law or conflict of law rules or provisions that would cause the application of any other jurisdiction’s laws. All entrants consent to the jurisdiction and venue of the Province of Ontario.
+							li
+								b LANGUAGE DISCREPANCY
+								| . In the event of any discrepancy or inconsistency between the terms and conditions of the Contest Rules and disclosures or other statements contained in any Contest-related materials, including but not limited to the Contest entry form, or point of sale, television, print or online advertising, the terms and conditions of the Contest Rules shall prevail, govern and control. In the event of any discrepancies between the English language Contest Rules and the non-English language Contest Rules, the English language Contest Rules shall prevail to the extent permitted by applicable law.
+							li
+								b QUEBEC, CANADA
+								| : Any litigation respecting the conduct or organization of a publicity contest may be submitted to the Régie des alcools, des courses et des jeux for a ruling. Any litigation respecting the awarding of a prize may be submitted to the Régie only for the purpose of helping the parties reach a settlement.
 			footer.footer
 				.container
 					ul.footer-menu.row-line.center

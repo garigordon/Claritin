@@ -830,6 +830,9 @@ Result page
 			line-height:1.25rem;
 			margin-bottom:30px;
 		}
+.single-result__text sup{
+			margin: -7px 0 -1px;
+		}
 .single-result__title{
 		margin: 0 0 36px;
 		font-size: 2.1875rem;
@@ -853,6 +856,8 @@ Result page
 		margin: -2px -2000px 30px;
 		text-align: center;
 		min-height: 100px;
+		position: relative;
+	 	z-index:22;
 	}
 
 .single__description h4{
@@ -884,6 +889,55 @@ Result page
 .single__description--large p{
 				font-size: 2.375rem;
 		 	}
+
+.page{
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
+
+.page h3{
+		color: #ffee31;
+		margin: 0 0 4px;
+		font-size: 1.5625rem;
+		text-align: center;
+	}
+
+.page h3 + h3{
+			margin-bottom:30px;
+		}
+
+.page p{
+		color: #ffee31;
+		font-weight: 400;
+		margin: 0 0 15px;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+.page a{
+		color: #ffee31;
+	}
+
+.page ol{
+		margin:0 0 0 18px;
+		color: #ffee31;
+		font-size: 1rem;
+		line-height: 1.5rem;
+	}
+
+.page ol > li{
+			margin-bottom: 15px;
+		}
+
+.page .marg{
+		list-style:none;
+		padding:0;
+		margin-left:30px;
+	}
+
+.page .marg > li{
+			margin-bottom: 15px;
+		}
 
 @media (max-width: 767px) {
 	.single-result{

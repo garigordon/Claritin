@@ -30,7 +30,7 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='/') HFFFFFFFOME
+								a.header-menu__link(href='/') Regles
 							li.header-menu__item
 								a.header-menu__link(href='#form-block') ENTER
 							li.header-menu__item
@@ -41,85 +41,123 @@ html(lang='en')
 								a.header-menu__link(href='/rules') English
 			main.page__main.main
 				.container
-					.home-slider__top
-						.home-slider__item
-							img.home-slider__image.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
-							img.home-slider__image.home-slider__image--visible-mobile(src='img/banner-mob.png', alt='houdini')
-							.home-slider__content
-								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk.png', alt='')
-								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob.png', alt='')
-								.row-line
-									.column
-										h3.home-slider__title
-											| For your chance to 
-											strong WIN
-											| * 1 of 3 $1,000 Shoppers Drug Mart gift cards!
-										p.home-slider__text
-											| Allergies keeping you indoors? One non-drowsy Claritin
-											sup ®
-											|  pill provides 24-hour relief from indoor** and outdoor
-											sup †
-											|  allergy symptoms. Take the Claritin
-											sup ®
-											|  Outsider Quiz to find out what kind of outsider you are.
-										a.btn-home-slider(href='#form-block') ENTER
-							.home-slider__txt
-								span **dust, pets, mould
-								span
-									sup †
-									| pollen, trees, grass, ragweed
-					#form-block.home-form
-						.home-form__title
-							h3
-								span
-									| ENTER TO 
-									strong WIN
-						form#form2(name='myForm', action='http://13.59.224.151/api/fileupload/list', method='POST', enctype='multipart/form-data')
-							.row-line
-								.column
-									#username_div
-										input#first_name.form-control(type='text', name='first_name', placeholder='Prénom*')
-										#name_error
-								.column
-									#lastname_div
-										input#last_name.form-control(type='text', name='last_name', placeholder='Nom de famille*')
-										#lastname_error
-								.full-width
-									#email_div
-										input#Email.form-control(placeholder='Adresse e-mail*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
-										#email_error
-								.column
-									#phone_div
-										input#phone.form-control(type='text', name='phone', placeholder='Numéro de téléphone*')
-										#phone_error
-								.column
-									#age_div
-										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Âge*')
-										#age_error
-							.item
-								label.checkbox(for='Accept')
-									#checkbox_div
-										input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
-										span.checkbox__label I accept the official rules and regulations
-										#checkbox_error
-							.item
-								label.checkbox(for='Yes')
-									input#Yes.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
-									span.checkbox__label
-										| Yes, I would like to receive email communications about products and offerings from Bayer, Inc. and its affiliates. I understand I can unsubscribe at any time.
-							.item
-								p.home-form__fields *Fields are mandatory
-							.item
-								input.home-form__submit(type='button', value='SUBMIT', onclick='Validate()')
-							p#demo(style='color: red;')
-					#prizes.home-slider-banner
-						.home-slider-banner__item
-							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image.png', alt='')
-							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob.png', alt='')
-					.home-slider-banner
-						.home-slider-banner__item
-							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image_1.png', alt='')
-							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob_1.png', alt='')
+					.page
+						h3
+							| CONCOURS « ALLEZ DEHORS » DE CLARITIN
+							sup ®
+						h3 RÈGLEMENT OFFICIEL
+						p
+							| LE 
+							strong CONCOURS « ALLEZ DEHORS » DE CLARITIN
+							sup ®
+							|  (LE « 
+							b CONCOURS
+							|  ») EST DESTINÉ AUX RÉSIDENTS DU CANADA SEULEMENT ET SERA INTERPRÉTÉ ET ÉVALUÉ EN FONCTION DES LOIS APPLICABLES AU CANADA. AUCUN ACHAT REQUIS. LES PARTICIPANTS DOIVENT AVOIR DIX-HUIT (18) ANS OU PLUS AU MOMENT DE LEUR INSCRIPTION. CE CONCOURS EST NUL EN TOUT OU EN PARTIE LÀ OÙ LA LOI L’INTERDIT. LA PARTICIPATION À CE CONCOURS CONSTITUE UNE ACCEPTATION DU PRÉSENT RÈGLEMENT DU CONCOURS (LE « RÈGLEMENT DU CONCOURS »). Pour en savoir plus : www.concoursclaritin.com.
+						ol
+							li
+								p
+									strong ADMISSIBILITÉ
+									| . Pour être admissible à ce concours, le participant doit :
+								ul.marg
+									li (a) être un résident autorisé du Canada; 
+									li (b) avoir au moins dix-huit (18) ans ou plus au moment de son inscription. 
+									li
+										| Les employés de Bayer Inc. (le « commanditaire »), de Pharmaprix (le « détaillant participant »), de leurs sociétés affiliées, filiales, sociétés liées, agences de publicité et de promotion et représentants respectifs, ainsi que ceux de l’organisation indépendante chargée de juger le concours et toute personne vivant sous le même toit qu’eux ou faisant partie de leur famille immédiate (c’est-à-dire mère, père, frère, sœur, fils, fille, époux et épouse) ne sont pas admissibles au concours. Les inscriptions sont limitées aux particuliers. Les entreprises commerciales et les entités commerciales ne sont pas admissibles au concours.
+									li
+										| Le commanditaire se réserve le droit d’exiger une preuve d’identité et/ou d’admissibilité au concours, et ce, en tout temps. Tout participant qui néglige de présenter une telle preuve peut être exclu du concours. Tous les renseignements personnels et autres demandés par le commanditaire et fournis à celui-ci par le participant dans le cadre du concours doivent être véridiques, complets et exacts et n’être nullement trompeurs. Le commanditaire se réserve le droit, à son entière discrétion, d’exclure tout participant qui fournit, à quelque étape que ce soit, des détails et/ou des renseignements personnels mensongers, incomplets, inexacts ou trompeurs.
+							li
+								b PÉRIODE DU CONCOURS.
+								|  Le concours commence le lundi 5 avril 2018 à 9 h 00 (heure avancée de l’Est – « 
+								b HAE
+								|  ») et se termine le vendredi 25 mai 2018 à 23 h 59 (HAE) (la « 
+								b période du concours
+								|  »).
+							li
+								p
+									b COMMENT PARTICIPER. AUCUN ACHAT REQUIS. Pour participer,
+									|  visitez le site www.concoursclaritin.com (le « 
+									b site Web du concours
+									|  ») et remplissez le formulaire d’inscription en indiquant votre prénom, votre nom de famille, votre adresse électronique, votre numéro de téléphone et votre âge.
+								ol(type='a')
+									li
+										| Pour participer au concours, visitez le site Web du concours pendant la période du concours, inscrivez-vous, lisez et acceptez le règlement officiel et cliquez sur « Soumettre ». Vous accéderez au jeu-questionnaire sur les activités extérieures et devrez répondre à cinq (5) questions à choix multiples, après quoi on vous dira quel type de personne d’extérieur vous êtes, en fonction de vos réponses, lorsque vous aurez fini de répondre au jeu-questionnaire. Vous recevrez alors une (1) inscription au tirage au sort des grands prix.
+									li
+										| Limite quotidienne d’inscription : limite d’une (1) inscription par personne, par jour, pendant la période du concours. La même adresse électronique ne peut être utilisée par plus d’une personne. Le même numéro de téléphone à dix (10) chiffres ne peut être utilisé par plus d’une personne. . S’il est découvert que vous avez rempli ou tenté de remplir plus d’un formulaire d’identification ou avez tenté d’obtenir plus que le nombre stipulé d’inscriptions en utilisant des adresses électroniques, des numéros de téléphone, des identités, des renseignements d’identification ou d’ouverture de session différents ou multiples ou toute autre méthode, toutes vos inscriptions seront déclarées nulles et vous ne serez admissible à aucun prix. Le commanditaire n’est pas responsable des coordonnées incomplètes ou incompréhensibles fournies par les participants. Toute tentative de soumettre une inscription ou un formulaire d’identification à l’aide de moyens électroniques, informatisés ou autres qui vont à l’encontre de l’esprit de cette promotion (par exemple piratage, envoi en masse de courriels, etc.) mènera à un rejet automatique de l’inscription ou du formulaire d’identification et pourrait être transmise aux autorités. Tout formulaire d’identification automatisé sera détecté et rejeté.
+									li
+										| Les inscriptions doivent être reçues au plus tard à la fin de la période du concours. Les inscriptions seront déclarées non valides si elles sont en retard, illisibles, incomplètes, endommagées, non conformes, mutilées, falsifiées, inintelligibles ou reproduites mécaniquement ou électroniquement. Aucune communication ni aucune correspondance ne sera échangée avec les participants, sauf avec ceux qui seront sélectionnés pour recevoir un prix.
+									li
+										| Les inscriptions reçues en ligne seront réputées avoir été soumises par le titulaire autorisé du compte de l’adresse électronique associée à l’inscription. Aux fins du règlement du concours, le « titulaire autorisé du compte » d’une adresse électronique est défini comme étant la personne physique à qui une adresse électronique a été attribuée par un fournisseur d’accès Internet, un fournisseur de service en ligne ou toute autre organisation responsable de l’attribution des adresses électroniques pour le domaine associé à l’adresse électronique soumise. Chaque participant sélectionné pourrait être tenu de fournir au commanditaire la preuve qu’il est le titulaire autorisé du compte de l’adresse électronique associée à l’inscription gagnante.
+							li
+								p
+									b PRIX
+									|  : Il y a trois (3) grands prix (chacun étant un « 
+									b grand prix
+									|  » et, collectivement, les « 
+									b grands prix
+									|  ») à gagner au début de la promotion :
+								ol(type='a')
+									li
+										p Chaque grand prix consiste en ce qui suit :
+										ul
+											li
+												| Une (1) carte-cadeau de 1000 $ de Pharmaprix – valeur au détail approximative : 1000,00 $ CAN). 
+												b
+													| [We have added Pharmaprix since this is the banner name in the province of Quebec. Simply delete if it’s not appropriate.]
+										p
+											| L’utilisation de la carte-cadeau du détaillant est assujettie aux modalités et conditions établies par l’émetteur de la carte-cadeau.
+									li Limite : un (1) prix par famille, adresse électronique ou ménage.
+									li
+										| Les prix doivent être acceptés tels qu’ils sont décernés. Ils ne peuvent être reproduits, transférés, assignés, remplacés ni échangés contre de l’argent, sauf à la discrétion exclusive du commanditaire. Toute partie inutilisée d’un prix sera perdue et n’a aucune valeur en argent. Le commanditaire se réserve le droit, à sa discrétion exclusive, de remplacer un prix par un prix de valeur égale ou supérieure, si un prix (ou toute portion d’un prix) ne peut être décerné pour quelque raison que ce soit, ainsi que le détermine le commanditaire, à sa discrétion exclusive.
+									li
+										| Le commanditaire se dégage de toute responsabilité en cas de prix perdus, endommagés ou mal acheminés. En cas de perte, de vol, de dommages, de dégradation ou d’utilisation non autorisée, le prix ne sera pas remboursé ni remplacé.
+							li
+								p
+									strong SÉLECTION DES GAGNANTS DES GRANDS PRIX :
+								p Trois (3) gagnants d’un grand prix seront sélectionnés, comme suit :
+								ol(type='a')
+									li
+										| Le ou vers le 1er juin 2018, à 12 h 00 (HAE), à Toronto (Ontario), trois (3) participants seront sélectionné en tant que gagnants potentiels d’un grand prix au moyen d’un tirage au sort effectué parmi toutes les inscriptions reçues pendant la période du concours. Les chances d’être sélectionné en tant que gagnant potentiel d’un grand prix dépendent du nombre d’inscriptions reçues par le commanditaire. Avant d’être déclaré gagnant d’un grand prix, chaque participant sélectionné sera tenu de répondre correctement, sans aide mécanique ou autre, à une question réglementaire d’arithmétique qui lui sera posée par téléphone à un moment fixé d’avance ou par courriel, afin de se conformer au règlement du concours, puis de signer et de retourner la renonciation (décrite ci-dessous).
+									li
+										| CHAQUE PARTICIPANT SÉLECTIONNÉ SERA AVISÉ PAR COURRIEL OU PAR TÉLÉPHONE AU PLUS TARD LE 8 JUIN 2018 À 17 H (HAE) ET DEVRA RÉPONDRE DANS LES CINQ (5) JOURS OUVRABLES SUIVANT CET AVIS. Lorsqu’il recevra l’avis, le participant sélectionné devra répondre par courriel à l’adresse électronique précisée dans l’avis ou par téléphone au numéro de téléphone précisé dans l’avis et le commanditaire devra recevoir sa réponse dans les cinq (5) jours ouvrables suivant l’avis. Si le participant sélectionné ne répond pas conformément au règlement du concours, il sera exclu et ne recevra pas le prix et un autre participant pourrait être sélectionné, à la discrétion exclusive du commanditaire, et ce, jusqu’au moment où un participant répondra aux modalités énoncées aux présentes. Le commanditaire n’est pas responsable, pour quelque raison que ce soit, du défaut de réception de l’avis par un participant sélectionné ni du défaut de réception de la réponse d’un participant sélectionné.
+									li
+										| Si, en raison d’une erreur liée au processus de participation, au tirage au sort ou à tout autre aspect du concours, le nombre de participants sélectionnés est supérieur à celui prévu dans le règlement du concours, un tirage au sort sera effectué après la date de clôture du concours parmi toutes les personnes admissibles réclamant un prix, en vue d’attribuer le nombre exact de prix.
+									li
+										| Le commanditaire ne sera pas tenu d’attribuer un nombre de prix supérieur à celui qui est stipulé dans le règlement du concours.
+							li
+								p
+									b RENONCIATION
+									| . Avant d’être déclarés gagnants et de recevoir un grand prix, les gagnants potentiels devront signer et retourner un accord juridique et une renonciation (« renonciation ») confirmant : (i) leur admissibilité au concours et leur conformité au présent règlement du concours; (ii) leur acceptation du prix tel qu’il est offert; (iii) qu’ils dégagent le commanditaire et ses sociétés mères, ses filiales, ses sociétés affiliées et/ou ses sociétés liées, ainsi que chacun de leurs employés, directeurs, dirigeants, fournisseurs, mandataires, commanditaires, administrateurs, titulaires de licence, représentants, agences de publicité, d’achat de médias et de promotion (collectivement, les « renonciataires ») de toute responsabilité pour les pertes, préjudices, dommages, frais ou dépenses découlant de la participation au concours, de la participation à toute activité liée au concours ou de l’acceptation, de l’utilisation ou du mésusage de tout prix, y compris, mais sans s’y limiter, les coûts, les préjudices, les pertes associées aux lésions corporelles, au décès, aux dommages, à la perte ou à la destruction de biens, aux droits de publicité ou à la vie privée, à la diffamation ou à la présentation erronée ou contre toute réclamation de tiers qui en découlent; et (iv) qu’ils accordent au commanditaire le droit inconditionnel, à la discrétion du commanditaire, de produire, de reproduire, de publier, de diffuser, de communiquer par télécommunication, d’exposer, de distribuer, d’adapter et d’utiliser autrement ou de réutiliser le nom, la photographie, l’image, la voix, le nom de la province (ou du territoire) et de la ville de résidence du gagnant, ainsi que les déclarations du gagnant au sujet du prix, dans les médias connus présentement ou conçus ultérieurement, relativement au concours, à sa promotion et à son exploitation. La renonciation signée doit être retournée dans les dix (10) jours ouvrables suivant la date indiquée dans la lettre de notification ou de confirmation du gagnant qui l’accompagne, à défaut de quoi le participant sélectionné sera exclu et perdra le prix.
+								p
+									| Les gagnants potentiels pourraient être tenus de fournir une preuve d’identité, par exemple un permis de conduire ou une autre pièce d’identité avec photo, dans le cadre du processus de vérification. Si un gagnant d’un prix ne respecte pas le présent règlement du concours, ne répond pas correctement à la question réglementaire ou refuse le prix, ou si les appels téléphoniques destinés au gagnant potentiel demeurent sans réponse et sans numéro de renvoi, ou si la communication par courrier électronique ou par la poste envoyée par le commanditaire (ou son mandataire) au gagnant potentiel ne peut être acheminée ou est retournée comme étant non livrable sans adresse de réexpédition, ou encore si le gagnant potentiel omet de retourner le formulaire de déclaration et de renonciation au plus tard à la date indiquée, le gagnant potentiel pourrait perdre son prix. Le formulaire de déclaration et de renonciation signé, entre autres, dégage le commanditaire, ses filiales, sociétés affiliées et mandataires, incluant ses agences de publicité et de promotion, ainsi que les juges de la promotion, de toute responsabilité relativement au concours et à l’acceptation et/ou à l’utilisation du prix et confirme que le gagnant s’est conformé au règlement du concours.
+							li
+								b NDEMNISATION PAR LE PARTICIPANT
+								| . En prenant part au concours, chaque participant garantit les renonciataires contre toute responsabilité pour les préjudices, les pertes ou les dommages de quelque nature que ce soit subis par le participant ou toute autre personne, y compris les lésions corporelles, le décès ou les dommages matériels, résultant, en tout ou en partie, directement ou directement, de l’acceptation, de la possession, de l’utilisation ou du mésusage de tout prix, de la participation au concours, de toute violation du règlement du concours ou de toute activité liée au prix. Chaque participant consent à garantir entièrement les renonciataires contre toute réclamation par un tiers relativement au concours, et ce, sans restriction.
+							li
+								b LIMITATION DE RESPONSABILITÉ
+								| . Le commanditaire n’assume aucune responsabilité pour les inscriptions, notifications, réponses, renonciations ou messages perdus, en retard, incompréhensibles, illisibles, contrefaits, endommagés, mal acheminés ou incomplets, ni pour les problèmes d’ordinateur, de connexion, de logiciel, de téléphone, de matériel ou toute défectuosité technique qui pourraient survenir, y compris, mais sans s’y limiter, toute défaillance qui pourrait toucher la transmission ou la non-transmission de toute inscription. Le commanditaire n’assume aucune responsabilité pour tout renseignement erroné ou incorrect, qu’il soit causé par les usagers du site Web ou par un équipement ou un programme associés au concours ou utilisés dans le cadre de celui-ci ou par toute erreur technique ou humaine qui pourrait se produire au cours de l’administration du concours. Le commanditaire n’assume aucune responsabilité pour les erreurs, les omissions, les interruptions, les suppressions, les défauts, les retards de fonctionnement ou de transmission, les pannes des lignes de communication ou le vol, la destruction ou l’altération des inscriptions, ainsi que l’accès non autorisé à celles-ci. Le commanditaire ne peut être tenu responsable des problèmes, des pannes ou du mauvais fonctionnement d’un réseau ou d’une ligne téléphonique, des systèmes informatiques en ligne, des serveurs, des fournisseurs, du matériel informatique, des logiciels, des messages électroniques, des lecteurs ou des navigateurs dus à des problèmes techniques ou de congestion sur Internet ou sur tout site Web, ou à toute combinaison des éléments précédents ou autrement. Le commanditaire n’est aucunement responsable des préjudices ou des dommages qu’un participant ou un ordinateur pourrait subir en raison de la participation au concours ou du téléchargement de documents liés au concours. Les participants assument la responsabilité des préjudices causés, ou allégués avoir été causés, par leur participation au concours ou par l’acceptation, la possession, l’utilisation ou la non-réception de tout prix. Le commanditaire n’assume aucune responsabilité dans l’éventualité où le concours ne pourrait se dérouler comme prévu, et ce, pour quelque raison que ce soit, y compris des raisons indépendantes de sa volonté, comme une infection par un virus informatique, un bogue, une altération, une intervention non autorisée, une fraude, des problèmes techniques ou une corruption de l’administration, de la sécurité, de l’équité, de l’intégrité, du bon déroulement du concours et/ou du bon fonctionnement du site Web du concours.
+							li
+								b CONDUITE
+								| . En prenant part au concours, chaque participant accepte d’être lié par le règlement du concours, qui sera affiché sur le site Web du concours et qui demeurera à la disposition du public tout au long de la période du concours. Le participant accepte également de respecter les décisions du commanditaire, qui sont finales et exécutoires à tous points de vue, sous réserve de l’approbation de la Régie des alcools, des courses et des jeux du Québec (la « Régie »), le cas échéant. Le commanditaire se réserve le droit, à son entière discrétion, d’exclure tout participant qui : a) viole le règlement du concours; b) altère ou tente d’altérer le processus d’inscription, le déroulement du concours et/ou le fonctionnement du site Web du concours; et/ou c) agit de manière antisportive ou perturbatrice ou en ayant l’intention de déranger, d’exploiter, de menacer ou de harceler une autre personne. AVERTISSEMENT : TOUTE TENTATIVE D’ENDOMMAGER DÉLIBÉRÉMENT LE SITE WEB DU CONCOURS OU TOUT SITE WEB RELIÉ À CELUI-CI OU DE SAPER LE DÉROULEMENT LÉGITIME DE CE CONCOURS PEUT CONSTITUER UNE INFRACTION AUX LOIS PÉNALES ET CIVILES. DANS L’ÉVENTUALITÉ D’UNE TELLE TENTATIVE, LE COMMANDITAIRE SE RÉSERVE LE DROIT D’EXERCER DES RECOURS ET DE RÉCLAMER DES DOMMAGES-INTÉRÊTS AVEC TOUTE LA RIGUEUR DE LA LOI, Y COMPRIS, MAIS SANS S’Y LIMITER, DES POURSUITES CRIMINELLES. Les gagnants doivent respecter le règlement du concours et se comporter en tout temps d’une façon convenable lorsqu’ils reçoivent leur prix. Le commanditaire se réserve le droit : (i) de se retirer en tout temps des lieux où se trouve un gagnant si celui-ci ne se comporte pas convenablement; et (ii) d’exclure un tel gagnant.
+							li
+								b VIE PRIVÉE ET UTILISATION DES RENSEIGNEMENTS PERSONNELS
+								| . En prenant part au concours, le participant : (i) accorde au commanditaire le droit d’utiliser son nom, son adresse postale, son numéro de téléphone et son adresse électronique (collectivement, les « 
+								b renseignements personnels
+								|  ») dans le but d’administrer le concours, y compris, mais sans s’y limiter, pour contacter et annoncer les gagnants; (ii) accorde au commanditaire le droit d’utiliser ses renseignements personnels à des fins publicitaires et promotionnelles reliées au concours dans tous les médias connus présentement ou conçus ultérieurement, et ce, sans autre compensation, sauf si cette utilisation est interdite par la loi, s’il est déclaré gagnant; et (iii) reconnaît que le commanditaire peut révéler ses renseignements personnels à des mandataires et fournisseurs de service de tierces parties relativement à toute activité énumérée aux points (i) et (ii) ci-dessus.
+							li
+								b PROPRIÉTÉ INTELLECTUELLE.
+								|  Toute propriété intellectuelle, y compris, mais sans s’y limiter, les marques de commerce, les noms commerciaux, les logos, les éléments graphiques, le matériel promotionnel, les pages Web, les codes sources, les dessins, les illustrations, les slogans et les représentations, appartient au commanditaire ou à ses sociétés affiliées. Tous droits réservés. La reproduction ou l’utilisation non autorisée de tout matériel protégé par un droit d’auteur ou de tout élément de propriété intellectuelle sont strictement interdites sans l’autorisation expresse écrite de son propriétaire.
+							li
+								b ANNULATION
+								| . Le commanditaire se réserve le droit, sous réserve de l’approbation de la Régie pour la province de Québec, de mettre fin au concours, en tout ou en partie, et/ou de modifier, de réviser ou de suspendre le concours et/ou le règlement du concours, et ce, de quelque façon que ce soit, en tout temps et pour toute raison, sans préavis.
+							li
+								b LOIS APPLICABLES
+								| . Le présent règlement constitue le règlement officiel du concours. Le concours est assujetti aux lois et aux règlements fédéraux, provinciaux et municipaux en vigueur. Le commanditaire pourrait modifier le règlement du concours sans préavis, afin de le rendre conforme à toute loi fédérale, provinciale ou municipale ou à la politique de toute entité ayant autorité sur le commanditaire. Tous les litiges et toutes les questions concernant la structure, la validité, l’interprétation et le caractère exécutoire du règlement du concours ou les droits et obligations qui pourraient exister entre les participants et le commanditaire relativement au concours sont régis par les lois de la province de l’Ontario et doivent être interprétés conformément auxdites lois, y compris les dispositions de procédure, sans égard aux conflits de lois ou aux règles ou dispositions qui feraient en sorte que les lois d’une autre autorité s’appliqueraient. Tous les participants reconnaissent la compétence des tribunaux de la province de l’Ontario.
+							li
+								b DIVERGENCES.
+								|  En cas de divergence ou de contradiction entre les modalités et conditions du règlement du concours et les déclarations ou autres énoncés contenus dans tout autre matériel lié au concours, y compris, mais sans s’y limiter, le formulaire d’identification du concours ou la publicité au point de vente, télévisée, imprimée ou en ligne, les modalités et conditions du règlement du concours prévaudront, régiront le concours et auront préséance. En cas de divergence entre la version anglaise du règlement du concours et une version dans toute autre langue, la version anglaise aura préséance dans la mesure autorisée par la loi applicable.
+							li
+								b QUÉBEC (CANADA)
+								|  : Tout différend quant à la conduite ou à l’organisation d’un concours publicitaire peut être soumis à la Régie des alcools, des courses et des jeux afin qu’il soit tranché. Un différend quant à l’attribution d’un prix peut être soumis à la Régie uniquement aux fins d’une intervention pour tenter de le régler.
 			footer.footer
 				.container
 					ul.footer-menu.row-line.center

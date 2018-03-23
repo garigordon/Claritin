@@ -770,6 +770,9 @@ Result page
 			line-height:20px;
 			margin:* * 30px;
 		}
+		sup{
+			margin: -7px 0 -1px;
+		}
 	}
 	&__title{
 		margin: 0 0 36px;
@@ -793,6 +796,8 @@ Result page
 		margin: -2px -2000px 30px;
 		text-align: center;
 		min-height: 100px;
+		position: relative;
+	 	z-index:22;
 		h4{
 			color: var(--colorBlue);
 			font-weight: 400;
@@ -820,6 +825,46 @@ Result page
 				font-size: 38px;
 		 	}
 		 }
+	}
+}
+
+.page{
+	padding: 30px *;
+	h3{
+		color: var(--colorYellow);
+		margin: 0 0 4px;
+		font-size: 25px;
+		text-align: center;
+		+ h3{
+			margin:* * 30px;
+		}
+	}
+	p{
+		color: var(--colorYellow);
+		font-weight: 400;
+		margin: 0 0 15px;
+		font-size: 16px;
+		line-height: 24px;
+	}
+	a{
+		color: var(--colorYellow);
+	}
+	ol{
+		margin:0 0 0 18px;
+		color: var(--colorYellow);
+		font-size: 16px;
+		line-height: 24px;
+		> li{
+			margin: * * 15px;
+		}
+	}
+	.marg{
+		list-style:none;
+		padding:0;
+		margin:* * * 30px;
+		> li{
+			margin: * * 15px;
+		}
 	}
 }
 
