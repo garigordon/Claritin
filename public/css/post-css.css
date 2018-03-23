@@ -176,7 +176,7 @@ Layout
 	&__list{
 		color:  #275295 #ffee31;
 		list-style: none;
-		padding: 6px;
+		padding: 6px 6px 4px;
 		margin: 0;
 		justify-content:space-around;
 		display: flex;
@@ -185,14 +185,16 @@ Layout
 		}
 	}
 	&__item{
-		position: relative;
-		padding: 0 4%;
+		 position: relative;
+		 padding: 0 4%;
+		 width: 20%;
+		 text-align: center;
 		&::after{
 			content:'';
 			size:2px 13px;
 			background: #275295;
 			display: block;
-			position: absolute 4px * * 0;
+			position: absolute 0px * * 0;
 		}
 		&:first-child{
 			&::after{
@@ -205,6 +207,7 @@ Layout
 		font-weight: bold;
 		color: #275295;
 		display: block;
+		line-height:1;
 		text-transform: uppercase;
 	}
 }

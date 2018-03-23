@@ -206,7 +206,7 @@ Layout
 		color:  #275295;
 		background-color:  #ffee31;
 		list-style: none;
-		padding: 6px;
+		padding: 6px 6px 4px;
 		margin: 0;
 		-ms-flex-pack:distribute;
 		    justify-content:space-around;
@@ -223,8 +223,10 @@ Layout
 		}
 
 .header-menu__item{
-		position: relative;
-		padding: 0 4%;
+		 position: relative;
+		 padding: 0 4%;
+		 width: 20%;
+		 text-align: center;
 	}
 
 .header-menu__item::after{
@@ -233,7 +235,7 @@ Layout
 			height:13px;
 			background: #275295;
 			display: block;
-			top: 4px;
+			top: 0px;
 			left: 0;
 			position: absolute;
 		}
@@ -247,6 +249,7 @@ Layout
 		font-weight: 700;
 		color: #275295;
 		display: block;
+		line-height:1;
 		text-transform: uppercase;
 	}
 
