@@ -1,4 +1,5 @@
 localStorage.clear();
+
 function Validate() {
 	var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	var first_name = document.forms['myForm']['first_name'];
@@ -72,7 +73,7 @@ function Validate() {
 		document.getElementById('checkbox_div').style.color = "yellow";
 		checkbox_error.textContent = "This is a required field.";
 	}
-	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone.value.length === 15 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 15 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
 }
