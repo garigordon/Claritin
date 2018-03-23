@@ -125,48 +125,50 @@ $(function(){
 				}
 			}
 		}
-		var newFile = new FormData();
-		newFile.append('first_name', first_name);
-		newFile.append('last_name', last_name);
-		newFile.append('email', email);
-		newFile.append('phone', phone);
-		newFile.append('age', age);
-		newFile.append('ans_1', answ1);
-		newFile.append('ans_2', answ2);
-		newFile.append('ans_3', answ3);
-		newFile.append('ans_4', answ4);
-		newFile.append('ans_5', answ5);
-		newFile.append('language', "Fr");
-		axios({
-			method: 'post',
-			url: 'http://13.59.224.151/api/fileupload/list',
-			data: email,
-		}).then(function (response) {
-			newFile.append('day', response.data.date);
-			if (response.data.day === "Quiz") {
-				var opts = {
-					url: 'http://13.59.224.151/api/fileupload/create',
-					data: newFile,
-					cache: false,
-					contentType: false,
-					processData: false,
-					type: 'POST',
-					success: function (data) {
-						document.location = 'resultat';
-						localStorage.setItem("checkAnswerTest", "MOSTLY");
-					},
-					error: function (data) {
-						//console.log(data.file_upload.phone);
-						document.location = 'resultat';
-						localStorage.setItem("checkAnswerTest", "MOSTLY");
-					}
-				};
-				jQuery.ajax(opts);
-			} else {
-				document.location = "/";
-			}
-		}).catch(function (error) {
-			console.log(error);
-		});
+		if (answ1 !== 0 && answ2 !== 0 && answ3 !== 0 && answ4 !== 0 && answ5 !== 0 && answ1 !== undefined && answ2 !== undefined && answ3 !== undefined && answ4 !== undefined && answ5 !== undefined) {
+			var newFile = new FormData();
+			newFile.append('first_name', first_name);
+			newFile.append('last_name', last_name);
+			newFile.append('email', email);
+			newFile.append('phone', phone);
+			newFile.append('age', age);
+			newFile.append('ans_1', answ1);
+			newFile.append('ans_2', answ2);
+			newFile.append('ans_3', answ3);
+			newFile.append('ans_4', answ4);
+			newFile.append('ans_5', answ5);
+			newFile.append('language', "Fr");
+			axios({
+				method: 'post',
+				url: 'http://13.59.224.151/api/fileupload/list',
+				data: email,
+			}).then(function (response) {
+				newFile.append('day', response.data.date);
+				if (response.data.day === "Quiz") {
+					var opts = {
+						url: 'http://13.59.224.151/api/fileupload/create',
+						data: newFile,
+						cache: false,
+						contentType: false,
+						processData: false,
+						type: 'POST',
+						success: function (data) {
+							document.location = 'resultat';
+							localStorage.setItem("checkAnswerTest", "MOSTLY");
+						},
+						error: function (data) {
+							//console.log(data.file_upload.phone);
+							document.location = 'resultat';
+							localStorage.setItem("checkAnswerTest", "MOSTLY");
+						}
+					};
+					jQuery.ajax(opts);
+				} else {
+					document.location = "/";
+				}
+			}).catch(function (error) {
+				console.log(error);
+			});
+		}
 	});
 });
