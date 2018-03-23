@@ -11,25 +11,25 @@ $(function(){
 			answ5 = val[4];
 		});
 		var arr = [answ1, answ2, answ3, answ4, answ5];
-		var ks=[];
-		for(var value of arr){
-			ks[value] = (ks[value]||0)+1;
+		var ks = [];
+		for (var value of arr) {
+			ks[value] = (ks[value] || 0) + 1;
 		}
-		var arr2 =[];
-		var arr3 =[];
-		for(var i in arr) {
-			if (  ks[ arr[i] ] > 2 ){
+		var arr2 = [];
+		var arr3 = [];
+		for (var i in arr) {
+			if (ks[arr[i]] > 2) {
 				arr3.push(arr[i]);
-				ks[ arr[i] ] = 0;
+				ks[arr[i]] = 0;
 				break;
-			}else if ( ks[ arr[i] ] > 1 && ks[ arr[i] ] != 3 ){
+			} else if (ks[arr[i]] > 1 && ks[arr[i]] != 3) {
 				arr2.push(arr[i]);
-				ks[ arr[i] ] = 0;
+				ks[arr[i]] = 0;
 			}
 		}
-		if(arr2.length > 1 && arr3.length == 0){
+		if (arr2.length > 1 && arr3.length == 0) {
 			for (var i = 0; i < arr2.length; i++) {
-				if(arr2[i] < arr2[0]){
+				if (arr2[i] < arr2[0]) {
 					arr2[0] = arr2[i];
 				}
 			}
