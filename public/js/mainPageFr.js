@@ -135,6 +135,12 @@ function uploadFile () {
 	localStorage.setItem("email", email);
 	localStorage.setItem("phone", phone);
 	localStorage.setItem("age", age);
+	var chbox = document.getElementById('Yes');
+	if (chbox.checked) {
+		localStorage.setItem("checkbox", "Yes");
+	} else {
+		localStorage.setItem("checkbox", "No");
+	}
 	axios({
 		method: 'post',
 		url: 'http://13.59.224.151/api/fileupload/list',

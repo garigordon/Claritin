@@ -132,7 +132,12 @@ function uploadFile () {
 	var email = document.getElementById('Email').value;
 	var phone = document.getElementById('phone').value;
 	var age = document.getElementById('age').value;
-    
+	var chbox = document.getElementById('Yes');
+	if (chbox.checked) {
+		localStorage.setItem("checkbox", "Yes");
+	} else {
+		localStorage.setItem("checkbox", "No");
+	}
 	localStorage.setItem("first_name", first_name);
 	localStorage.setItem("last_name", last_name);
 	localStorage.setItem("email", email);
