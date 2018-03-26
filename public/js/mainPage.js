@@ -16,7 +16,8 @@ function Validate() {
 
 	var phone = document.forms['myForm']['phone'];
 	var phone_error = document.getElementById('phone_error');
-
+	phone.addEventListener('keyup', phoneVerify, true);
+	
 	var age = document.forms['myForm']['age'];
 	var age_error = document.getElementById('age_error');
 	age.addEventListener('keyup', ageVerify, true);
@@ -84,6 +85,14 @@ function nameVerify () {
 		return true; 
 	}
 }
+
+function phoneVerify () {
+	if (phone.value.length === 10) {
+		phone.style.border = "1px solid green";
+		return true;
+	}
+}
+
 function checkboxVerify () {
 	var chbox;
 	chbox = document.getElementById('Accept');

@@ -162,9 +162,11 @@ html(lang='en')
 				e.target.value = !x[2] ? x[1] : x[1] + x[2] + (x[3] ? x[3] : '');
 				for (i = 0; i < arr.length; i++) {
 					if (x[1] != arr[i]) {
+						phone.style.border = "1px solid red";
 						document.getElementById('phone_div').style.color = "yellow";
 						phone_error.textContent = "Invalid Phone number.";
 					} else {
+						phone.style.border = "1px solid green";
 						i = arr[i];
 						phone_error.textContent = "";
 					}

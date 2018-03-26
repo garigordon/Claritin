@@ -154,20 +154,20 @@ html(lang='en')
 				if (event.charCode && (event.charCode < 48 || event.charCode > 57))
 					return false;
 			};
-			
+
 			var i;
 			var arr = [204, 226, 236, 249, 250, 289, 306, 343, 365, 403, 416, 418, 431, 437, 438, 450, 506, 514, 519, 548, 579, 581, 587, 604, 613, 639, 647, 705, 709, 778, 780, 782, 807, 819, 825, 867, 873, 902, 905];
 			document.getElementById('phone').addEventListener('input', function (e) {
 				var x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-				e.target.value = !x[2] ? x[1] :  x[1] + x[2] + (x[3] ? x[3] : '');
+				e.target.value = !x[2] ? x[1] : x[1] + x[2] + (x[3] ? x[3] : '');
 				for (i = 0; i < arr.length; i++) {
 					if (x[1] != arr[i]) {
 						phone.style.border = "1px solid red";
 						document.getElementById('phone_div').style.color = "yellow";
 						phone_error.textContent = "Invalid Phone number.";
 					} else {
-						i = arr[i];
 						phone.style.border = "1px solid green";
+						i = arr[i];
 						phone_error.textContent = "";
 					}
 				}
