@@ -16,7 +16,6 @@ function Validate() {
 
 	var phone = document.forms['myForm']['phone'];
 	var phone_error = document.getElementById('phone_error');
-	phone.addEventListener('keyup', phoneVerify, true);
 
 	var age = document.forms['myForm']['age'];
 	var age_error = document.getElementById('age_error');
@@ -47,7 +46,7 @@ function Validate() {
 		phone_error.textContent = "Invalid Phone number.";
 		phone.focus();
 	}
-	if (phone.value !== "" && phone.value.length < 15) {
+	if (phone.value !== "" && phone.value.length < 10) {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
 		phone_error.textContent = "Phone number must be 10 digits.";
@@ -68,16 +67,16 @@ function Validate() {
 	var chbox;
 	chbox = document.getElementById('Accept');
 
-	if(!chbox.checked){
+	if (!chbox.checked) {
 		age.style.border = "1px solid red";
 		document.getElementById('checkbox_div').style.color = "yellow";
 		checkbox_error.textContent = "This is a required field.";
 	}
-	if(first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 15 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
 }
-function nameVerify() {
+function nameVerify () {
 	if (first_name.value !== "") {
 		first_name.style.border = "1px solid green";
 		document.getElementById('username_div').style.color = "green";
@@ -85,7 +84,7 @@ function nameVerify() {
 		return true; 
 	}
 }
-function checkboxVerify() {
+function checkboxVerify () {
 	var chbox;
 	chbox = document.getElementById('Accept');
 	if (chbox.checked) {
@@ -94,6 +93,7 @@ function checkboxVerify() {
 		return true;
 	}
 }
+
 function lastVerify () {
 	if (last_name.value !== "") {
 		last_name.style.border = "1px solid green";
@@ -102,14 +102,7 @@ function lastVerify () {
 		return true;
 	}
 }
-function phoneVerify () {
-	if (phone.value !== "" && phone.value.length > 14) {
-		phone.style.border = "1px solid green";
-		document.getElementById('phone_div').style.color = "green";
-		phone_error.textContent = "";
-		return true;
-	}
-}
+
 function ageVerify () {
 	if (age.value !== "" && age.value > 17) {
 		age.style.border = "1px solid green";
@@ -118,6 +111,7 @@ function ageVerify () {
 		return true;
 	}
 }
+
 function emailVerify () {
 	var reg = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	if (reg.test(Email.value) === false) {
@@ -161,98 +155,3 @@ function uploadFile () {
 		console.log(error);
 	});
 }
-
-//
-// function myFunction() {
-// 	var email;
-// 	email = document.getElementById("Email").value;
-// 	alert(email)
-// 	var reg = /^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$/;
-// 	if (reg.test(Email.value) === false) {
-// 		document.getElementById("demo").style.color = "red";
-// 		document.getElementById("demo").innerHTML ="EMail is not correct";
-// 		return false;
-// 	} else {
-// 		uploadFile();
-// 	}
-// 	return true;
-// }
-//
-// function uploadFile() {
-// 	console.log('FILE')
-//
-// 	var first_name = $('#first_name').val();
-// 	var last_name = $('#last_name').val();
-// 	var email = $('#Email').val();
-// 	var phone = $('#phone').val();
-// 	var age = $('#age').val();
-//	
-// 	localStorage.setItem("first_name", first_name);
-// 	localStorage.setItem("last_name", last_name);
-// 	localStorage.setItem("email", email);
-// 	localStorage.setItem("phone", phone);
-// 	localStorage.setItem("age", age);
-//	
-// 	//document.location = './test.html';
-//	
-// 	var opts = {
-// 		url: 'http://localhost:3000/api/fileupload/list',
-// 		data: email,
-// 		type: 'POST',
-// 		dataType: 'json',
-// 		success: function(data) {
-// 			console.log("result")
-// 			// console.log(data);
-// 			// console.log(data.msg);
-// 			//document.location = './test.html';
-// 		},
-// 		complete: function(data, res) {
-// 			//console.log(data);
-// 			//console.log(data.collections);
-// 			alert(JSON.stringify(data));
-// 		},
-// 		error: function(data) {
-// 			//alert(JSON.stringify(data))
-// 			// console.log(data);
-// 			//alert(xhr.responseText + '|\n' + status + '|\n' + error);
-//
-// 			//document.location = './test.html';
-// 		},
-// 	};
-// 	jQuery.ajax(opts);
-//
-// 	// fetch("http://localhost:3000/api/fileupload/list",
-// 	// 	{mode: 'cors',
-// 	// 	headers:{
-// 	// 	'Access-Control-Allow-Origin':'*'},
-// 	// 		method: "POST",
-// 	// 		body: email
-// 	// 	})
-// 	// 	.then(function(res){ return res.json(); })
-// 	// 	.then(function(data){ alert( JSON.stringify( data ) ) })
-// 	// 	.catch(function(err){ console.log(err) })
-//	
-// 	// var newFile = new FormData();
-// 	// newFile.append('first_name', first_name);
-// 	// newFile.append('last_name', last_name);
-// 	// newFile.append('email', email);
-// 	// newFile.append('phone', phone);
-// 	// newFile.append('age', age);
-//     //
-// 	// var opts = {
-// 	// 	url: 'http://localhost:3000/api/fileupload/create',
-// 	// 	data:   newFile,
-// 	// 	cache: false,
-// 	// 	contentType: false,
-// 	// 	processData: false,
-// 	// 	type: 'POST',
-// 	// 	success: function(data) {
-// 	// 		document.location = './test.html';
-// 	// 	},
-// 	// 	error: function(err) {
-// 	// 		document.location = './test.html';
-// 	// 	}
-// 	// };
-// 	// jQuery.ajax(opts);
-// }
-//
