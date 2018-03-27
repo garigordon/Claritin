@@ -43,18 +43,18 @@ html(lang='en')
 				.container
 					.home-slider__top
 						.home-slider__item
-							img.home-slider__image.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
+							img.home-slider__image.home-slider__image--large.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
 							img.home-slider__image.home-slider__image--visible-mobile(src='img/banner-mob.png', alt='houdini')
-							.home-slider__content
+							.home-slider__content.home-slider__content--large
 								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk.png', alt='')
 								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob.png', alt='')
 								.row-line
 									.column
-										h3.home-slider__title
+										h3.home-slider__title.home-slider__title--large
 											| For your chance to 
 											strong WIN
 											| * 1 of 3 $1,000 Shoppers Drug Mart gift cards!
-										p.home-slider__text
+										p.home-slider__text.home-slider__text--large
 											| Allergies keeping you indoors? One non-drowsy Claritin
 											sup ®
 											|  pill provides 24-hour relief from indoor** and outdoor
@@ -123,22 +123,22 @@ html(lang='en')
 			footer.footer
 				.container
 					ul.footer-menu.row-line.center
-						li
+						li.footer-menu__item
 							a.footer-menu__link(href='/rules') Rules & Regulations
-						li
+						li.footer-menu__item
 							a.footer-menu__link(href='mailto:contactus@claritincontest.com') Contact Us
-						li
+						li.footer-menu__item
 							a.footer-menu__link(target='_blank', href='https://www.claritin.ca/en/privacy-statement/') Privacy Policy
-						li
+						li.footer-menu__item
 							a.footer-menu__link(target='_blank', href='http://bayer.ca/en/general-conditions-of-use/') Terms & Conditions
-						li
+						li.footer-menu__item
 							a.footer-menu__link.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Site Owner
 							.tooltip_templates
 								#tooltip_content
 									p Bayer Inc.,
 									p Mississauga, ON
 									p L5W 5R6
-						li
+						li.footer-menu__item
 							a.footer-menu__link(target='_blank', href='https://www.claritin.ca/') Claritin
 					span.footer__text *See official rules for full details.
 					img.footer__logo(src='img/bayer-icon.png', alt='')

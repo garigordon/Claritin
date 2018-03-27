@@ -224,7 +224,7 @@ Layout
 
 .header-menu__item{
 		 position: relative;
-		 padding: 0 4%;
+		 padding: 0 5px;
 		 width: 20%;
 		 text-align: center;
 	}
@@ -252,6 +252,10 @@ Layout
 		line-height:1;
 		text-transform: uppercase;
 	}
+
+.header-menu__link--small{
+			font-size:0.75rem;
+		}
 
 @media (max-width: 767px) {
 	.header{
@@ -353,11 +357,11 @@ Layout
 		list-style: none;
 		margin: 0 0 15px;
 	}
-.footer .footer-menu li{
+.footer .footer-menu__item{
 			padding: 0 20px;
 			position: relative;
 		}
-.footer .footer-menu li::after{
+.footer .footer-menu__item::after{
 				content:"";
 				background: #275295;
 				height: 12px;
@@ -366,13 +370,19 @@ Layout
 				left: 0;
 				position: absolute;
 			}
-.footer .footer-menu li:first-child::after{
+.footer .footer-menu__item:first-child::after{
 					display:none;
 				}
+.footer .footer-menu__item--padding{
+				 padding:0 15px;
+			}
 .footer .footer-menu__link{
 			color: #275295;
 			font-size: 1rem;
 		}
+.footer .footer-menu__link--small{
+				font-size:0.875rem;
+		 	}
 .footer__text{
 		display: block;
 		margin: 0 0 25px -15px;
@@ -444,9 +454,13 @@ Home
 		width: 100%;
 		height: auto;
 	 	display:block;
+		min-height: 409px;
 	}
 .home-slider__image--visible-mobile{
 			display: none;
+		}
+.home-slider__image--large{
+			 min-height:auto;
 		}
 .home-slider__slogan{
 		margin: 0 0 5px;
@@ -460,18 +474,24 @@ Home
 		bottom: 0;
 		left: 0;
 		position: absolute;
-		padding: 25px;
+		padding:16px 25px;
 	}
+.home-slider__content--large{
+			 padding:25px;
+		}
 .home-slider__content .column{
 			width: 60%;
 			text-align: center;
 		}
 .home-slider__title{
 		color: #047802;
-		font-size: 1.875rem;
+		font-size: 1.75rem;
 		font-weight: 400;
 		margin:0 0 6px;
 	}
+.home-slider__title--large{
+			 font-size: 1.875rem;
+		}
 .home-slider__title--indentation{
 			 margin: 25px 0 25px;
 		}
@@ -480,9 +500,13 @@ Home
 		}
 .home-slider__text{
 		color: #275295;
-		font-size: 1.0625rem;
-		margin: 0 0 15px;
+		font-size: 1rem;
+		margin: 0 0 8px;
 	}
+.home-slider__text--large{
+			font-size: 1.0625rem;
+			margin: 0 0 15px;
+		}
 .home-slider__txt{
 		bottom: 10px;
 		left: 10px;
@@ -514,10 +538,11 @@ Home
 	text-decoration: none;
 	padding: 10px;
 	font-weight: 700;
-	max-width: 147px;
+	max-width:160px;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
+	text-transform: uppercase;
 }
 
 @media (min-width: 768px) and (max-width: 992px){
@@ -666,6 +691,7 @@ Home
 		-webkit-appearance: none;  
 		   -moz-appearance: none;  
 		        appearance: none;
+		text-transform: uppercase;
 	}
 
 .checkbox {
@@ -817,7 +843,7 @@ Result page
 		height: auto;
 	}
 .single-result__text{
-		padding: 0 25px;
+		padding: 0 25px 20px;
 		color: #ffee31;
 		font-family: 'Helvetica LT Std', sans-serif;
 		font-weight: 500;
@@ -1000,6 +1026,9 @@ Test page
 			line-height: 2.8125rem;
 			font-size: 1.875rem;
 			color: #fff;
+		}
+.single-test__title strong{
+			text-transform: uppercase;
 		}
 .single-test__description{
 		color: #ffee31;

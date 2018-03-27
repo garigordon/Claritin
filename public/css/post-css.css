@@ -186,7 +186,7 @@ Layout
 	}
 	&__item{
 		 position: relative;
-		 padding: 0 4%;
+		 padding: 0 5px;
 		 width: 20%;
 		 text-align: center;
 		&::after{
@@ -209,6 +209,9 @@ Layout
 		display: block;
 		line-height:1;
 		text-transform: uppercase;
+		&--small{
+			font-size:12px;
+		}
 	}
 }
 
@@ -315,7 +318,7 @@ Layout
 	.footer-menu{
 		list-style: none;
 		margin: 0 0 15px;
-		li{
+		&__item{
 			padding: 0 20px;
 			position: relative;
 			&::after{
@@ -330,10 +333,16 @@ Layout
 					display:none;
 				}
 			}
+			&--padding{
+				 padding:0 15px;
+			}
 		}
 		&__link{
 			color: var(--colorBlue);
 			font-size: 16px;
+			&--small{
+				font-size:14px;
+		 	}
 		}
 	}
 	&__text{
@@ -411,8 +420,12 @@ Home
 	&__image{
 		size: 100% auto;
 	 	display:block;
+		min-height: 409px;
 		&--visible-mobile{
 			display: none;
+		}
+		&--large{
+			 min-height:auto;
 		}
 	}
 	&__slogan{
@@ -423,7 +436,10 @@ Home
 	}
 	&__content{
 		position: absolute 0;
-		padding: 25px;
+		padding:16px 25px;
+	 	&--large{
+			 padding:25px;
+		}
 		.column{
 			width: 60%;
 			text-align: center;
@@ -431,9 +447,12 @@ Home
 	}
 	&__title{
 		color: var(--colorGreen);
-		font-size: 30px;
+		font-size: 28px;
 		font-weight: normal;
 		margin:0 0 6px;
+	 	&--large{
+			 font-size: 30px;
+		}
 		&--indentation{
 			 margin: 25px 0 25px;
 		}
@@ -443,8 +462,12 @@ Home
 	}
 	&__text{
 		color: var(--colorBlue);
-		font-size: 17px;
-		margin: 0 0 15px;
+		font-size: 16px;
+		margin: 0 0 8px;  
+		&--large{
+			font-size: 17px;
+			margin: 0 0 15px;
+		}
 	}
 	&__txt{
 		position: absolute * * 10px 10px;
@@ -474,10 +497,11 @@ Home
 	text-decoration: none;
 	padding: 10px;
 	font-weight: 700;
-	max-width: 147px;
+	max-width:160px;
 	width: 100%;
 	display: block;
 	margin: 0 auto;
+	text-transform: uppercase;
 }
 
 @media (--ipadMin) and (--ipadMax){
@@ -618,6 +642,7 @@ Home
 		margin: * auto;
 		cursor: pointer;  
 		appearance: none;
+		text-transform: uppercase;
 	}
 }
 
@@ -758,7 +783,7 @@ Result page
 		size: 100% auto;
 	}
 	&__text{
-		padding: 0 25px;
+		padding: 0 25px 20px;
 		color: var(--colorYellow);
 		font-family: var(--fontLTStd);
 		font-weight: 500;
@@ -932,6 +957,9 @@ Test page
 			line-height: 45px;
 			font-size: 30px;
 			color: #fff;
+		}
+		strong{
+			text-transform: uppercase;
 		}
 	}
 	&__description{

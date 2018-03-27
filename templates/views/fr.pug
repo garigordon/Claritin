@@ -30,15 +30,15 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='/') HOME
+								a.header-menu__link.header-menu__link--small(href='/') ACCUEIL  
 							li.header-menu__item
-								a.header-menu__link(href='#form-block') ENTER
+								a.header-menu__link.header-menu__link--small(href='#form-block') INSCRIVEZ-VOUS
 							li.header-menu__item
-								a.header-menu__link(href='#prizes') PRIZES
+								a.header-menu__link.header-menu__link--small(href='#prizes') Détails des prix
 							li.header-menu__item
-								a.header-menu__link(href='/regles') RULES
+								a.header-menu__link.header-menu__link--small(href='/regles') RéGLEMENT
 							li.header-menu__item
-								a.header-menu__link(href='/') English
+								a.header-menu__link.header-menu__link--small(href='/') English
 			main.page__main.main
 				.container
 					.home-slider__top
@@ -46,23 +46,21 @@ html(lang='en')
 							img.home-slider__image.home-slider__image--hidden-mobile(src='img/banner.png', alt='houdini')
 							img.home-slider__image.home-slider__image--visible-mobile(src='img/banner-mob.png', alt='houdini')
 							.home-slider__content
-								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk.png', alt='')
-								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob.png', alt='')
+								img.home-slider__slogan.home-slider__slogan--hidden-mobile(src='img/title-desk-fr.png', alt='')
+								img.home-slider__slogan.home-slider__slogan--visible-mobile(src='img/title-mob-fr.png', alt='')
 								.row-line
 									.column
 										h3.home-slider__title
-											| For your chance to 
-											strong WIN
-											| * 1 of 3 $1,000 Shoppers Drug Mart gift cards!
+											| sur les activités extrérieures 
+											strong GAGNER
+											| * 1 des 3 cartes-cadeaux de 1000 $ de Shoppers Drug Mart gift cards!
 										p.home-slider__text
-											| Allergies keeping you indoors? One non-drowsy Claritin
+											| Les allergies vous empêchent de sortir? Un comprimé Claritin
 											sup ®
-											|  pill provides 24-hour relief from indoor** and outdoor
-											sup †
-											|  allergy symptoms. Take the Claritin
+											| somnolence soulage les symptômes d’allergies extérieures et intérieures pendant 24 heures. Répondez au jeu-questionnaire de Claritin
 											sup ®
-											|  Outsider Quiz to find out what kind of outsider you are.
-										a.btn-home-slider(href='#form-block') ENTER
+											|  sur les activités extérieures pour découvrir quel type de personne d’extérieur vous êtes et passer plus de temps dehors!
+										a.btn-home-slider(href='#form-block') Inscrivez-vous
 							.home-slider__txt
 								span **dust, pets, mould
 								span
@@ -72,8 +70,8 @@ html(lang='en')
 						.home-form__title
 							h3
 								span
-									| ENTER TO 
-									strong WIN
+									| INSCRIVEZ-VOUS POUR 
+									strong GAGNER
 						form#form2(name='myForm', action='http://13.59.224.151/api/fileupload/list', method='POST', enctype='multipart/form-data')
 							.row-line
 								.column
@@ -100,49 +98,49 @@ html(lang='en')
 								label.checkbox(for='Accept')
 									#checkbox_div
 										input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
-										span.checkbox__label I accept the official rules and regulations
+										span.checkbox__label J’accepte le règlement officiel.
 										#checkbox_error
 							.item
 								label.checkbox(for='Yes')
 									input#Yes.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
 									span.checkbox__label
-										| Yes, I would like to receive email communications about products and offerings from Bayer, Inc. and its affiliates. I understand I can unsubscribe at any time.
+										| Oui, j’aimerais recevoir des courriels au sujet des produits et des offres de Bayer, Inc. et de ses sociétés affiliées. Je comprends que je peux me désabonner en tout temps.
 							.item
-								p.home-form__fields *Fields are mandatory
+								p.home-form__fields *Champs obligatoires.
 							.item
-								input.home-form__submit(type='button', value='SUBMIT', onclick='Validate()')
+								input.home-form__submit(type='button', value='Soumettre', onclick='Validate()')
 							p#demo(style='color: red;')
 					#prizes.home-slider-banner
 						.home-slider-banner__item
-							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image.png', alt='')
-							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob.png', alt='')
+							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image-fr.png', alt='')
+							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob-fr.png', alt='')
 					.home-slider-banner
 						.home-slider-banner__item
-							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image_1.png', alt='')
-							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob_1.png', alt='')
+							img.home-slider-banner__image.home-slider-banner__image--hidden-mobile(src='img/home-slider-banner__image_1_fr.png', alt='')
+							img.home-slider-banner__image.home-slider-banner__image--visible-mobile(src='img/home-slider-banner__image-mob_1_fr.png', alt='')
 			footer.footer
 				.container
 					ul.footer-menu.row-line.center
-						li
-							a.footer-menu__link(href='/regles') Rules & Regulations
-						li
-							a.footer-menu__link(href='mailto:contacteznous@concoursclaritin.com') Contact Us
-						li
-							a.footer-menu__link(target='_blank', href='https://www.claritin.ca/en/privacy-statement/') Privacy Policy
-						li
-							a.footer-menu__link(target='_blank', href='http://bayer.ca/en/general-conditions-of-use/') Terms & Conditions
-						li
-							a.footer-menu__link.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Site Owner
+						li.footer-menu__item.footer-menu__item--padding
+							a.footer-menu__link.footer-menu__link--small(href='/regles') Réglement
+						li.footer-menu__item.footer-menu__item
+							a.footer-menu__link.footer-menu__link--small(href='mailto:contacteznous@concoursclaritin.com') Communiquez avec nous
+						li.footer-menu__item.footer-menu__item--padding
+							a.footer-menu__link.footer-menu__link--small(target='_blank', href='https://www.claritin.ca/en/privacy-statement/') Politique de confidentialité
+						li.footer-menu__item.footer-menu__item--padding
+							a.footer-menu__link.footer-menu__link--small(target='_blank', href='http://bayer.ca/en/general-conditions-of-use/') Modalités et conditions
+						li.footer-menu__item.footer-menu__item--padding
+							a.footer-menu__link.footer-menu__link--small.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Propriéetaire du site
 							.tooltip_templates
 								#tooltip_content
 									p Bayer Inc.,
 									p Mississauga, ON
 									p L5W 5R6
-						li
-							a.footer-menu__link(target='_blank', href='https://www.claritin.ca/') Claritin
-					span.footer__text *See official rules for full details.
+						li.footer-menu__item.footer-menu__item--padding
+							a.footer-menu__link.footer-menu__link--small(target='_blank', href='https://www.claritin.ca/') Claritin
+					span.footer__text *Consultez le réglement officiel pour tous les détails.
 					img.footer__logo(src='img/bayer-icon.png', alt='')
-					p.footer__description To be sure this product is right for you, always read and follow the label.
+					p.footer__description Pour vous assurer que ce produit vous convient, lisez et suivez toujours les instructions sur l’étiquette.
 					p.footer__description ©2018 Bayer Inc.
 					p.footer__description L.CA.MKT.CC.02.2018.1078
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')

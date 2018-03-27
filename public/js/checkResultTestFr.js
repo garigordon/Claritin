@@ -37,9 +37,9 @@ $(function(){
 				localStorage.setItem("number", "MOSTLY 1's - ");
 				localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
 				localStorage.setItem("imgRes", "img/Results1.jpg");
-				localStorage.setItem("firstText", "You’re a mover and a shaker, especially when it comes to shopping! Nothing stops you from heading to the trendiest parts of town to find the best deals and the newest styles.");
-				localStorage.setItem("secondText", "Head outdoors with confidence by using non-drowsy Claritin");
-				localStorage.setItem("threeText", "when allergy symptoms strike.");
+				localStorage.setItem("firstText", "Vous êtes extrêmement dynamique, surtout en ce qui a trait au magasinage! Rien ne vous empêche de vous rendre dans les quartiers les plus en vogue de la ville pour dénicher les meilleures aubaines et découvrir les nouveaux styles.");
+				localStorage.setItem("secondText", "Sortez en toute confiance avec Claritin<sup>®</sup> et obteniez un soulagement efficace et sans somnolence de vos pires symptômes.");
+				localStorage.setItem("threeText", "");
 			}else if(arr2[0] == 2){
 				localStorage.setItem("number", "MOSTLY 2's - ");
 				localStorage.setItem("lastname", "THE GARDENER");
@@ -68,9 +68,9 @@ $(function(){
 					localStorage.setItem("number", "MOSTLY 1's - ");
 					localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
 					localStorage.setItem("imgRes", "img/Results1.jpg");
-					localStorage.setItem("firstText", "You’re a mover and a shaker, especially when it comes to shopping! Nothing stops you from heading to the trendiest parts of town to find the best deals and the newest styles.");
-					localStorage.setItem("secondText", "Head outdoors with confidence by using non-drowsy Claritin");
-					localStorage.setItem("threeText", "when allergy symptoms strike.");
+					localStorage.setItem("firstText", "Vous êtes extrêmement dynamique, surtout en ce qui a trait au magasinage! Rien ne vous empêche de vous rendre dans les quartiers les plus en vogue de la ville pour dénicher les meilleures aubaines et découvrir les nouveaux styles.");
+					localStorage.setItem("secondText", "Sortez en toute confiance avec Claritin<sup>®</sup> et obteniez un soulagement efficace et sans somnolence de vos pires symptômes.");
+					localStorage.setItem("threeText", "");
 				} else if (arr3[0] == 2) {
 					localStorage.setItem("number", "MOSTLY 2's - ");
 					localStorage.setItem("lastname", "THE GARDENER");
