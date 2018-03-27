@@ -41,6 +41,8 @@ exports = module.exports = function (app) {
 	app.get('/checkDate', routes.views.checkDate);
 	app.get('/coming', routes.views.coming);
 	app.get('/close', routes.views.close);
+	app.get('/venir', routes.views.venir);
+	app.get('/fin', routes.views.fin);
 	app.get('/Quiz', routes.views.Quiz);
 	app.get('/concours', routes.views.concours);
 	app.get('/result', routes.views.result);
