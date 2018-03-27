@@ -10,6 +10,7 @@ html(lang='en')
 		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
 		script(src='https://unpkg.com/axios/dist/axios.min.js')
 		script(src='js/mainPageFr.js')
+		script(src='https://www.google.com/recaptcha/api.js')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
 		.wrapper
@@ -94,6 +95,7 @@ html(lang='en')
 									#age_div
 										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Âge*')
 										#age_error
+							#recaptcha.g-recaptcha(data-sitekey='6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ')
 							.item
 								label.checkbox(for='Accept')
 									#checkbox_div
@@ -108,7 +110,7 @@ html(lang='en')
 							.item
 								p.home-form__fields *Champs obligatoires.
 							.item
-								input.home-form__submit(type='button', value='Soumettre', onclick='Validate()')
+								input.home-form__submit(type='button', value='Soumettre', id='btn-validate', onclick='Validate()')
 							p#demo(style='color: red;')
 					#prizes.home-slider-banner
 						.home-slider-banner__item

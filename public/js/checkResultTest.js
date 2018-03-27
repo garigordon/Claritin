@@ -174,7 +174,7 @@ $(function(){
 						error: function (data) {
 							document.location = 'result';
 							localStorage.setItem("checkAnswerTest", "MOSTLY");
-						}
+						},
 					};
 					jQuery.ajax(opts);
 					var numberResult = {
