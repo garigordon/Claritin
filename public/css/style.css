@@ -831,8 +831,11 @@ Result page
 			font-size: 1.0625rem;
 			color:#fff;  
 			line-height:1.25rem;
-			margin-bottom:30px;
+			margin:0 0 7px;
 		}
+.single-result__text--white:last-child{
+			 margin-bottom:30px;
+		 	}
 .single-result__text sup{
 			margin: -7px 0 -1px;
 		}

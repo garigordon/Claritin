@@ -771,7 +771,10 @@ Result page
 			font-size: 17px;
 			color:#fff;  
 			line-height:20px;
-			margin:* * 30px;
+			margin:0 0 7px;
+			&:last-child{
+			 margin:* * 30px;
+		 	}
 		}
 		sup{
 			margin: -7px 0 -1px;
