@@ -73,9 +73,15 @@ function Validate() {
 		document.getElementById('checkbox_div').style.color = "yellow";
 		checkbox_error.textContent = "This is a required field.";
 	}
-	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
-		uploadFile();
-	}
+	$('#btn-validate').click(function () {
+		var response = grecaptcha.getResponse();
+		if (response.length === 0) {
+		} else {
+			if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+				uploadFile();
+			}
+		}
+	});
 }
 function nameVerify () {
 	if (first_name.value !== "") {
@@ -155,7 +161,7 @@ function uploadFile () {
 	axios({
 		method: 'post',
 		url: 'http://13.59.224.151/api/fileupload/list',
-		data: email, 
+		data: email,
 	}).then(function (response) {
 		if (response.data.day === "Quiz") {
 			document.location = "" + response.data.day + "";

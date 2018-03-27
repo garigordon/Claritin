@@ -60,8 +60,7 @@ exports.remove = function(req, res) {
 				}
 				console.log(stdout);
 			});
-
-			console.log("remove")
+			
 			return res.apiResponse({
 				success: true
 			});

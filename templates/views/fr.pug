@@ -10,6 +10,7 @@ html(lang='en')
 		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
 		script(src='https://unpkg.com/axios/dist/axios.min.js')
 		script(src='js/mainPageFr.js')
+		script(src='https://www.google.com/recaptcha/api.js')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
 		.wrapper
@@ -36,7 +37,7 @@ html(lang='en')
 							li.header-menu__item
 								a.header-menu__link(href='#prizes') PRIZES
 							li.header-menu__item
-								a.header-menu__link(href='/regles') RULES
+								a.header-menu__link(href='/rules') RULES
 							li.header-menu__item
 								a.header-menu__link(href='/') English
 			main.page__main.main
@@ -78,24 +79,25 @@ html(lang='en')
 							.row-line
 								.column
 									#username_div
-										input#first_name.form-control(type='text', name='first_name', placeholder='Prénom*')
+										input#first_name.form-control(type='text', name='first_name', placeholder='First Name*')
 										#name_error
 								.column
 									#lastname_div
-										input#last_name.form-control(type='text', name='last_name', placeholder='Nom de famille*')
+										input#last_name.form-control(type='text', name='last_name', placeholder='Last Name*')
 										#lastname_error
 								.full-width
 									#email_div
-										input#Email.form-control(placeholder='Adresse e-mail*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
+										input#Email.form-control(placeholder='Email Address*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
 										#email_error
 								.column
 									#phone_div
-										input#phone.form-control(type='text', name='phone', placeholder='Numéro de téléphone*')
+										input#phone.form-control(type='text', name='phone', placeholder='Phone Number*')
 										#phone_error
 								.column
 									#age_div
-										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Âge*')
+										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Age*')
 										#age_error
+							#recaptcha.g-recaptcha(data-sitekey='6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ')
 							.item
 								label.checkbox(for='Accept')
 									#checkbox_div
@@ -110,7 +112,7 @@ html(lang='en')
 							.item
 								p.home-form__fields *Fields are mandatory
 							.item
-								input.home-form__submit(type='button', value='SUBMIT', onclick='Validate()')
+								input.home-form__submit(type='button', value='SUBMIT', id='btn-validate', onclick='Validate()')
 							p#demo(style='color: red;')
 					#prizes.home-slider-banner
 						.home-slider-banner__item
@@ -124,9 +126,9 @@ html(lang='en')
 				.container
 					ul.footer-menu.row-line.center
 						li
-							a.footer-menu__link(href='/regles') Rules & Regulations
+							a.footer-menu__link(href='/rules') Rules & Regulations
 						li
-							a.footer-menu__link(href='mailto:contacteznous@concoursclaritin.com') Contact Us
+							a.footer-menu__link(href='mailto:contactus@claritincontest.com') Contact Us
 						li
 							a.footer-menu__link(target='_blank', href='https://www.claritin.ca/en/privacy-statement/') Privacy Policy
 						li
@@ -172,3 +174,4 @@ html(lang='en')
 					}
 				}
 			});
+            
