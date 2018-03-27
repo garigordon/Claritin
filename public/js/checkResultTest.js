@@ -127,6 +127,13 @@ $(function(){
 		}
 		if (answ1 !== 0 && answ2 !== 0 && answ3 !== 0 && answ4 !== 0 && answ5 !== 0 && answ1 !== undefined && answ2 !== undefined && answ3 !== undefined && answ4 !== undefined && answ5 !== undefined) {
 			var newFile = new FormData();
+			var newResult = new FormData();
+
+			newResult.append('first_name', first_name);
+			newResult.append('last_name', last_name);
+			newResult.append('email', email);
+			newResult.append('phone', phone);
+			newResult.append('age', age);
 			newFile.append('first_name', first_name);
 			newFile.append('last_name', last_name);
 			newFile.append('email', email);
@@ -141,16 +148,23 @@ $(function(){
 			newFile.append('checkbox', localStorage.getItem('checkbox'));
 			axios({
 				method: 'post',
+				url: 'http://13.59.224.151/api/numberofregistrations/remove',
+				data: email,
+			});
+			 
+			axios({
+				method: 'post',
 				url: 'http://13.59.224.151/api/fileupload/list',
 				data: email,
 			}).then(function (response) {
 				newFile.append('day', response.data.date);
-				if (response.data.day === "Quiz") {
+				newResult.append('quantity', response.data.numberRegistrations + 1);
+				if (response.data.day === "Quiz") { 
 					var opts = {
 						url: 'http://13.59.224.151/api/fileupload/create',
 						data: newFile,
 						cache: false,
-						contentType: false,
+						contentType: false, 
 						processData: false,
 						type: 'POST',
 						success: function (data) {
@@ -158,12 +172,25 @@ $(function(){
 							localStorage.setItem("checkAnswerTest", "MOSTLY");
 						},
 						error: function (data) {
-							//console.log(data.file_upload.phone);
 							document.location = 'result';
 							localStorage.setItem("checkAnswerTest", "MOSTLY");
 						}
 					};
 					jQuery.ajax(opts);
+					var numberResult = {
+						url: 'http://13.59.224.151/api/numberofregistrations/create',
+						data: newResult, 
+						cache: false, 
+						contentType: false,
+						processData: false,
+						type: 'POST',
+						success: function (data) {
+						},
+						error: function (data) {
+						},
+					};
+					jQuery.ajax(numberResult);
+					
 				} else {
 					document.location = "/";
 				}

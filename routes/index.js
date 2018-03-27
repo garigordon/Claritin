@@ -57,4 +57,8 @@ exports = module.exports = function (app) {
 	app.all('/api/fileupload/:id/update', keystone.middleware.api, routes.api.fileupload.update);
 	app.all('/api/fileupload/create', keystone.middleware.api, routes.api.fileupload.create);
 	app.get('/api/fileupload/:id/remove', keystone.middleware.api, routes.api.fileupload.remove);
+
+	app.all('/api/numberofregistrations/:id/update', keystone.middleware.api, routes.api.numberofregistrations.update);
+	app.all('/api/numberofregistrations/create', keystone.middleware.api, routes.api.numberofregistrations.create); 
+	app.post('/api/numberofregistrations/remove', keystone.middleware.api, routes.api.numberofregistrations.remove);
 };

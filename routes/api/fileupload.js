@@ -8,15 +8,12 @@ var app = express();
 
 exports.list = function (req, res) {
 	var data = req.body;
-	console.log((Object.keys(data)));
 	FileData.model.find({ email: (Object.keys(data)) }, function (err, items) {
 	
 		var now = new Date();
 		var month = now.getMonth() + 1;
 		var day = now.getDate();
-		console.log(items.length)
-		
-		var answer = '';
+		var answer = ''; 
 		if (month === 3 && day - items.length >= 16 && items.length === 0) {
 			answer =  'Quiz';
 		} else if (month === 4 && (day + 30) - items.length >= 16 && items.length === 0) {
@@ -32,8 +29,9 @@ exports.list = function (req, res) {
 		
 		if (err) return res.apiError('database error', err);
 		res.apiResponse({
-			day: answer,
+			day: answer, 
 			date: day,
+			numberRegistrations: items.length,
 		});
 	});
 }
@@ -80,7 +78,6 @@ exports.update = function(req, res) {
 }
 
 exports.create = function (req, res) {
-console.log(req.body);
 	var item = new FileData.model(),
 		data = (req.method === 'POST') ? req.body : req.query;
 	

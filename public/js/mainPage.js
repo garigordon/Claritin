@@ -155,7 +155,7 @@ function uploadFile () {
 	axios({
 		method: 'post',
 		url: 'http://13.59.224.151/api/fileupload/list',
-		data: email,
+		data: email, 
 	}).then(function (response) {
 		if (response.data.day === "Quiz") {
 			document.location = "" + response.data.day + "";
