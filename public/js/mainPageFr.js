@@ -148,9 +148,9 @@ function uploadFile () {
 	localStorage.setItem("age", age);
 	var chbox = document.getElementById('Yes');
 	if (chbox.checked) {
-		localStorage.setItem("checkbox", "Yes");
+		localStorage.setItem("subscribe", "Yes");
 	} else {
-		localStorage.setItem("checkbox", "No");
+		localStorage.setItem("subscribe", "No");
 	}
 	axios({
 		method: 'post',

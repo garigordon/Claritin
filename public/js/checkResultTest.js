@@ -145,7 +145,7 @@ $(function(){
 			newFile.append('ans_4', answ4);
 			newFile.append('ans_5', answ5); 
 			newFile.append('language', "En");
-			newFile.append('checkbox', localStorage.getItem('checkbox'));
+			newFile.append('subscribe', localStorage.getItem('subscribe'));
 			axios({
 				method: 'post',
 				url: 'http://13.59.224.151/api/numberofregistrations/remove',

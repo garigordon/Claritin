@@ -144,9 +144,9 @@ function uploadFile () {
 	var age = document.getElementById('age').value;
 	var chbox = document.getElementById('Yes');
 	if (chbox.checked) {
-		localStorage.setItem("checkbox", "Yes");
+		localStorage.setItem("subscribe", "Yes");
 	} else {
-		localStorage.setItem("checkbox", "No");
+		localStorage.setItem("subscribe", "No");
 	}
 	localStorage.setItem("first_name", first_name);
 	localStorage.setItem("last_name", last_name);
