@@ -159,37 +159,22 @@ $(function(){
 				newFile.append('day', response.data.date);
 				newResult.append('quantity', response.data.numberRegistrations + 1);
 				if (response.data.day === "Quiz") {
-					var opts = {
+					axios({
+						method: 'post',
 						url: 'http://13.59.224.151/api/fileupload/create',
 						data: newFile,
-						cache: false,
-						contentType: false,
-						processData: false,
-						type: 'POST',
-						success: function (data) {
-							document.location = 'resultat';
-							localStorage.setItem("checkAnswerTest", "MOSTLY");
-						},
-						error: function (data) {
-							document.location = 'resultat';
-							localStorage.setItem("checkAnswerTest", "MOSTLY");
-						},
-					};
-					jQuery.ajax(opts);
-					var numberResult = {
+					}).then(function () {
+						document.location = 'resultat';
+						localStorage.setItem("checkAnswerTest", "MOSTLY");
+					}).catch(function () {
+						document.location = 'resultat';
+						localStorage.setItem("checkAnswerTest", "MOSTLY");
+					});
+					axios({
+						method: 'post',
 						url: 'http://13.59.224.151/api/numberofregistrations/create',
 						data: newResult,
-						cache: false,
-						contentType: false,
-						processData: false,
-						type: 'POST',
-						success: function (data) {
-						},
-						error: function (data) {
-						},
-					};
-					jQuery.ajax(numberResult);
-
+					});
 				} else {
 					document.location = "/";
 				}
