@@ -61,7 +61,7 @@ function Validate() {
 	if (age.value !== "" && age.value < 18) {
 		age.style.border = "1px solid red";
 		document.getElementById('age_div').style.color = "yellow";
-		age_error.textContent = "You must be 18 or older to participate.";
+		age_error.textContent = "Vous devez avoir atteint l'âge de la majorité pour participer.";
 		age.focus();
 	}
 	var chbox;
