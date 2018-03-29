@@ -25,37 +25,37 @@ function Validate() {
 	if (first_name.value === "") {
 		first_name.style.border = "1px solid red";
 		document.getElementById('username_div').style.color = "yellow";
-		name_error.textContent = "First Name is required";
+		name_error.textContent = "Le prénom est requis";
 		first_name.focus();
 	}
 	if (last_name.value === "") {
 		last_name.style.border = "1px solid red";
 		document.getElementById('lastname_div').style.color = "yellow";
-		lastname_error.textContent = "Last Name is required";
+		lastname_error.textContent = "Nom de famille est requis";
 		last_name.focus();
 	}
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
-		email_error.textContent = "Invalid Email.";
+		email_error.textContent = "Adresse électronique non valide.";
 		Email.focus();
 	}
 	if (phone.value === "") {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
-		phone_error.textContent = "Invalid Phone number.";
+		phone_error.textContent = "Numéro de téléphone non valide.";
 		phone.focus();
 	}
 	if (phone.value !== "" && phone.value.length < 10) {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
-		phone_error.textContent = "Phone number must be 10 digits.";
+		phone_error.textContent = "Le numéro de téléphone doit avoir 10 chiffres.";
 		phone.focus();
 	}
 	if (age.value === "") { 
 		age.style.border = "1px solid red";
 		document.getElementById('age_div').style.color = "yellow";
-		age_error.textContent = "Age is required";
+		age_error.textContent = "L'âge est requis";
 		age.focus();
 	}
 	if (age.value !== "" && age.value < 18) {
@@ -68,12 +68,11 @@ function Validate() {
 	chbox = document.getElementById('Accept');
 
 	if(!chbox.checked){
-		age.style.border = "1px solid red";
 		document.getElementById('checkbox_div').style.color = "yellow";
-		checkbox_error.textContent = "That checkbox is required";
+		checkbox_error.textContent = "Cette case à cocher est obligatoire";
 	}
 	
-	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
+	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Numéro de téléphone non valide." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
 		uploadFile();
 	}
 	
@@ -125,7 +124,7 @@ function emailVerify () {
 	if (reg.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
-		email_error.textContent = "Invalid Email.";
+		email_error.textContent = "Adresse électronique non valide.";
 	} else {
 		Email.style.border = "1px solid green";
 		document.getElementById('email_div').style.color = "green";
@@ -163,7 +162,7 @@ function uploadFile () {
 			localStorage.clear();
 			Email.style.border = "1px solid red";
 			document.getElementById('email_div').style.color = "yellow";
-			email_error.textContent = "You have already played today. Please try again tomorrow.";
+			email_error.textContent = "Vous avez déjà joué aujourd'hui. Veuillez réessayer demain.";
 		}
 	}).catch(function (error) {
 		console.log(error);
