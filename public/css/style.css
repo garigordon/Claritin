@@ -214,6 +214,7 @@ Layout
 		display: -ms-flexbox;
 		display: -moz-box;
 		display: flex;
+		min-height: 26px;
 	}
 
 .header-menu__list--right{
@@ -249,7 +250,7 @@ Layout
 		font-weight: 700;
 		color: #275295;
 		display: block;
-		line-height:1;
+		line-height:0.9375rem;
 		text-transform: uppercase;
 	}
 
@@ -379,6 +380,7 @@ Layout
 .footer .footer-menu__link{
 			color: #275295;
 			font-size: 1rem;
+			text-decoration: none;
 		}
 .footer .footer-menu__link--small{
 				font-size:0.875rem;

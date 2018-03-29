@@ -180,6 +180,7 @@ Layout
 		margin: 0;
 		justify-content:space-around;
 		display: flex;
+		min-height: 26px;
 		&--right{
 			justify-content:flex-end;
 		}
@@ -207,7 +208,7 @@ Layout
 		font-weight: bold;
 		color: #275295;
 		display: block;
-		line-height:1;
+		line-height:15px;
 		text-transform: uppercase;
 		&--small{
 			font-size:12px;
@@ -340,6 +341,7 @@ Layout
 		&__link{
 			color: var(--colorBlue);
 			font-size: 16px;
+			text-decoration: none;
 			&--small{
 				font-size:14px;
 		 	}

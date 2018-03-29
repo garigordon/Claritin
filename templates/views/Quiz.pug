@@ -47,7 +47,7 @@ html(lang='en')
 							li.header-menu__item
 								a.header-menu__link(href='/#prizes') PRIZES
 							li.header-menu__item
-								a.header-menu__link(href='/rules') RULES
+								a.header-menu__link(href='/rules', target='_blank', <='', body='') RULES
 							li.header-menu__item
 								a.header-menu__link(href='/concours') Français
 			main.page__main.main
@@ -165,22 +165,22 @@ html(lang='en')
 			footer.footer
 				.container
 					ul.footer-menu.row-line.center
-						li
-							a.footer-menu__link(href='/rules') Rules & Regulations
-						li
+						li.footer-menu__item
+							a.footer-menu__link(href='/rules', target='_blank', <='', body='') Rules & Regulations
+						li.footer-menu__item
 							a.footer-menu__link(href='#') Contact Us
-						li
+						li.footer-menu__item
 							a.footer-menu__link(href='https://www.claritin.ca/en/privacy-statement/') Privacy Policy
-						li
+						li.footer-menu__item
 							a.footer-menu__link(href='http://bayer.ca/en/general-conditions-of-use/') Terms & Conditions
-						li
+						li.footer-menu__item
 							a.footer-menu__link.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Site Owner
 							.tooltip_templates
 								#tooltip_content
 									p Bayer Inc.,
 									p Mississauga, ON
 									p L5W 5R6
-						li
+						li.footer-menu__item
 							a.footer-menu__link(href='https://www.claritin.ca/') Claritin
 					img.footer__logo(src='img/bayer-icon.png', alt='')
 					p.footer__description To be sure this product is right for you, always read and follow the label.
