@@ -76,39 +76,39 @@ html(lang='en')
 							.row-line
 								.column
 									#username_div
-										input#first_name.form-control(type='text', name='first_name', placeholder='Prénom*')
+										input#first_name.form-control(type='text', name='first_name', tabindex="1", placeholder='Prénom*')
 										#name_error
 								.column
 									#lastname_div
-										input#last_name.form-control(type='text', name='last_name', placeholder='Nom de famille*')
+										input#last_name.form-control(type='text', name='last_name', tabindex="2", placeholder='Nom de famille*')
 										#lastname_error
 								.full-width
 									#email_div
-										input#Email.form-control(placeholder='Adresse e-mail*', name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
+										input#Email.form-control(placeholder='Adresse e-mail*', tabindex="3", name='Email', type='email', title='Email Address (format: xxx@xxx.xxx)', pattern="[a-zA-Z0-9!#$%&'*+\/=?^_`{|}~.-]+@[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+)*")
 										#email_error
 								.column
 									#phone_div
-										input#phone.form-control(type='text', name='phone', placeholder='Numéro de téléphone*')
+										input#phone.form-control(type='text', name='phone', tabindex="4", placeholder='Numéro de téléphone*')
 										#phone_error
 								.column
 									#age_div
-										input#age.form-control(type='text', name='age', maxlength='2', placeholder='Âge*')
+										input#age.form-control(type='text', name='age', tabindex="5", maxlength='2', placeholder='Âge*')
 										#age_error
 							.item
-								label.checkbox(for='Accept')
+								label.checkbox(for='Accept', tabindex="6")
 									#checkbox_div
 										input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
 										span.checkbox__label J’accepte le règlement officiel.
 										#checkbox_error
 							.item
-								label.checkbox(for='Yes')
+								label.checkbox(for='Yes', tabindex="7")
 									input#Yes.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
 									span.checkbox__label
 										| Oui, j’aimerais recevoir des courriels au sujet des produits et des offres de Bayer, Inc. et de ses sociétés affiliées. Je comprends que je peux me désabonner en tout temps.
 							.item
 								p.home-form__fields *Champs obligatoires.
 							.item
-								input.home-form__submit(type='button', value='Soumettre', id='btn-validate', onclick='Validate()')
+								input.home-form__submit(type='button', value='Soumettre', tabindex="8", id='btn-validate', onclick='Validate()')
 							p#demo(style='color: red;')
 					#prizes.home-slider-banner
 						.home-slider-banner__item
@@ -170,3 +170,20 @@ html(lang='en')
 					}
 				}
 			});
+			$(document).on('keypress', function (event) {
+				if (event.keyCode == 13) {
+					$('#Yes').prop('checked', true);
+				}
+				if (event.keyCode == 32) {
+					$('#Yes').prop('checked', true);
+				}
+			});
+			$(document).on('keypress', function (event) {
+				if (event.keyCode == 13) {
+					$('#Accept').prop('checked', true);
+				}
+				if (event.keyCode == 32) {
+					$('#Accept').prop('checked', true);
+				}
+			});
+			
