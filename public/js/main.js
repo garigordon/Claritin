@@ -13,7 +13,7 @@ $( document ).ready(function() {
 		$( ".header-menu" ).slideToggle( "slow", function() {
 			$( ".cross" ).hide();
 			$( ".hamburger" ).show();
-		});
+		}); 
 	});
 
 	$('.tooltip').tooltipster({
