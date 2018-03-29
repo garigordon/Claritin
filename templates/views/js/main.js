@@ -18,7 +18,7 @@ $( document ).ready(function() {
 		if (title) e.preventDefault();
 		$('body,html').animate({
 			scrollTop: top
-		}, 1500);
+		}, 1500); 
 	});
 });	
 
