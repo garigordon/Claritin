@@ -99,7 +99,7 @@ html(lang='en')
 							.item
 								label.checkbox(for='Accept', tabindex="6")
 									#checkbox_div
-										input#Accept.checkbox__hidden(type='checkbox', name='subscribe', value='newsletter')
+										input#Accept.checkbox__hidden(type='checkbox' , name='subscribe', value='newsletter')
 										span.checkbox__label I accept the official rules and regulations
 										#checkbox_error
 							.item
@@ -172,4 +172,19 @@ html(lang='en')
 					}
 				}
 			});
-			
+			$(document).on('keypress', function (event) {
+				if (event.keyCode == 13) {
+					$('#Yes').prop('checked', true);
+				}
+				if (event.keyCode == 32) {
+					$('#Yes').prop('checked', true);
+				}
+			});
+			$(document).on('keypress', function (event) {
+				if (event.keyCode == 13) {
+					$('#Accept').prop('checked', true);
+				}
+				if (event.keyCode == 32) {
+					$('#Accept').prop('checked', true);
+				}
+			});
