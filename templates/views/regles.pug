@@ -15,7 +15,7 @@ html(lang='en')
 			header.header
 				.container.row-line.center
 					.header__logo
-						a(href='/')
+						a(href='/fr')
 							img(src='img/logo.png', alt='')
 					.burger
 						button.hamburger
@@ -29,15 +29,15 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='/') HOME
+								a.header-menu__link.header-menu__link--small(href='/') ACCUEIL  
 							li.header-menu__item
-								a.header-menu__link(href='/#form-block') ENTER
+								a.header-menu__link.header-menu__link--small(href='/fr#form-block') INSCRIVEZ-VOUS
 							li.header-menu__item
-								a.header-menu__link(href='/#prizes') PRIZES
+								a.header-menu__link.header-menu__link--small(href='/fr#prizes') Détails des prix
 							li.header-menu__item
-								a.header-menu__link(href='/regles') Regles
+								a.header-menu__link.header-menu__link--small(href='#', target='_blank', <='', body='') RéGLEMENT
 							li.header-menu__item
-								a.header-menu__link(href='/rules') English
+								a.header-menu__link.header-menu__link--small(href='/result') English
 			main.page__main.main
 				.container
 					.page
@@ -55,7 +55,8 @@ html(lang='en')
 							b AUCUN ACHAT REQUIS.
 							| LES PARTICIPANTS DOIVENT AVOIR DIX-HUIT (18) ANS OU PLUS AU MOMENT DE LEUR INSCRIPTION. CE CONCOURS EST NUL EN TOUT OU EN PARTIE LÀ OÙ LA LOI L’INTERDIT. LA PARTICIPATION À CE CONCOURS CONSTITUE UNE ACCEPTATION DU PRÉSENT RÈGLEMENT DU CONCOURS (LE « 
 							b RÈGLEMENT DU CONCOURS 
-							| »). Pour en savoir plus : www.concoursclaritin.com.
+							| »). Pour en savoir plus : 
+							a(href='https://www.claritin.ca/') www.concoursclaritin.com
 						ol
 							li
 								p
@@ -82,7 +83,9 @@ html(lang='en')
 							li
 								p
 									b COMMENT PARTICIPER. AUCUN ACHAT REQUIS. Pour participer,
-									|  visitez le site www.concoursclaritin.com (le « 
+									|  visitez le site 
+									a(href='https://www.claritin.ca/') www.concoursclaritin.com
+									|  (le « 
 									b site Web du concours
 									|  ») et remplissez le formulaire d’inscription en indiquant votre prénom, votre nom de famille, votre adresse électronique, votre numéro de téléphone et votre âge.
 								ol(type='a')

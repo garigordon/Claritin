@@ -16,7 +16,9 @@ $( document ).ready(function() {
 		});
 	});
 
-	$('.tooltip').tooltipster();
+	$('.tooltip').tooltipster({
+		trigger: 'click'
+	});
 
 	$('a[href^="#"]').on('click', function(event){
 		event.preventDefault();
