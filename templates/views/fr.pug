@@ -170,16 +170,15 @@ html(lang='en')
 					}
 				}
 			});
-			
 			var Accept = document.getElementById('Accept');
 			var Yes = document.getElementById('Yes');
 			$(document).on('keypress', function (event) {
 				if ((event.keyCode === 13 || event.keyCode === 32)) {
-					if (!Accept.checked) {
+					if (!Accept.checked && document.activeElement.tabIndex === 6) {
 						$("input[id=Accept]").prop({checked: true})
 						return false;
 					}
-					if (!Yes.checked) {
+					if (!Yes.checked && document.activeElement.tabIndex === 7) {
 						$("input[id=Yes]").prop({checked: true})
 						return false;
 					}
