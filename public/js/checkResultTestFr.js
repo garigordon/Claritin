@@ -157,12 +157,12 @@ $(function(){
 				data: email,
 			}).then(function (response) {
 				newFile.append('day', response.data.date);
-				newResult.append('quantity', response.data.numberRegistrations + 1);
+				newResult.append('registration', response.data.numberRegistrations + 1);
 				if (response.data.day === "Quiz") {
 					axios({
 						method: 'post',
 						url: 'http://13.59.224.151/api/fileupload/create',
-						data: newFile,
+						data: newFile, 
 					}).then(function () {
 						document.location = 'resultat';
 						localStorage.setItem("checkAnswerTest", "MOSTLY");

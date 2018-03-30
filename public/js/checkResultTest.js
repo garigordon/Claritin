@@ -158,7 +158,7 @@ $(function(){
 				data: email,
 			}).then(function (response) {
 				newFile.append('day', response.data.date);
-				newResult.append('quantity', response.data.numberRegistrations + 1);
+				newResult.append('registration', response.data.numberRegistrations + 1);
 				if (response.data.day === "Quiz") {
 					axios({ 
 						method: 'post',

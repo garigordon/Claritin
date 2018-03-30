@@ -15,9 +15,9 @@ numberOfRegistrations.add({
 	email: { type: String },
 	phone: { type: String },
 	age: { type: Number },
-	quantity: { type: Number },
+	registration: { type: Number },
 	createdAt: { type: Date, default: Date.now },
 });
 
-numberOfRegistrations.defaultColumns = 'name,first_name,last_name,email,phone,age,quantity,createdAt';
+numberOfRegistrations.defaultColumns = 'name,first_name,last_name,email,phone,age,registration,createdAt';
 numberOfRegistrations.register();
