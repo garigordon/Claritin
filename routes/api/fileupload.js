@@ -1,7 +1,7 @@
 var async = require('async'),
 	keystone = require('keystone');
 var exec = require('child_process').exec;
-var FileData = keystone.list('FileUpload');
+var FileData = keystone.list('MainStatistics');
 const router = require('express').Router();
 var express = require('express');
 var app = express();

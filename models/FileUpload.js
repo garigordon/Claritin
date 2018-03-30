@@ -1,6 +1,6 @@
 var keystone = require('keystone');
 var Types = keystone.Field.Types;
-var FileUpload = new keystone.List('FileUpload');
+var FileUpload = new keystone.List('MainStatistics');
 var myStorage = new keystone.Storage({
 	adapter: keystone.Storage.Adapters.FS,
 	fs: {
