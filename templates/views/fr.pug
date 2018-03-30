@@ -169,21 +169,21 @@ html(lang='en')
 						phone_error.textContent = "";
 					}
 				}
-			}); 
-			$(document).on('keypress', function (event) {
-				if (event.keyCode == 13) {
-					$('#Yes').prop('checked', true);
-				}
-				if (event.keyCode == 32) {
-					$('#Yes').prop('checked', true);
-				}
 			});
+			
+			var Accept = document.getElementById('Accept');
+			var Yes = document.getElementById('Yes');
 			$(document).on('keypress', function (event) {
-				if (event.keyCode == 13) {
-					$('#Accept').prop('checked', true);
-				}
-				if (event.keyCode == 32) {
-					$('#Accept').prop('checked', true);
+				if ((event.keyCode === 13 || event.keyCode === 32)) {
+					if (!Accept.checked) {
+						$("input[id=Accept]").prop({checked: true})
+						return false;
+					}
+					if (!Yes.checked) {
+						$("input[id=Yes]").prop({checked: true})
+						return false;
+					}
+					return false;
 				}
 			});
 			
