@@ -184,6 +184,10 @@ Layout
 		&--right{
 			justify-content:flex-end;
 		}
+		&--fr{
+			 justify-content:center;
+			 align-items: center;
+		}
 	}
 	&__item{
 		 position: relative;
@@ -201,6 +205,10 @@ Layout
 			&::after{
 				display:none;
 			}
+		}
+		&--fr{
+			width:auto;
+			padding:0 3%;
 		}
 	}
 	&__link{
@@ -400,6 +408,7 @@ Layout
 				}
 			}
 			&__link{
+				color: var(--colorBlue) #fff;
 				border:1px solid #3e669f;
 				display: block;
 				text-align: center;
@@ -530,6 +539,7 @@ Home
 	.home-slider{
 		&__slogan{
 			margin: 0 auto 8px;
+		 	width:50%;
 			&--visible-mobile{
 				display: block;
 			}
@@ -553,7 +563,7 @@ Home
 			}
 		}
 		&__title{
-			font-size: 18px;
+			font-size: 14px;
 			margin: 0 0 5px;
 		}
 		&__text{
@@ -576,7 +586,7 @@ Home
 		}
 	}
 	.btn-home-slider{
-		position: absolute * 0 20px 0;
+		position: absolute * 0 34px 0;
 	}
 }
 .home-form{
