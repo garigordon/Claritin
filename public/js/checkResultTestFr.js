@@ -12,9 +12,9 @@ $(function(){
 		});
 		var arr = [answ1, answ2, answ3, answ4, answ5];
 		var ks=[];
-		for(var value of arr){
-			ks[value] = (ks[value]||0)+1;
-		}
+		arr.forEach(function (value) {
+			ks[value] = (ks[value] || 0) + 1;
+		});
 		var arr2 =[];
 		var arr3 =[];
 		for(var i in arr) {
@@ -146,41 +146,32 @@ $(function(){
 			newFile.append('ans_5', answ5);
 			newFile.append('language', "Fr");
 			newFile.append('subscribe', localStorage.getItem('subscribe'));
-			axios({
-				method: 'post',
-				url: 'http://13.59.224.151/api/numberofregistrations/remove',
-				data: email,
-			});
-			axios({
-				method: 'post',
-				url: 'http://13.59.224.151/api/fileupload/list',
-				data: email,
-			}).then(function (response) {
-				newFile.append('day', response.data.date);
-				newResult.append('registration', response.data.numberRegistrations + 1);
-				if (response.data.day === "Quiz") {
-					axios({
-						method: 'post',
-						url: 'http://13.59.224.151/api/fileupload/create',
-						data: newFile, 
-					}).then(function () {
+			
+			var xhr = new XMLHttpRequest();
+			var xhresponse = new XMLHttpRequest();
+			var xhrclosetable = new XMLHttpRequest();
+			xhresponse.open('post', 'http://13.59.224.151/api/numberofregistrations/remove');
+			xhresponse.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhresponse.send(email);
+			xhr.open('post', 'http://13.59.224.151/api/fileupload/list', true);
+			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhr.onload = function (e) {
+				newFile.append('day', JSON.parse(xhr.response).date);
+				newResult.append('registration', JSON.parse(xhr.response).numberRegistrations + 1);
+				if (JSON.parse(xhr.response).day === "Quiz") {
+					xhr.open('post', 'http://13.59.224.151/api/fileupload/create', true);
+					xhr.onload = function (e) {
 						document.location = 'resultat';
 						localStorage.setItem("checkAnswerTest", "MOSTLY");
-					}).catch(function () {
-						document.location = 'resultat';
-						localStorage.setItem("checkAnswerTest", "MOSTLY");
-					});
-					axios({
-						method: 'post',
-						url: 'http://13.59.224.151/api/numberofregistrations/create',
-						data: newResult,
-					});
+					};
+					xhr.send(newFile);
+					xhrclosetable.open('post', 'http://13.59.224.151/api/numberofregistrations/create', true);
+					xhrclosetable.send(newResult);
 				} else {
-					document.location = "/";
+					document.location = "/fr";
 				}
-			}).catch(function (error) {
-				console.log(error);
-			});
+			};
+			xhr.send(email);
 		}
 	});
 });

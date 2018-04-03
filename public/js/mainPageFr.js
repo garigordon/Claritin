@@ -78,6 +78,8 @@ function Validate() {
 	
 }
 function nameVerify() {
+	var first_name = document.forms['myForm']['first_name'];
+	var name_error = document.getElementById('name_error');
 	if (first_name.value !== "") {
 		first_name.style.border = "1px solid green";
 		document.getElementById('username_div').style.color = "green";
@@ -88,6 +90,7 @@ function nameVerify() {
 function checkboxVerify() {
 	var chbox;
 	chbox = document.getElementById('Accept');
+	var checkbox_error = document.getElementById('checkbox_error');
 	if (chbox.checked) {
 		document.getElementById('checkbox_div').style.color = "green";
 		checkbox_error.textContent = "";
@@ -96,6 +99,7 @@ function checkboxVerify() {
 }
 
 function phoneVerify () {
+	var phone = document.forms['myForm']['phone'];
 	if (phone.value.length === 10) {
 		phone.style.border = "1px solid green";
 		return true;
@@ -103,6 +107,8 @@ function phoneVerify () {
 }
 
 function lastVerify () {
+	var last_name = document.forms['myForm']['last_name'];
+	var lastname_error = document.getElementById('lastname_error');
 	if (last_name.value !== "") {
 		last_name.style.border = "1px solid green";
 		document.getElementById('lastname_div').style.color = "green";
@@ -112,6 +118,8 @@ function lastVerify () {
 }
 
 function ageVerify () {
+	var age = document.forms['myForm']['age'];
+	var age_error = document.getElementById('age_error');
 	if (age.value !== "" && age.value > 17) {
 		age.style.border = "1px solid green";
 		document.getElementById('age_div').style.color = "green";
@@ -120,6 +128,8 @@ function ageVerify () {
 	}
 }
 function emailVerify () {
+	var Email = document.forms['myForm']['Email'];
+	var email_error = document.getElementById('email_error');
 	var reg = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	if (reg.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
@@ -151,20 +161,22 @@ function uploadFile () {
 	} else {
 		localStorage.setItem("subscribe", "No");
 	}
-	axios({
-		method: 'post',
-		url: 'http://13.59.224.151/api/fileupload/list',
-		data: email,
-	}).then(function (response) {
-		if (response.data.day === "Quiz") {
+
+	var xhr = new XMLHttpRequest();
+	xhr.open('POST', 'http://13.59.224.151/api/fileupload/list', true);
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.responseType = 'text';
+	xhr.onload = function (e) {
+		if (JSON.parse(xhr.response).day === "Quiz") {
 			document.location = "concours";
-		}else{
+		} else {
 			localStorage.clear();
+			var Email = document.forms['myForm']['Email'];
+			var email_error = document.getElementById('email_error');
 			Email.style.border = "1px solid red";
 			document.getElementById('email_div').style.color = "yellow";
 			email_error.textContent = "Vous avez déjà joué aujourd'hui. Veuillez réessayer demain.";
 		}
-	}).catch(function (error) {
-		console.log(error);
-	});
+	};
+	xhr.send(email);
 }

@@ -17,7 +17,6 @@ function Validate() {
 	var phone = document.forms['myForm']['phone'];
 	var phone_error = document.getElementById('phone_error');
 	phone.addEventListener('keyup', phoneVerify, true);
-	
 	var age = document.forms['myForm']['age'];
 	var age_error = document.getElementById('age_error');
 	age.addEventListener('keyup', ageVerify, true);
@@ -79,6 +78,8 @@ function Validate() {
 	}
 }
 function nameVerify () {
+	var first_name = document.forms['myForm']['first_name'];
+	var name_error = document.getElementById('name_error');
 	if (first_name.value !== "") {
 		first_name.style.border = "1px solid green";
 		document.getElementById('username_div').style.color = "green";
@@ -88,6 +89,7 @@ function nameVerify () {
 }
 
 function phoneVerify () {
+	var phone = document.forms['myForm']['phone'];
 	if (phone.value.length === 10) {
 		phone.style.border = "1px solid green";
 		return true;
@@ -97,6 +99,7 @@ function phoneVerify () {
 function checkboxVerify () {
 	var chbox;
 	chbox = document.getElementById('Accept');
+	var checkbox_error = document.getElementById('checkbox_error');
 	if (chbox.checked) {
 		document.getElementById('checkbox_div').style.color = "green";
 		checkbox_error.textContent = "";
@@ -105,6 +108,8 @@ function checkboxVerify () {
 }
 
 function lastVerify () {
+	var last_name = document.forms['myForm']['last_name'];
+	var lastname_error = document.getElementById('lastname_error');
 	if (last_name.value !== "") {
 		last_name.style.border = "1px solid green";
 		document.getElementById('lastname_div').style.color = "green";
@@ -114,6 +119,8 @@ function lastVerify () {
 }
 
 function ageVerify () {
+	var age = document.forms['myForm']['age'];
+	var age_error = document.getElementById('age_error');
 	if (age.value !== "" && age.value > 17) {
 		age.style.border = "1px solid green";
 		document.getElementById('age_div').style.color = "green";
@@ -123,6 +130,8 @@ function ageVerify () {
 }
 
 function emailVerify () {
+	var Email = document.forms['myForm']['Email'];
+	var email_error = document.getElementById('email_error');
 	var reg = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 	if (reg.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
@@ -153,20 +162,21 @@ function uploadFile () {
 	localStorage.setItem("email", email);
 	localStorage.setItem("phone", phone);
 	localStorage.setItem("age", age);
-	axios({
-		method: 'post',
-		url: 'http://13.59.224.151/api/fileupload/list',
-		data: email,
-	}).then(function (response) {
-		if (response.data.day === "Quiz") {
-			document.location = "" + response.data.day + "";
-		}else{
+
+	var xhr = new XMLHttpRequest();
+	xhr.open('post', 'http://13.59.224.151/api/fileupload/list');
+	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+	xhr.send(email);
+	xhr.onload = function (e) {
+		if (JSON.parse(this.response).day === "Quiz") {
+			document.location = "" + JSON.parse(xhr.response).day + "";
+		} else {
 			localStorage.clear();
+			var Email = document.forms['myForm']['Email'];
+			var email_error = document.getElementById('email_error');
 			Email.style.border = "1px solid red";
 			document.getElementById('email_div').style.color = "yellow";
 			email_error.textContent = "You have already played today. Please try again tomorrow.";
 		}
-	}).catch(function (error) {
-		console.log(error);
-	});
+	};
 }

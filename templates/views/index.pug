@@ -36,7 +36,7 @@ html(lang='en')
 							li.header-menu__item
 								a.header-menu__link(href='#prizes') PRIZES
 							li.header-menu__item
-								a.header-menu__link(href='/rules', target='_blank', <='', body='') RULES
+								a.header-menu__link(href='/rules', target='_blank') RULES
 							li.header-menu__item
 								a.header-menu__link(href='/fr') Français
 			main.page__main.main
@@ -124,7 +124,7 @@ html(lang='en')
 				.container
 					ul.footer-menu.row-line.center
 						li.footer-menu__item
-							a.footer-menu__link(href='/rules', target='_blank', <='', body='') Rules & Regulations
+							a.footer-menu__link(href='/rules', target='_blank') Rules & Regulations
 						li.footer-menu__item
 							a.footer-menu__link(href='mailto:contactus@claritincontest.com') Contact Us
 						li.footer-menu__item
@@ -149,6 +149,8 @@ html(lang='en')
 		script(type='text/javascript', src='js/tooltipster.bundle.min.js')
 		script(type='text/javascript', src='js/main.js')
 		script.
+			var phone = document.forms['myForm']['phone'];
+			var phone_error = document.getElementById('phone_error');
 			document.getElementById("age").onkeypress = function (event) {
 				event = event || window.event;
 				if (event.charCode && (event.charCode < 48 || event.charCode > 57))
@@ -188,6 +190,4 @@ html(lang='en')
 					return false;
 				}
 			});
-			
-			
 		

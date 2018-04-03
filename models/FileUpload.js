@@ -22,7 +22,7 @@ FileUpload.add({
 	ans_5: { type: Number },
 	day: { type: Number },
 	language: { type: String },
-	subscribe:  { type: String },
+	subscribe: { type: String },
 	createdAt: { type: Date, default: Date.now },
 });
 

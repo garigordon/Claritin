@@ -1,14 +1,11 @@
 // Simulate config options from your production environment by
 // customising the .env file in your project's root folder.
 require('dotenv').config();
-
 // Require keystone
 var keystone = require('keystone');
-
 // Initialise Keystone with your project's configuration.
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
-
 keystone.init({
 	'name': 'Check',
 	'brand': 'Check',
