@@ -52,7 +52,6 @@ exports.get = function (req, res) {
 		answer = 'close';
 	}
 	console.log(answer);
-	
 	res.apiResponse({
 		collection: answer,
 	});
@@ -80,8 +79,8 @@ exports.update = function(req, res) {
 exports.create = function (req, res) {
 	var item = new FileData.model(),
 		data = (req.method === 'POST') ? req.body : req.query;
-	
-		item.getUpdateHandler(req).process(data, function(err) {
+
+	item.getUpdateHandler(req).process(data, function (err) {
 
 		if (err) return res.apiError('error', err);
 		res.apiResponse({

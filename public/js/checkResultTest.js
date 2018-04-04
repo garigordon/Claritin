@@ -62,7 +62,7 @@ $(function(){
 				localStorage.setItem("secondText", "Make more time for fetch using Claritin");
 				localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mold.");
 			}
-		}else {
+		} else {
 			if (arr3.length > 0) {
 				if (arr3[0] == 1) {
 					localStorage.setItem("number", "MOSTLY 1's - ");
@@ -143,7 +143,7 @@ $(function(){
 			newFile.append('ans_2', answ2);
 			newFile.append('ans_3', answ3);
 			newFile.append('ans_4', answ4);
-			newFile.append('ans_5', answ5); 
+			newFile.append('ans_5', answ5);
 			newFile.append('language', "En");
 			newFile.append('subscribe', localStorage.getItem('subscribe'));
 

@@ -1,5 +1,7 @@
 localStorage.clear();
 
+const ALLOWABLEAGE = 18;
+const LENGTHPHONENUMBER = 10;
 var first_name = document.forms['myForm']['first_name'];
 var name_error = document.getElementById('name_error');
 var last_name = document.forms['myForm']['last_name'];
@@ -43,12 +45,12 @@ function checkingForCharactersInTheField () {
 		document.getElementById('email_div').style.color = "yellow";
 		email_error.textContent = "Invalid Email.";
 	}
-	if (phone.value !== "" && phone.value.length < 10) {
+	if (phone.value !== "" && phone.value.length < LENGTHPHONENUMBER) {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
 		phone_error.textContent = "Phone number must be 10 digits.";
 	}
-	if (age.value !== "" && age.value < 18) {
+	if (age.value !== "" && age.value < ALLOWABLEAGE) {
 		age.style.border = "1px solid red";
 		document.getElementById('age_div').style.color = "yellow";
 		age_error.textContent = "You must be the age of majority or older to participate.";
@@ -81,7 +83,7 @@ function lastVerify () {
 }
 
 function ageVerify () {
-	if (age.value !== "" && age.value > 17) {
+	if (age.value !== "" && age.value >= ALLOWABLEAGE) {
 		age.style.border = "1px solid green";
 		document.getElementById('age_div').style.color = "green";
 		age_error.textContent = "";
@@ -90,7 +92,7 @@ function ageVerify () {
 }
 
 function phoneVerify () {
-	if (phone.value.length === 10) {
+	if (phone.value.length === LENGTHPHONENUMBER) {
 		phone.style.border = "1px solid green";
 		return true;
 	}
@@ -110,7 +112,7 @@ function emailVerify () {
 }
 
 function checkFields () {
-	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked) {
+	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
 		uploadFile();
 	}
 }

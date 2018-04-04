@@ -62,7 +62,7 @@ $(function(){
 				localStorage.setItem("secondText", "Consacrez plus de temps à jouer à « va chercher » en utilisant Claritin");
 				localStorage.setItem("threeText", "pour un soulagement puissant et sans somnolence des allergies aux animaux, au, pollen, à la poussière et aux moisissures.");
 			}
-		}else {
+		} else {
 			if (arr3.length > 0) {
 				if (arr3[0] == 1) {
 					localStorage.setItem("number", "PRINCIPALEMENT DES 1 - ");
