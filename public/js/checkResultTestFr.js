@@ -34,29 +34,29 @@ $(function(){
 				}
 			}
 			if(arr2[0] == 1){
-				localStorage.setItem("number", "MOSTLY 1's - ");
-				localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
+				localStorage.setItem("number", "PRINCIPALEMENT DES 1 - ");
+				localStorage.setItem("lastname", "ACHETEUSE EN PLEIN AIR");
 				localStorage.setItem("imgRes", "img/Results1.jpg");
 				localStorage.setItem("firstText", "Vous êtes extrêmement dynamique, surtout en ce qui a trait au magasinage! Rien ne vous empêche de vous rendre dans les quartiers les plus en vogue de la ville pour dénicher les meilleures aubaines et découvrir les nouveaux styles. ");
 				localStorage.setItem("secondText", "Sortez en toute confiance avec Claritin");
 				localStorage.setItem("threeText", "et obteniez un soulagement efficace et sans somnolence de vos pires symptômes.");
 			}else if(arr2[0] == 2){
-				localStorage.setItem("number", "MOSTLY 2's - ");
-				localStorage.setItem("lastname", "THE GARDENER");
+				localStorage.setItem("number", "PRINCIPALEMENT DES 2 - ");
+				localStorage.setItem("lastname", "LA JARDINIÈRE");
 				localStorage.setItem("imgRes", "img/Results2.jpg");
 				localStorage.setItem("firstText", "Avez-vous un talent inné pour le jardinage? Nous le croyons! Votre passion pour les plantes fait que vous adorez le plein air plus que toutes les autres personnes de votre groupe. ");
 				localStorage.setItem("secondText", "Si jouer dans la terre déclenche vos symptômes d’allergies, essayez Claritin");
 				localStorage.setItem("threeText", ", la seule solution qui offre un soulagement contre plus de 200 allergènes pendant 24 heures.");
 			} else if (arr2[0] == 3) {
-				localStorage.setItem("number", "MOSTLY 3's - ");
-				localStorage.setItem("lastname", "TEAM PLAYER");
+				localStorage.setItem("number", "PRINCIPALEMENT DES 3 - ");
+				localStorage.setItem("lastname", "JOUEUSE D’ÉQUIPE");
 				localStorage.setItem("imgRes", "img/Results3.jpg");
 				localStorage.setItem("firstText", "Enfilez vos chaussures, comme tout bon amateur de sport! Qu’il s’agisse d’une course matinale, d’une pratique de kickball en après-midi ou d’une séance de yoga en soirée, vous profitez toujours pleinement de votre journée d’activités en plein air. ");
 				localStorage.setItem("secondText", "Lorsque les symptômes d’allergies tranforment votre journée d’activités en semaine de récupération, vous pouvez compter sur Claritin");
 				localStorage.setItem("threeText", ", la solution sans somnolence à prise orale la plus recommandée par les médecins pour soulager les allergies.");
 			} else if (arr2[0] == 4) {
-				localStorage.setItem("number", "MOSTLY 4's - ");
-				localStorage.setItem("lastname", "CANINE WALKER");
+				localStorage.setItem("number", "PRINCIPALEMENT DES 4 - ");
+				localStorage.setItem("lastname", "PROMENEUSE DE CHIEN");
 				localStorage.setItem("imgRes", "img/Results4.jpg");
 				localStorage.setItem("firstText", "Fido occupe la première place dans votre famille! Beau temps, mauvais temps, vous ne reculez devant rien pour lui donner ce que la vie a de plus beau à offrir. Mais, lorsque vos symptômes d’allergies apparaissent, il vous est difficile de partir à l’aventure avec lui. ");
 				localStorage.setItem("secondText", "Consacrez plus de temps à jouer à « va chercher » en utilisant Claritin");
@@ -65,29 +65,29 @@ $(function(){
 		}else {
 			if (arr3.length > 0) {
 				if (arr3[0] == 1) {
-					localStorage.setItem("number", "MOSTLY 1's - ");
-					localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 1 - ");
+					localStorage.setItem("lastname", "ACHETEUSE EN PLEIN AIR");
 					localStorage.setItem("imgRes", "img/Results1.jpg");
 					localStorage.setItem("firstText", "Vous êtes extrêmement dynamique, surtout en ce qui a trait au magasinage! Rien ne vous empêche de vous rendre dans les quartiers les plus en vogue de la ville pour dénicher les meilleures aubaines et découvrir les nouveaux styles. ");
 					localStorage.setItem("secondText", "Sortez en toute confiance avec Claritin");
 					localStorage.setItem("threeText", "et obteniez un soulagement efficace et sans somnolence de vos pires symptômes.");
 				} else if (arr3[0] == 2) {
-					localStorage.setItem("number", "MOSTLY 2's - ");
-					localStorage.setItem("lastname", "THE GARDENER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 2 - ");
+					localStorage.setItem("lastname", "LA JARDINIÈRE");
 					localStorage.setItem("imgRes", "img/Results2.jpg");
 					localStorage.setItem("firstText", "Avez-vous un talent inné pour le jardinage? Nous le croyons! Votre passion pour les plantes fait que vous adorez le plein air plus que toutes les autres personnes de votre groupe. ");
 					localStorage.setItem("secondText", "Si jouer dans la terre déclenche vos symptômes d’allergies, essayez Claritin");
 					localStorage.setItem("threeText", ", la seule solution qui offre un soulagement contre plus de 200 allergènes pendant 24 heures.");
 				} else if (arr3[0] == 3) {
-					localStorage.setItem("number", "MOSTLY 3's - ");
-					localStorage.setItem("lastname", "TEAM PLAYER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 3 - ");
+					localStorage.setItem("lastname", "JOUEUSE D’ÉQUIPE");
 					localStorage.setItem("imgRes", "img/Results3.jpg");
 					localStorage.setItem("firstText", "Enfilez vos chaussures, comme tout bon amateur de sport! Qu’il s’agisse d’une course matinale, d’une pratique de kickball en après-midi ou d’une séance de yoga en soirée, vous profitez toujours pleinement de votre journée d’activités en plein air. ");
 					localStorage.setItem("secondText", "Lorsque les symptômes d’allergies tranforment votre journée d’activités en semaine de récupération, vous pouvez compter sur Claritin");
 					localStorage.setItem("threeText", ", la solution sans somnolence à prise orale la plus recommandée par les médecins pour soulager les allergies.");
 				} else if (arr3[0] == 4) {
-					localStorage.setItem("number", "MOSTLY 4's - ");
-					localStorage.setItem("lastname", "CANINE WALKER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 4 - ");
+					localStorage.setItem("lastname", "PROMENEUSE DE CHIEN");
 					localStorage.setItem("imgRes", "img/Results4.jpg");
 					localStorage.setItem("firstText", "Fido occupe la première place dans votre famille! Beau temps, mauvais temps, vous ne reculez devant rien pour lui donner ce que la vie a de plus beau à offrir. Mais, lorsque vos symptômes d’allergies apparaissent, il vous est difficile de partir à l’aventure avec lui. ");
 					localStorage.setItem("secondText", "Consacrez plus de temps à jouer à « va chercher » en utilisant Claritin");
@@ -95,29 +95,29 @@ $(function(){
 				}
 			} else {
 				if (arr2[0] == 1) {
-					localStorage.setItem("number", "MOSTLY 1's - ");
-					localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 1 - ");
+					localStorage.setItem("lastname", "ACHETEUSE EN PLEIN AIR");
 					localStorage.setItem("imgRes", "img/Results1.jpg");
 					localStorage.setItem("firstText", "Vous êtes extrêmement dynamique, surtout en ce qui a trait au magasinage! Rien ne vous empêche de vous rendre dans les quartiers les plus en vogue de la ville pour dénicher les meilleures aubaines et découvrir les nouveaux styles. ");
 					localStorage.setItem("secondText", "Sortez en toute confiance avec Claritin");
 					localStorage.setItem("threeText", "et obteniez un soulagement efficace et sans somnolence de vos pires symptômes.");
 				} else if (arr2[0] == 2) {
-					localStorage.setItem("number", "MOSTLY 2's - ");
-					localStorage.setItem("lastname", "THE GARDENER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 2 - ");
+					localStorage.setItem("lastname", "LA JARDINIÈRE");
 					localStorage.setItem("imgRes", "img/Results2.jpg");
 					localStorage.setItem("firstText", "Avez-vous un talent inné pour le jardinage? Nous le croyons! Votre passion pour les plantes fait que vous adorez le plein air plus que toutes les autres personnes de votre groupe. ");
 					localStorage.setItem("secondText", "Si jouer dans la terre déclenche vos symptômes d’allergies, essayez Claritin");
 					localStorage.setItem("threeText", ", la seule solution qui offre un soulagement contre plus de 200 allergènes pendant 24 heures.");
 				} else if (arr2[0] == 3) {
-					localStorage.setItem("number", "MOSTLY 3's - ");
-					localStorage.setItem("lastname", "TEAM PLAYER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 3 - ");
+					localStorage.setItem("lastname", "JOUEUSE D’ÉQUIPE");
 					localStorage.setItem("imgRes", "img/Results3.jpg");
 					localStorage.setItem("firstText", "Enfilez vos chaussures, comme tout bon amateur de sport! Qu’il s’agisse d’une course matinale, d’une pratique de kickball en après-midi ou d’une séance de yoga en soirée, vous profitez toujours pleinement de votre journée d’activités en plein air. ");
 					localStorage.setItem("secondText", "Lorsque les symptômes d’allergies tranforment votre journée d’activités en semaine de récupération, vous pouvez compter sur Claritin");
 					localStorage.setItem("threeText", ", la solution sans somnolence à prise orale la plus recommandée par les médecins pour soulager les allergies.");
 				} else if (arr2[0] == 4) {
-					localStorage.setItem("number", "MOSTLY 4's - ");
-					localStorage.setItem("lastname", "CANINE WALKER");
+					localStorage.setItem("number", "PRINCIPALEMENT DES 4 - ");
+					localStorage.setItem("lastname", "PROMENEUSE DE CHIEN");
 					localStorage.setItem("imgRes", "img/Results4.jpg");
 					localStorage.setItem("firstText", "Fido occupe la première place dans votre famille! Beau temps, mauvais temps, vous ne reculez devant rien pour lui donner ce que la vie a de plus beau à offrir. Mais, lorsque vos symptômes d’allergies apparaissent, il vous est difficile de partir à l’aventure avec lui. ");
 					localStorage.setItem("secondText", "Consacrez plus de temps à jouer à « va chercher » en utilisant Claritin");

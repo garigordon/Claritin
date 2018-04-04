@@ -15,41 +15,38 @@ var chbox = document.getElementById('Accept');
 var checkEmail = /^[A-Z0-9._%#^&*+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
 function Validate() {
+	checkingForCharactersInTheField();
+	checkFields();
+}
+
+function checkingForCharactersInTheField () {
 	first_name.addEventListener('keyup', nameVerify, true);
 	last_name.addEventListener('keyup', lastVerify, true);
 	Email.addEventListener('keyup', emailVerify, true);
 	phone.addEventListener('keyup', phoneVerify, true);
 	age.addEventListener('keyup', ageVerify, true);
-	checkboxVerify();
-	if (first_name.value === "") {
-		first_name.style.border = "1px solid red";
-		document.getElementById('username_div').style.color = "yellow";
-		name_error.textContent = "First Name is required";
+
+	var nameFields = [first_name, last_name, phone, age];
+	var nameFieldsError = [name_error, lastname_error, phone_error, age_error];
+	var textFields = ["First Name is required", "Last Name is required", "Invalid Phone number.", "Age is required."];
+	var divText = ['username_div', 'lastname_div', 'phone_div', 'age_div'];
+	for (var i = 0; i < nameFields.length; i++) {
+		if (nameFields[i].value === "") {
+			nameFields[i].style.border = "1px solid red";
+			document.getElementById(divText[i]).style.color = "yellow";
+			nameFieldsError[i].textContent = textFields[i];
+		}
 	}
-	if (last_name.value === "") {
-		last_name.style.border = "1px solid red";
-		document.getElementById('lastname_div').style.color = "yellow";
-		lastname_error.textContent = "Last Name is required";
-	}
+
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
 		email_error.textContent = "Invalid Email.";
 	}
-	if (phone.value === "") {
-		phone.style.border = "1px solid red";
-		document.getElementById('phone_div').style.color = "yellow";
-		phone_error.textContent = "Invalid Phone number.";
-	}
 	if (phone.value !== "" && phone.value.length < 10) {
 		phone.style.border = "1px solid red";
 		document.getElementById('phone_div').style.color = "yellow";
 		phone_error.textContent = "Phone number must be 10 digits.";
-	}
-	if (age.value === "") { 
-		age.style.border = "1px solid red";
-		document.getElementById('age_div').style.color = "yellow";
-		age_error.textContent = "Age is required";
 	}
 	if (age.value !== "" && age.value < 18) {
 		age.style.border = "1px solid red";
@@ -59,31 +56,17 @@ function Validate() {
 	if (!chbox.checked) {
 		document.getElementById('checkbox_div').style.color = "yellow";
 		checkbox_error.textContent = "This is a required field.";
-	}
-	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked){
-		uploadFile();
+	} else {
+		document.getElementById('checkbox_div').style.color = "green";
+		checkbox_error.textContent = "";
 	}
 }
+
 function nameVerify () {
 	if (first_name.value !== "") {
 		first_name.style.border = "1px solid green";
 		document.getElementById('username_div').style.color = "green";
 		name_error.textContent = "";
-		return true; 
-	}
-}
-
-function phoneVerify () {
-	if (phone.value.length === 10) {
-		phone.style.border = "1px solid green";
-		return true;
-	}
-}
-
-function checkboxVerify () {
-	if (chbox.checked) {
-		document.getElementById('checkbox_div').style.color = "green";
-		checkbox_error.textContent = "";
 		return true;
 	}
 }
@@ -106,6 +89,13 @@ function ageVerify () {
 	}
 }
 
+function phoneVerify () {
+	if (phone.value.length === 10) {
+		phone.style.border = "1px solid green";
+		return true;
+	}
+}
+
 function emailVerify () {
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
@@ -117,6 +107,12 @@ function emailVerify () {
 		email_error.textContent = "";
 	}
 	return true;
+}
+
+function checkFields () {
+	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === 10 && age.value !== "" && age.value > 17 && checkEmail.test(Email.value) === true && chbox.checked) {
+		uploadFile();
+	}
 }
 
 function uploadFile () {
