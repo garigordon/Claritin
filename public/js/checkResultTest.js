@@ -33,96 +33,12 @@ $(function(){
 					arr2[0] = arr2[i];
 				}
 			}
-			if(arr2[0] == 1){
-				localStorage.setItem("number", "MOSTLY 1's - ");
-				localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
-				localStorage.setItem("imgRes", "img/Results1.jpg");
-				localStorage.setItem("firstText", "You’re a mover and a shaker, especially when it comes to shopping! Nothing stops you from heading to the trendiest parts of town to find the best deals and the newest styles.");
-				localStorage.setItem("secondText", "Head outdoors with confidence by using non-drowsy Claritin");
-				localStorage.setItem("threeText", "when allergy symptoms strike.");
-			}else if(arr2[0] == 2){
-				localStorage.setItem("number", "MOSTLY 2's - ");
-				localStorage.setItem("lastname", "THE GARDENER");
-				localStorage.setItem("imgRes", "img/Results2.jpg");
-				localStorage.setItem("firstText", "Were you born with a green thumb? We think so! Your passion for plants makes you the outdoorsy one in your group.");
-				localStorage.setItem("secondText", "Yet if being among the Earth triggers your allergy symptoms, try turning to Claritin");
-				localStorage.setItem("threeText", "for fast 24-hour symptom relief from indoor and outdoor allergens.");
-			} else if (arr2[0] == 3) {
-				localStorage.setItem("number", "MOSTLY 3's - ");
-				localStorage.setItem("lastname", "TEAM PLAYER");
-				localStorage.setItem("imgRes", "img/Results3.jpg");
-				localStorage.setItem("firstText", "Lace up your shoes, sports fanatic! From morning run to afternoon kickball practice and evening yoga, you always get the most out of your outdoor game day.");
-				localStorage.setItem("secondText", "When allergy symptoms turn game day into a tough day, turn to Claritin");
-				localStorage.setItem("threeText", "for fast 24 hour allergy symptom relief.");
-			} else if (arr2[0] == 4) {
-				localStorage.setItem("number", "MOSTLY 4's - ");
-				localStorage.setItem("lastname", "CANINE WALKER");
-				localStorage.setItem("imgRes", "img/Results4.jpg");
-				localStorage.setItem("firstText", "Fido comes first in your family! Rain or shine, you stop at nothing to give your pup the best life has to offer. Yet when allergy symptoms strike, it’s hard to help Fido wag his tail.");
-				localStorage.setItem("secondText", "Make more time for fetch using Claritin");
-				localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mold.");
-			}
+			answerResult(arr2);
 		} else {
 			if (arr3.length > 0) {
-				if (arr3[0] == 1) {
-					localStorage.setItem("number", "MOSTLY 1's - ");
-					localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
-					localStorage.setItem("imgRes", "img/Results1.jpg");
-					localStorage.setItem("firstText", "You’re a mover and a shaker, especially when it comes to shopping! Nothing stops you from heading to the trendiest parts of town to find the best deals and the newest styles.");
-					localStorage.setItem("secondText", "Head outdoors with confidence by using non-drowsy Claritin");
-					localStorage.setItem("threeText", "when allergy symptoms strike.");
-				} else if (arr3[0] == 2) {
-					localStorage.setItem("number", "MOSTLY 2's - ");
-					localStorage.setItem("lastname", "THE GARDENER");
-					localStorage.setItem("imgRes", "img/Results2.jpg");
-					localStorage.setItem("firstText", "Were you born with a green thumb? We think so! Your passion for plants makes you the outdoorsy one in your group.");
-					localStorage.setItem("secondText", "Yet if being among the Earth triggers your allergy symptoms, try turning to Claritin");
-					localStorage.setItem("threeText", "for fast 24-hour symptom relief from indoor and outdoor allergens.");
-				} else if (arr3[0] == 3) {
-					localStorage.setItem("number", "MOSTLY 3's - ");
-					localStorage.setItem("lastname", "TEAM PLAYER");
-					localStorage.setItem("imgRes", "img/Results3.jpg");
-					localStorage.setItem("firstText", "Lace up your shoes, sports fanatic! From morning run to afternoon kickball practice and evening yoga, you always get the most out of your outdoor game day.");
-					localStorage.setItem("secondText", "When allergy symptoms turn game day into a tough day, turn to Claritin");
-					localStorage.setItem("threeText", "for fast 24 hour allergy symptom relief.");
-				} else if (arr3[0] == 4) {
-					localStorage.setItem("number", "MOSTLY 4's - ");
-					localStorage.setItem("lastname", "CANINE WALKER");
-					localStorage.setItem("imgRes", "img/Results4.jpg");
-					localStorage.setItem("firstText", "Fido comes first in your family! Rain or shine, you stop at nothing to give your pup the best life has to offer. Yet when allergy symptoms strike, it’s hard to help Fido wag his tail.");
-					localStorage.setItem("secondText", "Make more time for fetch using Claritin");
-					localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mold.");
-				}
+				answerResult(arr3);
 			} else {
-				if (arr2[0] == 1) {
-					localStorage.setItem("number", "MOSTLY 1's - ");
-					localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
-					localStorage.setItem("imgRes", "img/Results1.jpg");
-					localStorage.setItem("firstText", "You’re a mover and a shaker, especially when it comes to shopping! Nothing stops you from heading to the trendiest parts of town to find the best deals and the newest styles.");
-					localStorage.setItem("secondText", "Head outdoors with confidence by using non-drowsy Claritin");
-					localStorage.setItem("threeText", "when allergy symptoms strike.");
-				} else if (arr2[0] == 2) {
-					localStorage.setItem("number", "MOSTLY 2's - ");
-					localStorage.setItem("lastname", "THE GARDENER");
-					localStorage.setItem("imgRes", "img/Results2.jpg");
-					localStorage.setItem("firstText", "Were you born with a green thumb? We think so! Your passion for plants makes you the outdoorsy one in your group.");
-					localStorage.setItem("secondText", "Yet if being among the Earth triggers your allergy symptoms, try turning to Claritin");
-					localStorage.setItem("threeText", "for fast 24-hour symptom relief from indoor and outdoor allergens.");
-				} else if (arr2[0] == 3) {
-					localStorage.setItem("number", "MOSTLY 3's - ");
-					localStorage.setItem("lastname", "TEAM PLAYER");
-					localStorage.setItem("imgRes", "img/Results3.jpg");
-					localStorage.setItem("firstText", "Lace up your shoes, sports fanatic! From morning run to afternoon kickball practice and evening yoga, you always get the most out of your outdoor game day.");
-					localStorage.setItem("secondText", "When allergy symptoms turn game day into a tough day, turn to Claritin");
-					localStorage.setItem("threeText", "for fast 24 hour allergy symptom relief.");
-				} else if (arr2[0] == 4) {
-					localStorage.setItem("number", "MOSTLY 4's - ");
-					localStorage.setItem("lastname", "CANINE WALKER");
-					localStorage.setItem("imgRes", "img/Results4.jpg");
-					localStorage.setItem("firstText", "Fido comes first in your family! Rain or shine, you stop at nothing to give your pup the best life has to offer. Yet when allergy symptoms strike, it’s hard to help Fido wag his tail.");
-					localStorage.setItem("secondText", "Make more time for fetch using Claritin");
-					localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mold.");
-				}
+				answerResult(arr2);
 			}
 		}
 		if (answ1 !== 0 && answ2 !== 0 && answ3 !== 0 && answ4 !== 0 && answ5 !== 0 && answ1 !== undefined && answ2 !== undefined && answ3 !== undefined && answ4 !== undefined && answ5 !== undefined) {
@@ -175,3 +91,35 @@ $(function(){
 		}
 	});
 });
+
+function answerResult(arr) {
+	if (arr[0] == 1) {
+		localStorage.setItem("number", "MOSTLY 1's - ");
+		localStorage.setItem("lastname", "OPEN-AIR SHOPPER");
+		localStorage.setItem("imgRes", "img/Results1.jpg");
+		localStorage.setItem("firstText", "You’re a mover and a shaker, especially when it comes to shopping! Nothing stops you from heading to the trendiest parts of town to find the best deals and the newest styles.");
+		localStorage.setItem("secondText", "Head outdoors with confidence by using non-drowsy Claritin");
+		localStorage.setItem("threeText", "when allergy symptoms strike.");
+	} else if (arr[0] == 2){
+		localStorage.setItem("number", "MOSTLY 2's - ");
+		localStorage.setItem("lastname", "THE GARDENER");
+		localStorage.setItem("imgRes", "img/Results2.jpg");
+		localStorage.setItem("firstText", "Were you born with a green thumb? We think so! Your passion for plants makes you the outdoorsy one in your group.");
+		localStorage.setItem("secondText", "Yet if being among the Earth triggers your allergy symptoms, try turning to Claritin");
+		localStorage.setItem("threeText", "for fast 24-hour symptom relief from indoor and outdoor allergens.");
+	} else if (arr[0] == 3) {
+		localStorage.setItem("number", "MOSTLY 3's - ");
+		localStorage.setItem("lastname", "TEAM PLAYER");
+		localStorage.setItem("imgRes", "img/Results3.jpg");
+		localStorage.setItem("firstText", "Lace up your shoes, sports fanatic! From morning run to afternoon kickball practice and evening yoga, you always get the most out of your outdoor game day.");
+		localStorage.setItem("secondText", "When allergy symptoms turn game day into a tough day, turn to Claritin");
+		localStorage.setItem("threeText", "for fast 24 hour allergy symptom relief.");
+	} else if (arr[0] == 4) {
+		localStorage.setItem("number", "MOSTLY 4's - ");
+		localStorage.setItem("lastname", "CANINE WALKER");
+		localStorage.setItem("imgRes", "img/Results4.jpg");
+		localStorage.setItem("firstText", "Fido comes first in your family! Rain or shine, you stop at nothing to give your pup the best life has to offer. Yet when allergy symptoms strike, it’s hard to help Fido wag his tail.");
+		localStorage.setItem("secondText", "Make more time for fetch using Claritin");
+		localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mold.");
+	}
+}
