@@ -8,11 +8,10 @@ html(lang='en')
 		script(src='https://unpkg.com/axios/dist/axios.min.js')
 	body
 		script.
-			axios({
-				method: 'get',
-				url: 'http://13.59.224.151/api/fileupload/get',
-			}).then(function (response) {
-				document.location = "" + response.data.collection + "";
-			}).catch(function (error) {
-				
-			});
+			var xhr = new XMLHttpRequest();
+			xhr.open('get', 'http://13.59.224.151/api/fileupload/get');
+			xhr.onload = function (e) {
+				console.log(JSON.parse(this.response).collection)
+				document.location = "" + JSON.parse(this.response).collection + "";
+			};
+			xhr.send()
