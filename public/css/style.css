@@ -900,22 +900,20 @@ Home
 .home-slider-prize__title{
 		margin: 0 0 20px;
 		font-family: 'Helvetica LT Std', sans-serif;
-		border:0;
-		border-top-width: 3px;
-		border-bottom-width: 3px;
-		border-style: solid;
-		border-color: #275295;
 		font-size: 2.625rem;
 		color: #275295;
 		text-align: center;
-		line-height: 48px;
-		line-height: 3rem;
 	}
 
 .home-slider-prize__title span{
 			display: block;
 			line-height:1.875rem;
 		 	padding:12px 0;
+			border:0;
+			border-top-width: 3px;
+			border-bottom-width: 3px;
+			border-style: solid;
+			border-color: #275295;
 		}
 
 .home-slider-prize__description{

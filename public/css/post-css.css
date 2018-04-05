@@ -813,16 +813,15 @@ Home
 	&__title{
 		margin: 0 0 20px;
 		font-family: var(--fontLTStd);
-		border:0;
-		border: 3px * 3px * / solid / var(--colorBlue);
 		font-size: 42px;
 		color: var(--colorBlue);
 		text-align: center;
-		line-height: 3rem;
 		span{
 			display: block;
 			line-height:30px;
 		 	padding:12px 0;
+			border:0;
+			border: 3px * 3px * / solid / var(--colorBlue);
 		}
 	}
 	&__description{
