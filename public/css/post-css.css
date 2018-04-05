@@ -755,6 +755,7 @@ Home
 			position: relative;
 			top: -2px;
 			font-size: 16px;
+			margin:0;
 		}
 	}
 	&__top{
