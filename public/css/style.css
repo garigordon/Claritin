@@ -180,6 +180,10 @@ main{
 		body::before{
 			display: none;
 		}
+	main,
+	.wrapper{
+		display: block;
+	}
 }
 
 /*!==========================================================================
@@ -936,6 +940,9 @@ Home
 	.home-slider-banner{
 		margin-bottom: 15px;
 	}
+		.home-slider-banner__item{
+			padding:20px;
+		}
 		.home-slider-banner .column{
 			width: 100%;
 			text-align:center;
@@ -943,6 +950,10 @@ Home
 			.home-slider-banner .column:last-child{
 				padding: 0;
 			}
+		.home-slider-banner img{
+			width:80%;
+			margin:0 auto;
+		}
 		.home-slider-banner__title-list,
 		.home-slider-banner__top{
 			 width: 237px;
@@ -969,6 +980,7 @@ Home
 			}
 		.home-slider-prize img{
 			float: left;
+			width:80%;
 		}
 		.home-slider-prize__item{
 			padding:0;
@@ -979,14 +991,22 @@ Home
 				    -ms-flex-direction:column-reverse;
 				        flex-direction:column-reverse;
 			}
+		.home-slider-prize__text{
+			bottom:10px;
+			right:10px;
+		}
+			.home-slider-prize__text p{
+				font-size:0.875rem;
+			}
 		.home-slider-prize .column{
 			width: 100%;
-			text-align:left;
-		}		
-			.home-slider-prize .column:last-child{
-				 padding:30px 20px;
-				 text-align:center;
-			}
+			text-align:left;		
+			
+		}
+		.home-slider-prize .column:last-child{
+			padding:30px 20px;
+			text-align:center;
+		}
 			.home-slider-prize__title span{
 				font-size:2.8125rem;
 		 	}
@@ -1212,14 +1232,14 @@ Test page
 		padding-left: 10%;
 	}
 .single-test__block h3{
-			font-size: 2.3125rem;
+			font-size: 1.875rem;
 			color: #fff;
 			margin: 0 0 5px;
 			font-weight: 400;
 			text-align: center;
 		}
 .single-test__block h4{
-			font-size: 2.3125rem;
+			font-size: 1.875rem;
 			color: #ffee31;
 			font-weight: 700;
 			text-align: center;
@@ -1267,6 +1287,13 @@ Test page
 			.single-test__block .row-line{
 				margin: 0 -9px;
 			}
+			.single-test__block h3{
+				font-size: 1.125rem;
+			}
+			.single-test__block h4{
+				font-size: 1.125rem;
+				margin: 0 0 8px;
+			}
 		.single-test__image{
 			padding: 9px;
 		}
@@ -1276,13 +1303,6 @@ Test page
 		.single-test__label{
 			font-size: 0.875rem;
 		}
-			.single-test__block h3{
-				font-size: 1.125rem;
-			}
-			.single-test__block h4{
-				font-size: 1.125rem;
-				margin: 0 0 8px;
-			}
 			.single-test__title span{
 				padding: 0 0 5px;
 				line-height: 2.1875rem;
