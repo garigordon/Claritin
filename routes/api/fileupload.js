@@ -92,6 +92,7 @@ exports.create = function (req, res) {
 
 		});
 		answer = '';
+		answerNumber = 0;
 	}
 }
 
