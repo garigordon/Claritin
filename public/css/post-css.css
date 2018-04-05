@@ -755,6 +755,7 @@ Home
 			border:0;
 			border: 3px * 3px * / solid / var(--colorBlue);
 			display: block;
+			line-height:1rem;
 			padding: 12px;
 			font-size: 21px;
 			color: var(--colorBlue);
@@ -814,10 +815,11 @@ Home
 		font-family: var(--fontLTStd);
 		border:0;
 		border: 3px * 3px * / solid / var(--colorBlue);
-		padding: 12px;
+		padding: 6px;
 		font-size: 42px;
 		color: var(--colorBlue);
 		text-align: center;
+		 line-height: 3rem;
 	}
 	&__description{
 		text-align: center;

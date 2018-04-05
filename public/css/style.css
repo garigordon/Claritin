@@ -827,6 +827,8 @@ Home
 			border-style: solid;
 			border-color: #275295;
 			display: block;
+			line-height:16px;
+			line-height:1rem;
 			padding: 12px;
 			font-size: 1.3125rem;
 			color: #275295;
@@ -903,10 +905,12 @@ Home
 		border-bottom-width: 3px;
 		border-style: solid;
 		border-color: #275295;
-		padding: 12px;
+		padding: 6px;
 		font-size: 2.625rem;
 		color: #275295;
 		text-align: center;
+		 line-height: 48px;
+		 line-height: 3rem;
 	}
 
 .home-slider-prize__description{
