@@ -1234,6 +1234,7 @@ Test page
 		padding-right: 10%;
 		padding-bottom: 10%;
 		padding-left: 10%;
+		
 	}
 .single-test__block h3{
 			font-size: 1.5625rem;
@@ -1243,13 +1244,16 @@ Test page
 			text-align: center;
 		}
 .single-test__block h4{
-			font-size: 1.5625rem;
+			font-size: 1.25rem;
 			color: #ffee31;
 			font-weight: 700;
 			text-align: center;
 			margin: 0 0 20px;
 			text-transform: uppercase;
 		}
+.single-test__block h4.single-test__block--small{
+				font-size:1.25rem;
+			}
 .single-test__image{
 		width: 50%;
 		padding: 18px;
