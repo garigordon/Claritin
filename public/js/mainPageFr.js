@@ -149,5 +149,5 @@ function uploadFile () {
 			email_error.textContent = "Vous avez déjà joué aujourd'hui. Veuillez réessayer demain.";
 		}
 	};
-	xhr.send(email);
+	xhr.send(encodeURIComponent(email));
 }
