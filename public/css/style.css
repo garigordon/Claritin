@@ -898,6 +898,10 @@ Home
 	}
 
 .home-slider-prize__title{
+		border:0;
+		border-top-width: 3px;
+		border-style: solid;
+		border-color: #275295;
 		margin: 0 0 20px;
 		font-family: 'Helvetica LT Std', sans-serif;
 		font-size: 2.625rem;
@@ -910,7 +914,6 @@ Home
 			line-height:1.875rem;
 		 	padding:12px 0;
 			border:0;
-			border-top-width: 3px;
 			border-bottom-width: 3px;
 			border-style: solid;
 			border-color: #275295;

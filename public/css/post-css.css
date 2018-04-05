@@ -811,6 +811,8 @@ Home
 		padding: 60px * 21px;
 	}
 	&__title{
+		border:0;
+		border: 3px * * * / solid / var(--colorBlue);
 		margin: 0 0 20px;
 		font-family: var(--fontLTStd);
 		font-size: 42px;
@@ -821,7 +823,7 @@ Home
 			line-height:30px;
 		 	padding:12px 0;
 			border:0;
-			border: 3px * 3px * / solid / var(--colorBlue);
+			border: * * 3px * / solid / var(--colorBlue);
 		}
 	}
 	&__description{
