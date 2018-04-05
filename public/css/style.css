@@ -816,7 +816,7 @@ Home
 
 .home-slider-banner__title sup{
 			position: relative;
-			top: 4px;
+			top: -2px;
 			font-size: 1rem;
 		}
 
@@ -900,7 +900,7 @@ Home
 .home-slider-prize .title{
 		 border-top:3px solid #275295;
 		 border-bottom:3px solid #275295;
-		 padding:12px 0 7px;
+		 padding:14px 0 7px;
 		 margin:0 0 20px;
 		 font-size: 2.625rem;
 		 text-align: center;
