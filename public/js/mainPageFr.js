@@ -1,7 +1,7 @@
 localStorage.clear();
 
-const ALLOWABLEAGE = 18;
-const LENGTHPHONENUMBER = 10;
+var ALLOWABLEAGE = 18;
+var LENGTHPHONENUMBER = 10;
 var first_name = document.forms['myForm']['first_name'];
 var name_error = document.getElementById('name_error');
 var last_name = document.forms['myForm']['last_name'];
