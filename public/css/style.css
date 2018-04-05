@@ -486,6 +486,7 @@ Home
 		}
 .home-slider__slogan{
 		margin: 0 0 5px;
+	 	width:71%;
 	}
 .home-slider__slogan--visible-mobile{
 			display: none;
@@ -507,12 +508,13 @@ Home
 		}
 .home-slider__title{
 		color: #047802;
-		font-size: 1.75rem;
+		font-size: 1.625rem;
 		font-weight: 400;
 		margin:0 0 6px;
 	}
 .home-slider__title--large{
-			 font-size: 1.875rem;
+			 font-size: 1.8125rem;
+			 line-height:1.8125rem;
 		}
 .home-slider__title--indentation{
 			 margin: 25px 0 25px;
@@ -826,9 +828,9 @@ Home
 			border-style: solid;
 			border-color: #275295;
 			display: inline-block;
-			padding: 0 12px;
+			padding: 12px;
 			font-size: 1.3125rem;
-			line-height: 2.3125rem;
+			line-height: 1.375rem;
 			color: #275295;
 		}
 
@@ -907,9 +909,9 @@ Home
 			border-style: solid;
 			border-color: #275295;
 			display: block;
-			padding: 0 12px;
+			padding: 12px;
 			font-size: 2.625rem;
-			line-height: 3.5625rem;
+			line-height: 2.625rem;
 			color: #275295;
 			text-align: center;
 		}
