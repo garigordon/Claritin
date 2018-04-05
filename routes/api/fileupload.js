@@ -6,7 +6,7 @@ const router = require('express').Router();
 var express = require('express');
 var app = express();
 var answer = '';
-
+var answerNumber = 0;
 exports.list = function (req, res) {
 	var data = req.body;
 	FileData.model.find({ email: (Object.keys(data)) }, function (err, items) {
@@ -33,6 +33,7 @@ exports.list = function (req, res) {
 			date: day,
 			numberRegistrations: items.length,
 		});
+		answerNumber += 1;
 	});
 }
 
@@ -78,7 +79,7 @@ exports.update = function(req, res) {
 
 exports.create = function (req, res) {
 	console.log(answer);
-	if (answer === "Quiz") {
+	if (answer === "Quiz" && answerNumber === 2) {
 		var item = new FileData.model(),
 			data = (req.method === 'POST') ? req.body : req.query;
 
