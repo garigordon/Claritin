@@ -189,8 +189,10 @@ Layout
 			justify-content:flex-end;
 		}
 		&--fr{
-			 display: block;
+			 padding:5px 6px 4px;
+			display: block;
 			text-align:center;
+			min-height: 34px;
 		}
 	}
 	&__item{
@@ -226,6 +228,8 @@ Layout
 		text-transform: uppercase;
 		&--small{
 			font-size:12px;
+			 line-height: 1;
+			 font-family: Arial;
 		}
 	}
 }

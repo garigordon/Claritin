@@ -228,8 +228,10 @@ Layout
 		}
 
 .header-menu__list--fr{
-			 display: block;
+			 padding:5px 6px 4px;
+			display: block;
 			text-align:center;
+			min-height: 34px;
 		}
 
 .header-menu__item{
@@ -272,6 +274,8 @@ Layout
 
 .header-menu__link--small{
 			font-size:0.75rem;
+			 line-height: 1;
+			 font-family: Arial;
 		}
 
 @media (max-width: 767px) {
