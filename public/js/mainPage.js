@@ -138,7 +138,7 @@ function uploadFile () {
 	var xhr = new XMLHttpRequest();
 	xhr.open('post', 'http://13.59.224.151/api/fileupload/list');
 	xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	xhr.send(email);
+	xhr.send(encodeURIComponent(email));
 	xhr.onload = function (e) {
 		if (JSON.parse(this.response).day === "Quiz") {
 			document.location = "" + JSON.parse(xhr.response).day + "";

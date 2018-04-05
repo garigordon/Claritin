@@ -8,6 +8,7 @@ var app = express();
 var answer = '';
 exports.list = function (req, res) {
 	var data = req.body;
+	console.log(data);
 	FileData.model.find({ email: (Object.keys(data)) }, function (err, items) {
 
 		var now = new Date();
@@ -73,7 +74,7 @@ exports.update = function(req, res) {
 
 		});
 	});
-}
+};
 
 exports.create = function (req, res) {
 	console.log(answer);
