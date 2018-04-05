@@ -810,6 +810,7 @@ Home
 
 .home-slider-banner__title{
 		margin: 0 0 20px;
+		display: inline-block;
 		font-family: 'Helvetica LT Std', sans-serif;
 	}
 
@@ -825,10 +826,9 @@ Home
 			border-bottom-width: 3px;
 			border-style: solid;
 			border-color: #275295;
-			display: inline-block;
+			display: block;
 			padding: 12px;
 			font-size: 1.3125rem;
-			line-height: 1.375rem;
 			color: #275295;
 		}
 
@@ -898,21 +898,16 @@ Home
 .home-slider-prize__title{
 		margin: 0 0 20px;
 		font-family: 'Helvetica LT Std', sans-serif;
+		border:0;
+		border-top-width: 3px;
+		border-bottom-width: 3px;
+		border-style: solid;
+		border-color: #275295;
+		padding: 12px;
+		font-size: 2.625rem;
+		color: #275295;
+		text-align: center;
 	}
-
-.home-slider-prize__title span{
-			border:0;
-			border-top-width: 3px;
-			border-bottom-width: 3px;
-			border-style: solid;
-			border-color: #275295;
-			display: block;
-			padding: 12px;
-			font-size: 2.625rem;
-			line-height: 2.625rem;
-			color: #275295;
-			text-align: center;
-		}
 
 .home-slider-prize__description{
 		text-align: center;
