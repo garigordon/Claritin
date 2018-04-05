@@ -228,12 +228,8 @@ Layout
 		}
 
 .header-menu__list--fr{
-			 -webkit-box-pack:center;
-			     -ms-flex-pack:center;
-			         justify-content:center;
-			 -webkit-box-align: center;
-			     -ms-flex-align: center;
-			         align-items: center;
+			 display: block;
+			text-align:center;
 		}
 
 .header-menu__item{
@@ -259,8 +255,10 @@ Layout
 			}
 
 .header-menu__item--fr{
+			display: inline-block;
 			width:auto;
 			padding:0 2.5%;
+			 position: relative;
 		}
 
 .header-menu__link{

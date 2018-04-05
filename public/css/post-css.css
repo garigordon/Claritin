@@ -189,8 +189,8 @@ Layout
 			justify-content:flex-end;
 		}
 		&--fr{
-			 justify-content:center;
-			 align-items: center;
+			 display: block;
+			text-align:center;
 		}
 	}
 	&__item{
@@ -211,8 +211,10 @@ Layout
 			}
 		}
 		&--fr{
+			display: inline-block;
 			width:auto;
 			padding:0 2.5%;
+			 position: relative;
 		}
 	}
 	&__link{
