@@ -493,7 +493,7 @@ Home
 		}
 	}
 	&__info{
-		padding: * 20%;
+		padding: * 10%;
 		margin: 30px * *;
 		p{
 			font-size: 17px;
@@ -951,6 +951,10 @@ Result page
 			&:last-child{
 			 margin:* * 30px;
 		 	}
+			 a{
+				 color:#fff;
+				 text-decoration: none;
+			 }
 		}
 		sup{
 			margin: -7px 0 -1px;
@@ -1116,7 +1120,7 @@ Test page
 	&__description{
 		color: var(--colorYellow);
 		font-family: var(--fontLTStd);
-		font-size: 24px;
+		font-size: 22px;
 		text-align: center;
 		margin: 0 0 60px;
 	}

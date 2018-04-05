@@ -540,8 +540,8 @@ Home
 			font-size: 0.625rem;
 		}
 .home-slider__info{
-		padding-right: 20%;
-		padding-left: 20%;
+		padding-right: 10%;
+		padding-left: 10%;
 		margin-top: 30px;
 	}
 .home-slider__info p{
@@ -1051,6 +1051,10 @@ Result page
 .single-result__text--white:last-child{
 			 margin-bottom:30px;
 		 	}
+.single-result__text--white a{
+				 color:#fff;
+				 text-decoration: none;
+			 }
 .single-result__text sup{
 			margin: -7px 0 -1px;
 		}
@@ -1222,7 +1226,7 @@ Test page
 .single-test__description{
 		color: #ffee31;
 		font-family: 'Helvetica LT Std', sans-serif;
-		font-size: 1.5rem;
+		font-size: 1.375rem;
 		text-align: center;
 		margin: 0 0 60px;
 	}
