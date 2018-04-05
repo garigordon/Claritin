@@ -80,15 +80,13 @@ exports.create = function (req, res) {
 	if (answer === "Quiz") {
 		var item = new FileData.model(),
 			data = (req.method === 'POST') ? req.body : req.query;
-
 		item.getUpdateHandler(req).process(data, function (err) {
-
 			if (err) return res.apiError('error', err);
 			res.apiResponse({
 				file_upload: item,
 			});
-
 		});
+		answer = '';
 	}
 }
 
