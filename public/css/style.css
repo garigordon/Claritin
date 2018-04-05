@@ -812,7 +812,6 @@ Home
 		border-top:3px solid #275295;
 		margin: 0 0 20px;
 		display: inline-block;
-		font-family: 'Helvetica LT Std', sans-serif;
 		padding: 4px 0 0;
 		font-size: 1.3125rem;
 		color: #275295;
@@ -823,6 +822,7 @@ Home
 			top: 4px;
 			font-size: 1rem;
 			margin:0;
+			font-family: 'Helvetica LT Std', sans-serif;
 		}
 
 .home-slider-banner__title span{
