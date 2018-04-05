@@ -819,7 +819,11 @@ Home
 		font-size: 42px;
 		color: var(--colorBlue);
 		text-align: center;
-		 line-height: 3rem;
+		line-height: 3rem;
+		span{
+			display: block;
+			line-height:1;
+		}
 	}
 	&__description{
 		text-align: center;
