@@ -901,6 +901,10 @@ Home
 		 border-top:3px solid #275295;
 		 border-bottom:3px solid #275295;
 		 padding:12px 0 9px;
+		 margin:0 0 20px;
+		 font-size: 2.625rem;
+		 text-align: center;
+		 color: #275295;
 	 }
 
 .home-slider-prize__title{

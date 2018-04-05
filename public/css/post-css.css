@@ -814,6 +814,10 @@ Home
 		 border-top:3px solid var(--colorBlue);
 		 border-bottom:3px solid var(--colorBlue);
 		 padding:12px 0 9px;
+		 margin:0 0 20px;
+		 font-size: 42px;
+		 text-align: center;
+		 color: var(--colorBlue);
 	 }
 	&__title{
 		border:0;
