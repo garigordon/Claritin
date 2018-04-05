@@ -29,7 +29,6 @@
 	font-family: 'Helvetica';
 	src: url('Helvetica-Bold.eot');
 	src: url('Helvetica-Bold.eot?#iefix') format('embedded-opentype'),
-	url('Helvetica-Bold.woff2') format('woff2'),
 	url('Helvetica-Bold.woff') format('woff'),
 	url('Helvetica-Bold.ttf') format('truetype'),
 	url('Helvetica-Bold.svg#Helvetica-Bold') format('svg');
@@ -41,7 +40,6 @@
     font-family: 'Helvetica';
     src: url('Helvetica-Condensed.eot');
     src: url('Helvetica-Condensed.eot?#iefix') format('embedded-opentype'),
-        url('Helvetica-Condensed.woff2') format('woff2'),
         url('Helvetica-Condensed.woff') format('woff'),
         url('Helvetica-Condensed.ttf') format('truetype'),
         url('Helvetica-Condensed.svg#Helvetica-Condensed') format('svg');
@@ -53,7 +51,6 @@
     font-family: 'Helvetica LT Std';
     src: url('HelveticaLTStd-Bold.eot');
     src: url('HelveticaLTStd-Bold.eot?#iefix') format('embedded-opentype'),
-        url('HelveticaLTStd-Bold.woff2') format('woff2'),
         url('HelveticaLTStd-Bold.woff') format('woff'),
         url('HelveticaLTStd-Bold.ttf') format('truetype'),
         url('HelveticaLTStd-Bold.svg#HelveticaLTStd-Bold') format('svg');
