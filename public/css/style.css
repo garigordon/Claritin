@@ -809,15 +809,11 @@ Home
 		}
 
 .home-slider-banner__title{
-		border:0;
-		border-top-width: 3px;
-		border-bottom-width: 3px;
-		border-style: solid;
-		border-color: #275295;
+		border-top:3px solid #275295;
 		margin: 0 0 20px;
 		display: inline-block;
 		font-family: 'Helvetica LT Std', sans-serif;
-		padding: 4px 0 7px;
+		padding: 4px 0 0;
 		font-size: 1.3125rem;
 		color: #275295;
 	}
@@ -827,6 +823,12 @@ Home
 			top:2px;
 			font-size: 1rem;
 			margin:0;
+		}
+
+.home-slider-banner__title span{
+			display: block;
+			border-bottom: 3px solid #275295;
+			padding:0 0 6px;
 		}
 
 .home-slider-banner__top{
