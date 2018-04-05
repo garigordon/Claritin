@@ -905,7 +905,6 @@ Home
 		border-bottom-width: 3px;
 		border-style: solid;
 		border-color: #275295;
-		padding: 6px;
 		font-size: 2.625rem;
 		color: #275295;
 		text-align: center;
@@ -915,7 +914,8 @@ Home
 
 .home-slider-prize__title span{
 			display: block;
-			line-height:1;
+			line-height:1.875rem;
+		 	padding:12px 0;
 		}
 
 .home-slider-prize__description{

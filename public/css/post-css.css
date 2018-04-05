@@ -815,14 +815,14 @@ Home
 		font-family: var(--fontLTStd);
 		border:0;
 		border: 3px * 3px * / solid / var(--colorBlue);
-		padding: 6px;
 		font-size: 42px;
 		color: var(--colorBlue);
 		text-align: center;
 		line-height: 3rem;
 		span{
 			display: block;
-			line-height:1;
+			line-height:30px;
+		 	padding:12px 0;
 		}
 	}
 	&__description{
