@@ -748,12 +748,12 @@ Home
 		margin: 0 0 20px;
 		display: inline-block;
 		font-family: var(--fontLTStd);
-		padding: 7px 0 7px;
+		padding: 4px 0 7px;
 		font-size: 21px;
 		color: var(--colorBlue);
 		sup{
 			position: relative;
-			top: -2px;
+			top:2px;
 			font-size: 16px;
 			margin:0;
 		}
