@@ -897,6 +897,12 @@ Home
 		padding-bottom: 21px;
 	}
 
+.home-slider-prize .title{
+		 border-top:3px solid #275295;
+		 border-bottom:3px solid #275295;
+		 padding:12px 0 9px;
+	 }
+
 .home-slider-prize__title{
 		border:0;
 		border-top-width: 3px;

@@ -810,6 +810,11 @@ Home
 	&__item{
 		padding: 60px * 21px;
 	}
+	 .title{
+		 border-top:3px solid var(--colorBlue);
+		 border-bottom:3px solid var(--colorBlue);
+		 padding:12px 0 9px;
+	 }
 	&__title{
 		border:0;
 		border: 3px * * * / solid / var(--colorBlue);
