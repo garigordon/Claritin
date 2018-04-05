@@ -5,7 +5,7 @@ var numberData = keystone.list('numberOfRegistrations');
 const router = require('express').Router();
 var express = require('express');
 var app = express();
-
+var result = "";
 exports.update = function (req, res) {
 	numberData.model.findById(req.params.id).exec(function(err, item) {
 		if (err) return res.apiError('database error', err);
@@ -23,22 +23,12 @@ exports.update = function (req, res) {
 
 		});
 	});
-}
+};
 
-exports.create = function (req, res) {
-	var item = new numberData.model(),
-		data = (req.method === 'POST') ? req.body : req.query;
-	item.getUpdateHandler(req).process(data, function(err) {
-		if (err) return res.apiError('error', err);
-		res.apiResponse({
-			file_upload: item
-		});
-	});
-}
-
-exports.remove = function(req, res) {
+exports.remove = function (req, res) {
 	var data = req.body;
 	var fileId = req.params.email;
+	result = "GO";
 	numberData.model.find({ email: (Object.keys(data)) }, function (err, item) {
 		if (err) return res.apiError('database error', err);
 		if (!item) return res.apiError('not found');
@@ -55,6 +45,20 @@ exports.remove = function(req, res) {
 				success: true
 			});
 		});
-
 	});
+}
+
+
+exports.create = function (req, res) {
+	if (result === "GO") {
+		var item = new numberData.model(),
+			data = (req.method === 'POST') ? req.body : req.query;
+		item.getUpdateHandler(req).process(data, function (err) {
+			if (err) return res.apiError('error', err);
+			res.apiResponse({
+				file_upload: item
+			});
+		});
+		result = "";
+	}
 }

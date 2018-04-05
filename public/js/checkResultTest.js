@@ -66,21 +66,23 @@ $(function(){
 			var xhr = new XMLHttpRequest();
 			var xhresponse = new XMLHttpRequest();
 			var xhrclosetable = new XMLHttpRequest();
+			var xhrcreate = new XMLHttpRequest();
 			xhresponse.open('post', 'http://13.59.224.151/api/numberofregistrations/remove');
 			xhresponse.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xhresponse.send(email);
+
 			xhr.open('post', 'http://13.59.224.151/api/fileupload/list', true);
 			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 			xhr.onload = function (e) {
 				newFile.append('day', JSON.parse(xhr.response).date);
 				newResult.append('registration', JSON.parse(xhr.response).numberRegistrations + 1);
 				if (JSON.parse(xhr.response).day === "Quiz") {
-					xhr.open('post', 'http://13.59.224.151/api/fileupload/create', true);
-					xhr.onload = function (e) {
+					xhrcreate.open('post', 'http://13.59.224.151/api/fileupload/create', true);
+					xhrcreate.onload = function (e) {
 						document.location = 'result';
 						localStorage.setItem("checkAnswerTest", "MOSTLY");
 					};
-					xhr.send(newFile);
+					xhrcreate.send(newFile);
 					xhrclosetable.open('post', 'http://13.59.224.151/api/numberofregistrations/create', true);
 					xhrclosetable.send(newResult);
 				} else {

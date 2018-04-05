@@ -5,15 +5,15 @@ var FileData = keystone.list('MainStatistics');
 const router = require('express').Router();
 var express = require('express');
 var app = express();
+var answer = '';
 
 exports.list = function (req, res) {
 	var data = req.body;
 	FileData.model.find({ email: (Object.keys(data)) }, function (err, items) {
-	
+
 		var now = new Date();
 		var month = now.getMonth() + 1;
 		var day = now.getDate();
-		var answer = '';
 		if (month === 3 && day - items.length >= 16 && items.length === 0) {
 			answer =  'Quiz';
 		} else if (month === 4 && (day + 30) - items.length >= 16 && items.length === 0) {
@@ -26,7 +26,7 @@ exports.list = function (req, res) {
 			answer = 'thanks';
 		}
 		console.log(answer);
-		
+
 		if (err) return res.apiError('database error', err);
 		res.apiResponse({
 			day: answer,
@@ -77,17 +77,21 @@ exports.update = function(req, res) {
 }
 
 exports.create = function (req, res) {
-	var item = new FileData.model(),
-		data = (req.method === 'POST') ? req.body : req.query;
+	console.log(answer);
+	if (answer === "Quiz") {
+		var item = new FileData.model(),
+			data = (req.method === 'POST') ? req.body : req.query;
 
-	item.getUpdateHandler(req).process(data, function (err) {
+		item.getUpdateHandler(req).process(data, function (err) {
 
-		if (err) return res.apiError('error', err);
-		res.apiResponse({
-			file_upload: item
+			if (err) return res.apiError('error', err);
+			res.apiResponse({
+				file_upload: item,
+			});
+
 		});
-
-	});
+		answer = '';
+	}
 }
 
 exports.remove = function(req, res) {
@@ -101,7 +105,7 @@ exports.remove = function(req, res) {
 		item.remove(function (err) {
 
 			if (err) return res.apiError('database error', err);
-			
+
 			exec('rm public/uploads/files/'+fileId+'.*', function(err, stdout, stderr) {
 				if (err) {
 					console.log('child process exited with error code ' + err.code);
