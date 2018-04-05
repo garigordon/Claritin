@@ -220,7 +220,7 @@ Layout
 		font-weight: bold;
 		color: #275295;
 		display: block;
-		line-height:15px;
+		line-height:18px;
 		text-transform: uppercase;
 		&--small{
 			font-size:12px;
