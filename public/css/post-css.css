@@ -189,7 +189,8 @@ Layout
 			justify-content:flex-end;
 		}
 		&--fr{
-			 padding:4px;
+			 padding:10px;
+			 font-size:0;
 			display: block;
 			text-align:center;
 			min-height: 34px;
