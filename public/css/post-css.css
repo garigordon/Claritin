@@ -189,8 +189,11 @@ Layout
 			justify-content:flex-end;
 		}
 		&--fr{
-			 display: block;
+			 padding:10px;
+			 font-size:0;
+			display: block;
 			text-align:center;
+			min-height: 34px;
 		}
 	}
 	&__item{
@@ -226,6 +229,8 @@ Layout
 		text-transform: uppercase;
 		&--small{
 			font-size:12px;
+			 line-height: 1;
+			 font-family: Arial;
 		}
 	}
 }
@@ -743,22 +748,23 @@ Home
 		}
 	}
 	&__title{
+		border-top:3px solid var(--colorBlue);
 		margin: 0 0 20px;
 		display: inline-block;
-		font-family: var(--fontLTStd);
+		padding: 4px 0 0;
+		font-size: 21px;
+		color: var(--colorBlue);
 		sup{
 			position: relative;
 			top: 4px;
 			font-size: 16px;
+			margin:0;
+			font-family: var(--fontLTStd);
 		}
 		span{
-			border:0;
-			border: 3px * 3px * / solid / var(--colorBlue);
 			display: block;
-			line-height:1rem;
-			padding: 12px;
-			font-size: 21px;
-			color: var(--colorBlue);
+			border-bottom: 3px solid var(--colorBlue);
+			padding:0 0 6px;
 		}
 	}
 	&__top{
@@ -813,7 +819,7 @@ Home
 	 .title{
 		 border-top:3px solid var(--colorBlue);
 		 border-bottom:3px solid var(--colorBlue);
-		 padding:12px 0 9px;
+		 padding:14px 0 7px;
 		 margin:0 0 20px;
 		 font-size: 42px;
 		 text-align: center;
