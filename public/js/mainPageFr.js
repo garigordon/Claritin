@@ -112,7 +112,7 @@ function emailVerify () {
 }
 
 function checkFields () {
-	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
+	if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Numéro de téléphone non valide." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
 		uploadFile();
 	}
 }
