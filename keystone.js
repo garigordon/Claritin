@@ -7,18 +7,18 @@ var keystone = require('keystone');
 // See http://keystonejs.com/guide/config for available options
 // and documentation.
 keystone.init({
-	'name': 'Check',
-	'brand': 'Check',
+	'name': 'Claritin Admin Panel',
+	'brand': 'Claritin Admin Panel',
 
 	'less': 'public',
 	'static': 'public',
-	'favicon': 'public/favicon.ico',
+	'favicon': 'public/logo.PNG',
 	'views': 'templates/views',
 	'view engine': 'pug',
-	'auto update': true, 
-	'session': true, 
-	'auth': true, 
-	'user model': 'User', 
+	'auto update': true,
+	'session': true,
+	'auth': true,
+	'user model': 'User',
 	'port': 80,
 	'cookie secret': 'you api',
 });
