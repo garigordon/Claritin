@@ -14,6 +14,7 @@ keystone.init({
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
 	'logo': 'public/logo.png',
+	'signin logo': ['../logo.png', 205, 68],
 	'views': 'templates/views',
 	'view engine': 'pug',
 	'auto update': true,
@@ -40,7 +41,7 @@ keystone.set('locals', {
 // Load your project's Routes
 keystone.set('routes', require('./routes'));
 keystone.set('cors allow origin', true);
-
+keystone.set('signin logo', '../logo.png');
 // Configure the navigation bar in Keystone's Admin UI
 keystone.set('nav', {
 	users: 'users',
