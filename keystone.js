@@ -13,6 +13,7 @@ keystone.init({
 	'less': 'public',
 	'static': 'public',
 	'favicon': 'public/favicon.ico',
+	'logo': 'public/logo.png',
 	'views': 'templates/views',
 	'view engine': 'pug',
 	'auto update': true,
