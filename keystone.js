@@ -12,7 +12,7 @@ keystone.init({
 
 	'less': 'public',
 	'static': 'public',
-	'favicon': 'public/logo.PNG',
+	'favicon': 'public/favicon.ico',
 	'views': 'templates/views',
 	'view engine': 'pug',
 	'auto update': true,
