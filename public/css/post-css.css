@@ -33,6 +33,7 @@ General
 @custom-media --phone (max-width: 767px);
 @custom-media --ipadMin (min-width: 768px);
 @custom-media --ipadMax (max-width: 992px);
+@custom-media --ipad (max-width: 1064px);
 
 *{
 	margin: 0;
@@ -548,6 +549,18 @@ Home
 	}
 }
 
+
+@media (--ipadMin) and (--ipad){
+	.home-slider{
+		&__slogan{
+			width: 62%;
+		}
+		&__title{
+			font-size: 24px;
+		}
+	}
+}
+
 @media (--phone) {
 	.home-slider{
 		&__slogan{
@@ -608,7 +621,7 @@ Home
 	&__title{
 		margin: 0 0 20px;
 		h3{
-			font-size: 29px;
+			font-size:0px;
 			text-align: center;
 			font-weight: 400;
 			margin: 0;
@@ -619,6 +632,7 @@ Home
 				padding: 0 20px;
 				line-height: 42px;
 				color: #fff;
+				font-size: 29px;
 				strong{
 					color: #ffee31;
 				}
