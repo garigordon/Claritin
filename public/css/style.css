@@ -170,6 +170,7 @@ main{
 	display: none;
 }
 
+
 @media (max-width: 767px) {
 		body::after{
 			background-size:cover;
@@ -622,7 +623,7 @@ Home
 			margin: 0 0 5px;
 		}
 		.home-slider__text{
-			font-size: 0.6875rem;
+			font-size: 0.75rem;
 		}
 			.home-slider__txt span{
 				color: #fff;
@@ -632,9 +633,10 @@ Home
 			padding-right: 5%;
 			padding-left: 5%;
 			margin-top: 20px;
+			font-size: 0.75rem;
 		}
 			.home-slider__info p{
-				font-size: 0.6875rem;
+				font-size: 0.75rem;
 				color: #275295;
 				margin: 0 0 5px;
 			}

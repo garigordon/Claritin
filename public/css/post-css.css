@@ -580,7 +580,7 @@ Home
 			margin: 0 0 5px;
 		}
 		&__text{
-			font-size: 11px;
+			font-size: 12px;
 		}
 		&__txt{
 			span{
@@ -591,8 +591,9 @@ Home
 		&__info{
 			padding: * 5%;
 			margin: 20px * *;
+			font-size: 12px;
 			p{
-				font-size: 11px;
+				font-size: 12px;
 				color: var(--colorBlue);
 				margin: 0 0 5px;
 			}
