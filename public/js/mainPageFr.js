@@ -112,7 +112,6 @@ function emailVerify () {
 }
 
 function checkFields () {
-	$('#btn-validate').click(function () {
 		var response = grecaptcha.getResponse();
 		if (response.length === 0){
 		} else {
@@ -120,7 +119,6 @@ function checkFields () {
 				uploadFile();
 			}
 		}
-	});
 }
 
 function uploadFile () {
