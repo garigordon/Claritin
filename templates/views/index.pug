@@ -11,14 +11,21 @@ html(lang='en')
 			var xhr = new XMLHttpRequest();
 			xhr.open('get', 'http://13.59.224.151/api/fileupload/get');
 			xhr.onload = function (e) {
-				if(location.host == "concoursclaritin.com" && JSON.parse(this.response).collection == "en") {
-					document.location = "fr";
-				} else if (location.host == "concoursclaritin.com" && JSON.parse(this.response).collection == "coming"){
-					document.location = "venir";
-				} else if (location.host == "concoursclaritin.com" && JSON.parse(this.response).collection == "close") {
-					document.location = "fin";
-				} else {
-					document.location = "" + JSON.parse(this.response).collection + "";
-				}
+				console.log(JSON.parse(this.response).collection)
+				document.location = "" + JSON.parse(this.response).collection + "";
 			};
 			xhr.send()
+			// var xhr = new XMLHttpRequest();
+			// xhr.open('get', 'http://13.59.224.151/api/fileupload/get');
+			// xhr.onload = function (e) {
+			// 	if (location.host == "concoursclaritin.com" && JSON.parse(this.response).collection == "en") {
+			// 		document.location = "fr";
+			// 	} else if (location.host == "concoursclaritin.com" && JSON.parse(this.response).collection == "coming") {
+			// 		document.location = "venir";
+			// 	} else if (location.host == "concoursclaritin.com" && JSON.parse(this.response).collection == "close") {
+			// 		document.location = "fin";
+			// 	} else {
+			// 		document.location = "" + JSON.parse(this.response).collection + "";
+			// 	}
+			// };
+			// xhr.send()
