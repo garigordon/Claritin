@@ -224,5 +224,9 @@ html(lang='en')
 					return false;
 				}
 			});
-            
-        
+			
+			$(document).on('keypress', function (event) {
+				if ((event.keyCode === 32 && document.activeElement.tabIndex === 1) || (event.keyCode === 32 && document.activeElement.tabIndex === 2)) {
+					return false; 
+				}
+			});
