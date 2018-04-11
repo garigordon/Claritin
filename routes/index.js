@@ -38,6 +38,7 @@ exports = module.exports = function (app) {
 	app.all('/api*', keystone.middleware.cors);
 	app.get('/', routes.views.index);
 	app.get('/fr', routes.views.fr);
+	app.get('/en', routes.views.en);
 	app.get('/checkDate', routes.views.checkDate);
 	app.get('/coming', routes.views.coming);
 	app.get('/close', routes.views.close);

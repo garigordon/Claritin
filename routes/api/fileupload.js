@@ -43,11 +43,11 @@ exports.get = function (req, res) {
 
 	var answer = '';
 	if (month < 4 || (month === 4 && day < 16)) {
-		answer =  'coming';
+		answer = 'coming';
 	} else if (month === 4 && day >= 16 && day <= 30) {
-		answer =  '/';
+		answer = 'en';
 	} else if (month === 5 && day <= 25) {
-		answer = '/';
+		answer = 'en';
 	} else if ((month === 5 && day > 25) || month > 5) {
 		answer = 'close';
 	}

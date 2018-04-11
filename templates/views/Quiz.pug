@@ -18,16 +18,16 @@ html(lang='en')
 			var phone = localStorage.getItem('phone');
 			var age = localStorage.getItem('age');
 			if (email === null && phone === null && first_name === null && last_name === null && age === null){
-				document.location = "/";
+				document.location = "/en";
 			}
 			if(localStorage.getItem('checkButton') === "check") {
-				document.location = "/";
+				document.location = "/en";
 			}
 		.wrapper 
 			header.header
 				.container.row-line.center
 					.header__logo
-						a(href='/')
+						a(href='/en')
 							img(src='img/logo.png', alt='')
 					.burger
 						button.hamburger
@@ -41,7 +41,7 @@ html(lang='en')
 					.header-menu
 						ul.header-menu__list
 							li.header-menu__item
-								a.header-menu__link(href='/') HOME
+								a.header-menu__link(href='/en') HOME
 							li.header-menu__item
 								a.header-menu__link(href='/#form-block') ENTER
 							li.header-menu__item

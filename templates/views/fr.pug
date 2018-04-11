@@ -9,6 +9,7 @@ html(lang='fr')
 		link(href='css/style.css', rel='stylesheet', type='text/css')
 		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
 		script(src='https://unpkg.com/axios/dist/axios.min.js')
+		script(src='https://www.google.com/recaptcha/api.js')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
 		.wrapper
@@ -37,7 +38,7 @@ html(lang='fr')
 							li.header-menu__item.header-menu__item--fr
 								a.header-menu__link.header-menu__link--small(href='/regles', target='_blank') RéGLEMENT
 							li.header-menu__item.header-menu__item--fr
-								a.header-menu__link.header-menu__link--small(href='/') English
+								a.header-menu__link.header-menu__link--small(href='/en') English
 			main.page__main.main
 				.container
 					.home-slider__top
@@ -93,6 +94,7 @@ html(lang='fr')
 									#age_div
 										input#age.form-control(type='text', name='age', tabindex="5", maxlength='2', placeholder='Âge*')
 										#age_error
+							#recaptcha.g-recaptcha(data-sitekey='6LcNY1AUAAAAACxtw9iWOIX_jrvuxzGc2_Y3m8NK')
 							.item
 								label.checkbox(for='Accept', tabindex="6")
 									#checkbox_div

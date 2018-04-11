@@ -86,7 +86,7 @@ $(function(){
 					xhrclosetable.open('post', 'http://13.59.224.151/api/numberofregistrations/create', true);
 					xhrclosetable.send(newResult);
 				} else {
-					document.location = "/";
+					document.location = "/en";
 				}
 			};
 			xhr.send(encodeURIComponent(email));
