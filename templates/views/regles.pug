@@ -5,11 +5,6 @@ html(lang='en')
 		meta(http-equiv='content-type', content='text/html; charset=utf-8')
 		meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
 		meta(http-equiv='x-ua-compatible', content='ie=edge')
-		link(rel='shortcut icon', href='img/favicon.ico')
-		link(rel='apple-touch-icon', sizes='180x180', href='img/apple-icon-180x180.png')
-		link.del-in-ie10(rel='icon', type='image/png', sizes='192x192', href='img/android-icon-192x192.png')
-		link.del-in-ie10(rel='icon', type='image/png', sizes='32x32', href='img/favicon-32x32.png')
-		link.del-in-ie10(rel='icon', type='image/png', sizes='16x16', href='img/favicon-16x16.png')
 		link(rel='stylesheet', href='fonts/fonts.css')
 		link(href='css/style.css', rel='stylesheet', type='text/css')
 		link(href='css/tooltipster.bundle.css', rel='stylesheet', type='text/css')
@@ -189,7 +184,7 @@ html(lang='en')
 						li.footer-menu__item.footer-menu__item--padding
 							a.footer-menu__link.footer-menu__link--small(target='_blank', href='http://bayer.ca/fr/general-conditions-of-use/') Modalités et conditions
 						li.footer-menu__item.footer-menu__item--padding
-							a.footer-menu__link.footer-menu__link--small.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Propriétaire du site
+							a.footer-menu__link.footer-menu__link--small.tooltip(href='javascript:void(0);', data-tooltip-content='#tooltip_content') Propriéetaire du site
 							.tooltip_templates
 								#tooltip_content
 									p Bayer Inc.,
@@ -205,26 +200,4 @@ html(lang='en')
 		script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js')
 		script(type='text/javascript', src='js/tooltipster.bundle.min.js')
 		script(type='text/javascript', src='js/main.js')
-		script.
-			document.getElementById("age").onkeypress = function (event) {
-				event = event || window.event;
-				if (event.charCode && (event.charCode < 48 || event.charCode > 57))
-					return false;
-			};
-			
-			var i;
-			var arr = [204, 226, 236, 249, 250, 289, 306, 343, 365, 403, 416, 418, 431, 437, 438, 450, 506, 514, 519, 548, 579, 581, 587, 604, 613, 639, 647, 705, 709, 778, 780, 782, 807, 819, 825, 867, 873, 902, 905];
-			document.getElementById('phone').addEventListener('input', function (e) {
-				var x = e.target.value.replace(/(\+1)?\D/g, '').match(/(\d{0,3})(\d{0,3})(\d{0,4})/);
-				e.target.value = !x[2] ? x[1] : '+1-' + x[1] + '-' + x[2] + (x[3] ? '-' + x[3] : '');
-				for (i = 0; i < arr.length; i++) {
-					console.log(arr.length)
-					if (x[1] != arr[i]) {
-						document.getElementById('phone_div').style.color = "yellow";
-						phone_error.textContent = "Invalid Phone number.";
-					} else {
-						i = arr[i];
-						phone_error.textContent = "";
-					}
-				}
-			});
+		script(type='text/javascript', src='js/checDateCurrent.js')
