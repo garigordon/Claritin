@@ -588,7 +588,7 @@ Home
 			padding: 15px;
 		}
 			.home-slider__content .column{
-				width: 100%;
+				width: 60%;
 				text-align: center;
 			}
 		.home-slider__title{
@@ -599,7 +599,6 @@ Home
 			font-size: 0.9375rem;
 		}
 }
-
 
 @media (min-width: 768px) and (max-width: 1064px){
 		.home-slider__slogan{
@@ -663,18 +662,35 @@ Home
 		position: absolute;
 	}
 }
+
+
+@media (min-width: 500px) and (max-width: 768px){
+		.home-slider__slogan{
+			 width: 62%;
+		 }
+		.home-slider__title{
+			 font-size: 1.5rem;
+		}
+		.home-slider__text{
+			 font-size: 1rem;
+		}
+}
+
 .home-form{
 	padding: 65px 75px 0;
 }
+
 .home-form__title{
 		margin: 0 0 20px;
 	}
+
 .home-form__title h3{
 			font-size:0;
 			text-align: center;
 			font-weight: 400;
 			margin: 0;
 		}
+
 .home-form__title h3 span{
 				border:0;
 				border-top-width: 3px;
@@ -687,28 +703,34 @@ Home
 				color: #fff;
 				font-size: 1.8125rem;
 			}
+
 .home-form__title h3 span strong{
 					color: #ffee31;
 				}
+
 .home-form__fields{
 		color: #fff;
 		font-size: 1.0625rem;
 		padding-left: 29px;
 		margin: 0;
 	}
+
 .home-form .row-line{
 		margin: 0 -10px;
 	}
+
 .home-form .column{
 		width: 50%;
 		margin: 0 0 20px;
 		padding: 0 10px;
 	}
+
 .home-form .full-width{
 		width: 100%;
 		margin: 0 0 20px;
 		padding: 0 10px;
 	}
+
 .home-form .form-control{
 		border: 0;
 		width: 100%;
@@ -717,9 +739,11 @@ Home
 		font-size: 1.0625rem;
 		color: #000;
 	}
+
 .home-form .item{
 		margin: 0 0 20px;
 	}
+
 .home-form__submit{
 		color: #275295;
 		background-color: #ffee31;
@@ -897,6 +921,12 @@ Home
 			display: none;
 		}
 
+@media (min-width: 768px) and (max-width: 992px){
+		.home-slider-banner img{
+			width:100%;
+		}
+}
+
 .home-slider-prize{
 	background: url(../img/home-slider-prize.png) no-repeat;
 	background-size: cover;
@@ -973,6 +1003,12 @@ Home
 			text-align: right;
 		}
 
+
+@media (min-width: 768px) and (max-width: 992px){
+		.home-slider-prize img{
+			width:100%;
+		}
+}
 @media (max-width: 767px) {
 	.home-slider-banner{
 		margin-bottom: 15px;

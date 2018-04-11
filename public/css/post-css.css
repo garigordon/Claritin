@@ -34,6 +34,8 @@ General
 @custom-media --ipadMin (min-width: 768px);
 @custom-media --ipadMax (max-width: 992px);
 @custom-media --ipad (max-width: 1064px);
+@custom-media --width768 (max-width: 768px);
+@custom-media --width500 (min-width: 500px);
 
 *{
 	margin: 0;
@@ -545,7 +547,7 @@ Home
 			position: absolute 0;
 			padding: 15px;
 			.column{
-				width: 100%;
+				width: 60%;
 				text-align: center;
 			}
 		}
@@ -558,7 +560,6 @@ Home
 		}
 	}
 }
-
 
 @media (--ipadMin) and (--ipad){
 	.home-slider{
@@ -626,6 +627,22 @@ Home
 		position: absolute * 0 34px 0;
 	}
 }
+
+
+@media (--width500) and (--width768){
+	.home-slider{
+		&__slogan{
+			 width: 62%;
+		 }
+		&__title{
+			 font-size: 24px;
+		}
+		&__text{
+			 font-size: 16px;
+		}
+	}
+}
+
 .home-form{
 	padding: 65px 75px 0;
 	&__title{
@@ -828,6 +845,14 @@ Home
 	}
 }
 
+@media (--ipadMin) and (--ipadMax){
+	.home-slider-banner{
+		img{
+			width:100%;
+		}
+	}
+}
+
 .home-slider-prize{
 	background: url(../img/home-slider-prize.png) no-repeat;
 	background-size: cover;
@@ -886,6 +911,14 @@ Home
 	}
 }
 
+
+@media (--ipadMin) and (--ipadMax){
+	.home-slider-prize{
+		img{
+			width:100%;
+		}
+	}
+}
 @media (--phone) {
 	.home-slider-banner{
 		margin: * * 15px;
