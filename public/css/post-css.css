@@ -142,6 +142,7 @@ main{
 	display: none;
 }
 
+
 @media (--phone) {
 	body{
 		&::after{
