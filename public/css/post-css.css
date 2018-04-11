@@ -50,7 +50,7 @@ input::placeholder {
 
 sup{
 	margin:-4px 0 -1px;
-	display: inline-block;
+	/*display: inline-block;*/
 }
 
 html,
