@@ -236,6 +236,16 @@ Layout
 	}
 }
 
+@media (--ipadMin) and (--ipad){
+	.header-menu{
+		&__link{
+			&--small{
+				font-size:11px;
+			}
+		}
+	}
+}
+
 @media (--phone) {
 	.header{
 		padding: 22px 0;
@@ -780,6 +790,7 @@ Home
 			display: block;
 			border-bottom: 3px solid var(--colorBlue);
 			padding:0 0 6px;
+			text-transform: uppercase;
 		}
 	}
 	&__top{
@@ -825,7 +836,7 @@ Home
 	.column{
 		width:50%;
 		&:last-child{
-			padding: * 20px * 40px;
+			padding: * 15px * 15px;
 		}
 	}
 	&__item{
@@ -839,6 +850,7 @@ Home
 		 font-size: 42px;
 		 text-align: center;
 		 color: var(--colorBlue);
+		 text-transform: uppercase;
 	 }
 	&__title{
 		border:0;
