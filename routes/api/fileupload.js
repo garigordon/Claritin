@@ -23,7 +23,7 @@ exports.list = function (req, res) {
 		} else if (month === 4 && (day + 30) - items.length >= 16 && day !== items[items.length - 1].day) {
 			answer =  'Quiz';
 		} else {
-			answer = 'thanks';
+			answer = '/';
 		}
 		console.log(answer);
 

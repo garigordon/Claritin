@@ -30,7 +30,7 @@ function checkingForCharactersInTheField () {
 
 	var nameFields = [first_name, last_name, phone, age];
 	var nameFieldsError = [name_error, lastname_error, phone_error, age_error];
-	var textFields = ["First Name is required", "Last Name is required", "Invalid Phone number.", "Age is required."];
+	var textFields = ["First Name is required", "Last Name is required", "Phone Number is required.", "Age is required."];
 	var divText = ['username_div', 'lastname_div', 'phone_div', 'age_div'];
 	for (var i = 0; i < nameFields.length; i++) {
 		if (nameFields[i].value === "") {
@@ -43,7 +43,7 @@ function checkingForCharactersInTheField () {
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
-		email_error.textContent = "Invalid Email.";
+		email_error.textContent = "Email Address is required.";
 	}
 	if (phone.value !== "" && phone.value.length < LENGTHPHONENUMBER) {
 		phone.style.border = "1px solid red";
@@ -102,7 +102,7 @@ function emailVerify () {
 	if (checkEmail.test(Email.value) === false) {
 		Email.style.border = "1px solid red";
 		document.getElementById('email_div').style.color = "yellow";
-		email_error.textContent = "Invalid Email.";
+		email_error.textContent = "Email Address is required.";
 	} else {
 		Email.style.border = "1px solid green";
 		document.getElementById('email_div').style.color = "green";
@@ -116,7 +116,7 @@ function checkFields () {
 		var response = grecaptcha.getResponse();
 		if (response.length === 0) {
 		} else {
-			if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Invalid Phone number." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
+			if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Phone Number is required." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
 				uploadFile();
 			}
 		}
