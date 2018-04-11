@@ -122,6 +122,6 @@ function answerResult(arr) {
 		localStorage.setItem("imgRes", "img/Results4.jpg");
 		localStorage.setItem("firstText", "Fido comes first in your family! Rain or shine, you stop at nothing to give your pup the best life has to offer. Yet when allergy symptoms strike, it’s hard to help Fido wag his tail.");
 		localStorage.setItem("secondText", "Make more time for fetch using Claritin");
-		localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mold.");
+		localStorage.setItem("threeText", "for fast non-drowsy relief against pets, pollen, dust and mould.");
 	}
 }
