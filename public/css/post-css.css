@@ -497,7 +497,8 @@ Home
 		font-weight: normal;
 		margin:0 0 6px;
 	 	&--fr{
-			 font-size: 22px;
+			 font-size: 22
+			 px;
 		}
 	 	&--large{
 			 font-size: 29px;
