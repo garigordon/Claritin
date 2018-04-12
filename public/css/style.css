@@ -542,6 +542,7 @@ Home
 		}
 .home-slider__text{
 		color: #275295;
+		font-family:Arial;
 		font-size: 1rem;
 		margin: 0 0 8px;
 	}
@@ -879,16 +880,12 @@ Home
 		border-top:3px solid #275295;
 		margin: 0 0 20px;
 		display: inline-block;
-		padding: 4px 0 0;
+		padding: 9px 0 0;
 		font-size: 1.3125rem;
 		color: #275295;
 	}
 
 .home-slider-banner__title sup{
-			position: relative;
-			top: 4px;
-			font-size: 1rem;
-			margin:0;
 			font-family: 'Helvetica LT Std', sans-serif;
 		}
 

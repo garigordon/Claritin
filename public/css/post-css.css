@@ -512,6 +512,7 @@ Home
 	}
 	&__text{
 		color: var(--colorBlue);
+		font-family:Arial;
 		font-size: 16px;
 		margin: 0 0 8px;  
 		&--large{
@@ -815,14 +816,10 @@ Home
 		border-top:3px solid var(--colorBlue);
 		margin: 0 0 20px;
 		display: inline-block;
-		padding: 4px 0 0;
+		padding: 9px 0 0;
 		font-size: 21px;
 		color: var(--colorBlue);
 		sup{
-			position: relative;
-			top: 4px;
-			font-size: 16px;
-			margin:0;
 			font-family: var(--fontLTStd);
 		}
 		span{
