@@ -701,12 +701,11 @@ Home
 	.form-control{
 		border: 0;
 		width: 100%;
-		padding: 10px;
+		padding: 16px;
 		font-family: var(--fontSite);
 		font-size: 17px;
 		color: #000;
-		line-height: 58px;
-		height: 62px;
+		line-height:1;
 	}
 	.item{
 		margin: 0 0 20px;

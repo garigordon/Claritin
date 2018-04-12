@@ -745,12 +745,11 @@ Home
 .home-form .form-control{
 		border: 0;
 		width: 100%;
-		padding: 10px;
+		padding: 16px;
 		font-family: 'Helvetica', sans-serif;
 		font-size: 1.0625rem;
 		color: #000;
-		line-height: 3.625rem;
-		height: 62px;
+		line-height:1;
 	}
 
 .home-form .item{
