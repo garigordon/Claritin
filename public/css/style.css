@@ -742,10 +742,12 @@ Home
 .home-form .form-control{
 		border: 0;
 		width: 100%;
-		padding: 20px 10px;
+		padding: 0 10px;
 		font-family: 'Helvetica', sans-serif;
 		font-size: 1.0625rem;
 		color: #000;
+		line-height: 3.625rem;
+		height: 62px;
 	}
 
 .home-form .item{
