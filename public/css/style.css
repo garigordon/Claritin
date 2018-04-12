@@ -89,7 +89,6 @@ body::before{
 .row-line {
 	display: -webkit-box;
 	display: -ms-flexbox;
-	display: -moz-box;
 	display: flex;
 	-webkit-box-orient: horizontal;
 	-webkit-box-direction: normal;
@@ -216,7 +215,6 @@ Layout
 		    justify-content:space-around;
 		display: -webkit-box;
 		display: -ms-flexbox;
-		display: -moz-box;
 		display: flex;
 		min-height: 26px;
 	}
@@ -747,12 +745,11 @@ Home
 .home-form .form-control{
 		border: 0;
 		width: 100%;
-		padding: 0 10px;
+		padding: 16px;
 		font-family: 'Helvetica', sans-serif;
 		font-size: 1.0625rem;
 		color: #000;
-		line-height: 3.625rem;
-		height: 62px;
+		line-height:1;
 	}
 
 .home-form .item{
@@ -1020,6 +1017,15 @@ Home
 
 
 @media (min-width: 768px) and (max-width: 992px){
+		.home-slider-prize .title{
+			font-size:1.875rem;
+		}
+		.home-slider-prize__description{
+			font-size:1.25rem;
+		}
+			.home-slider-prize__text p{
+				font-size: 0.75rem;
+			}
 		.home-slider-prize img{
 			width:100%;
 		}
@@ -1213,6 +1219,12 @@ Result page
 				font-size: 2.375rem;
 		 	}
 
+@media (max-width: 767px) {
+		.single__description{
+			min-height:50px;
+		}	
+}
+
 .page{
 	padding-top: 30px;
 	padding-bottom: 30px;
@@ -1264,7 +1276,7 @@ Result page
 
 @media (max-width: 767px) {
 	.single-result{
-		padding: 70px 0;
+		padding: 20px 0;
 	}
 		.single-result .column{
 			width: 100%;

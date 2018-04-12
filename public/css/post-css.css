@@ -701,12 +701,11 @@ Home
 	.form-control{
 		border: 0;
 		width: 100%;
-		padding: 0 10px;
+		padding: 16px;
 		font-family: var(--fontSite);
 		font-size: 17px;
 		color: #000;
-		line-height: 58px;
-		height: 62px;
+		line-height:1;
 	}
 	.item{
 		margin: 0 0 20px;
@@ -929,6 +928,17 @@ Home
 
 @media (--ipadMin) and (--ipadMax){
 	.home-slider-prize{
+		.title{
+			font-size:30px;
+		}
+		&__description{
+			font-size:20px;
+		}
+		&__text{
+			p{
+				font-size: 12px;
+			}
+		}
 		img{
 			width:100%;
 		}
@@ -1121,6 +1131,14 @@ Result page
 	}
 }
 
+@media (--phone) {
+	.single{
+		&__description{
+			min-height:50px;
+		}
+	}	
+}
+
 .page{
 	padding: 30px *;
 	h3{
@@ -1163,7 +1181,7 @@ Result page
 
 @media (--phone) {
 	.single-result{
-		padding: 70px 0;
+		padding: 20px 0;
 		.column{
 			width: 100%;
 			padding:5px 10px;
