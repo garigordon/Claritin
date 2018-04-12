@@ -705,7 +705,11 @@ Home
 		font-family: var(--fontSite);
 		font-size: 17px;
 		color: #000;
-		line-height:1;
+		line-height:1;         
+		
+		
+		
+		
 	}
 	.item{
 		margin: 0 0 20px;
