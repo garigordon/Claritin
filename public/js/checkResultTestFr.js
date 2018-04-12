@@ -122,6 +122,6 @@ function answerResult(arr) {
 		localStorage.setItem("imgRes", "img/Results4.jpg");
 		localStorage.setItem("firstText", "Fido occupe la première place dans votre famille! Beau temps, mauvais temps, vous ne reculez devant rien pour lui donner ce que la vie a de plus beau à offrir. Mais, lorsque vos symptômes d’allergies apparaissent, il vous est difficile de partir à l’aventure avec lui. ");
 		localStorage.setItem("secondText", "Consacrez plus de temps à jouer à « va chercher » en utilisant Claritin");
-		localStorage.setItem("threeText", " pour un soulagement rapide et sans somnolence des allergies aux animaux, au, pollen, à la poussière et aux moisissures.");
+		localStorage.setItem("threeText", " pour un soulagement rapide et sans somnolence des allergies aux animaux, au pollen, à la poussière et aux moisissures.");
 	}
 }
