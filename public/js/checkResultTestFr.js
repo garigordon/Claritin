@@ -74,7 +74,7 @@ $(function(){
 			var xhrcreate = new XMLHttpRequest();
 			xhresponse.open('post', 'http://13.59.224.151/api/numberofregistrations/remove');
 			xhresponse.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xhresponse.send(encodeURIComponent(email)); 
+			xhresponse.send(encodeURIComponent(email));
 
 			xhr.open('post', 'http://13.59.224.151/api/fileupload/list', true);
 			xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
