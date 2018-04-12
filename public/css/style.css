@@ -419,10 +419,13 @@ Layout
 		 	}
 .footer__text{
 		display: block;
-		margin: 0 0 25px -15px;
+		margin: 0 0 0 -15px;
 		color: #275295;
 		font-size: 0.75rem;
 	}
+.footer__text:first-child{
+			margin: 0 0 25px -15px;
+		}
 .footer__logo{
 		display: block;
 		margin:92px auto 15px;

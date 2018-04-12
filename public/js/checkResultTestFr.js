@@ -112,7 +112,7 @@ function answerResult(arr) {
 		localStorage.setItem("lastname", "LA JARDINIÈRE");
 		localStorage.setItem("imgRes", "img/Results2.jpg");
 		localStorage.setItem("firstText", "Avez-vous un talent inné pour le jardinage? Nous le croyons! Votre passion pour les plantes fait que vous adorez le plein air plus que toutes les autres personnes de votre groupe. ");
-		localStorage.setItem("secondText", "Si jouer dans la terre déclenche vos symptômes d’allergies, essayez Claritin");
+		localStorage.setItem("secondText", "Si être à l’extérieur déclenche vos symptômes d’allergies, essayez Claritin");
 		localStorage.setItem("threeText", " qui soulage rapidement les symptômes d’allergies extérieures et intérieures pendant 24 heures.");
 	} else if (arr[0] == 3) {
 		localStorage.setItem("number", "PRINCIPALEMENT DES 3 - ");
