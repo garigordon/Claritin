@@ -112,11 +112,13 @@ function emailVerify () {
 }
 
 function checkFields () {
-	
-			if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Numéro de téléphone non valide." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
-				uploadFile();
-			}
-		
+	var response = grecaptcha.getResponse();
+	if (response.length === 0) {
+	} else {
+		if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Numéro de téléphone non valide." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
+			uploadFile();
+		}
+	}
 }
 
 function uploadFile () {
