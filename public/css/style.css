@@ -455,11 +455,11 @@ Layout
 		padding: 0 0 5px;
 	}
 		.footer__text{
-			display: none;
+			text-align: center;
 		}
 		.footer__logo{
 			width: 70px;
-			margin: 0 auto 2px;
+			margin: 15px auto;
 		}
 		.footer__description{
 			font-size: 0.65625rem;

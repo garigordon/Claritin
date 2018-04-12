@@ -429,11 +429,11 @@ Layout
 	.footer{
 		padding: 0 0 5px;
 		&__text{
-			display: none;
+			text-align: center;
 		}
 		&__logo{
 			width: 70px;
-			margin: 0 auto 2px;
+			margin: 15px auto;
 		}
 		&__description{
 			font-size: 10.5px;
