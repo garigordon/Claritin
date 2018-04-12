@@ -14,13 +14,13 @@ exports.list = function (req, res) {
 		var now = new Date();
 		var month = now.getMonth() + 1;
 		var day = now.getDate();
-		if (month === 3 && day - items.length >= 16 && items.length === 0) {
+		if (month === 4 && day - items.length >= 16 && items.length === 0) {
 			answer =  'Quiz';
-		} else if (month === 4 && (day + 30) - items.length >= 16 && items.length === 0) {
+		} else if (month === 5 && (day + 30) - items.length >= 16 && items.length === 0) {
 			answer =  'Quiz';
-		} else if (month === 3 && day - items.length >= 16 && day !== items[items.length - 1].day) {
+		} else if (month === 4 && day - items.length >= 16 && day !== items[items.length - 1].day) {
 			answer =  'Quiz';
-		} else if (month === 4 && (day + 30) - items.length >= 16 && day !== items[items.length - 1].day) {
+		} else if (month === 5 && (day + 30) - items.length >= 16 && day !== items[items.length - 1].day) {
 			answer =  'Quiz';
 		} else {
 			answer = '/';
