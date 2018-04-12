@@ -509,6 +509,9 @@ Home
 		strong{
 			font-weight: 900;
 		}
+		&--fr{
+			 font-size: 18px;
+		}
 	}
 	&__text{
 		color: var(--colorBlue);
@@ -518,9 +521,6 @@ Home
 		&--large{
 			font-size: 17px;
 			margin: 0 0 15px;
-		}
-		&--fr{
-			font-size: 18px;
 		}
 	}
 	&__txt{
@@ -554,7 +554,7 @@ Home
 	max-width:195px;
 	width: 100%;
 	display: block;
-	margin: 0 auto;
+	margin:22px auto 0;
 	text-transform: uppercase;
 }
 

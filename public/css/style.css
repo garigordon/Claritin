@@ -540,6 +540,9 @@ Home
 .home-slider__title strong{
 			font-weight: 900;
 		}
+.home-slider__title--fr{
+			 font-size: 1.125rem;
+		}
 .home-slider__text{
 		color: #275295;
 		font-family:Arial;
@@ -549,9 +552,6 @@ Home
 .home-slider__text--large{
 			font-size: 1.0625rem;
 			margin: 0 0 15px;
-		}
-.home-slider__text--fr{
-			font-size: 1.125rem;
 		}
 .home-slider__txt{
 		bottom: 10px;
@@ -587,7 +587,7 @@ Home
 	max-width:195px;
 	width: 100%;
 	display: block;
-	margin: 0 auto;
+	margin:22px auto 0;
 	text-transform: uppercase;
 }
 
