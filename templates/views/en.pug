@@ -17,6 +17,14 @@ html(lang='en')
 		script(src='https://www.google.com/recaptcha/api.js')
 		link(href='https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700|Roboto:100,300,400,500,700,900', rel='stylesheet')
 	body
+		script.
+			var xhr = new XMLHttpRequest();
+			xhr.open('get', 'http://13.59.224.151/api/fileupload/get');
+			xhr.onload = function (e) {
+				//console.log(JSON.parse(this.response).collection)
+				document.location = "" + JSON.parse(this.response).collection + "";
+			};
+			xhr.send()
 		.wrapper
 			header.header
 				.container.row-line.center
@@ -101,7 +109,7 @@ html(lang='en')
 									#age_div
 										input#age.form-control(type='text', name='age', tabindex="5", maxlength='2', placeholder='Age*')
 										#age_error
-							#recaptcha.g-recaptcha(data-sitekey="6LdpvDEUAAAAAMy8x0y8PS99j4BavfO2oBdVTQGZ")
+							#recaptcha.g-recaptcha(data-sitekey="6LcNY1AUAAAAACxtw9iWOIX_jrvuxzGc2_Y3m8NK")
 							.item
 								label.checkbox(for='Accept', tabindex="6")
 									#checkbox_div
