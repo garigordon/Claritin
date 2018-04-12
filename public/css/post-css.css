@@ -916,6 +916,7 @@ Home
 	&__description{
 		text-align: center;
 		font-size:26px;
+		font-family:Arial, "Helvetica Neue", Helvetica, sans-serif;
 		color: var(--colorBlue);
 		span{
 			color:#e21d22;
