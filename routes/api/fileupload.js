@@ -40,8 +40,6 @@ exports.get = function (req, res) {
 	var now = new Date();
 	var month = now.getMonth() + 1;
 	var day = now.getDate();
-    var time = now.getHours();
-    console.log(time);
 	var answer = '';
 	if (month < 4 || (month === 4 && day < 16)) {
 		answer = 'coming';
