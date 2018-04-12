@@ -701,7 +701,7 @@ Home
 	.form-control{
 		border: 0;
 		width: 100%;
-		padding: 0 10px;
+		padding: 10px;
 		font-family: var(--fontSite);
 		font-size: 17px;
 		color: #000;
@@ -929,6 +929,17 @@ Home
 
 @media (--ipadMin) and (--ipadMax){
 	.home-slider-prize{
+		.title{
+			font-size:30px;
+		}
+		&__description{
+			font-size:20px;
+		}
+		&__text{
+			p{
+				font-size: 12px;
+			}
+		}
 		img{
 			width:100%;
 		}
