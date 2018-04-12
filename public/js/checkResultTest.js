@@ -1,3 +1,5 @@
+var newFile = new FormData();
+var resultAnswer = 0;
 $(function(){
 	$('#btnClick').click(function(){
 		var val = [];
@@ -34,15 +36,17 @@ $(function(){
 				}
 			}
 			answerResult(arr2);
+			resultAnswer = arr2;
 		} else {
 			if (arr3.length > 0) {
 				answerResult(arr3);
+				resultAnswer = arr3;
 			} else {
 				answerResult(arr2);
+				resultAnswer = arr2;
 			}
 		}
 		if (answ1 !== 0 && answ2 !== 0 && answ3 !== 0 && answ4 !== 0 && answ5 !== 0 && answ1 !== undefined && answ2 !== undefined && answ3 !== undefined && answ4 !== undefined && answ5 !== undefined) {
-			var newFile = new FormData();
 			var newResult = new FormData();
 
 			newResult.append('first_name', first_name);
@@ -60,6 +64,8 @@ $(function(){
 			newFile.append('ans_3', answ3);
 			newFile.append('ans_4', answ4);
 			newFile.append('ans_5', answ5);
+			newFile.append('ans_5', answ5);
+			newFile.append('result', resultAnswer);
 			newFile.append('language', "En");
 			newFile.append('subscribe', localStorage.getItem('subscribe'));
 
