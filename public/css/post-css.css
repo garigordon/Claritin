@@ -430,6 +430,7 @@ Layout
 		padding: 0 0 5px;
 		&__text{
 			text-align: center;
+			color:#fff;
 		}
 		&__logo{
 			width: 70px;

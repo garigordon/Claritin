@@ -456,6 +456,7 @@ Layout
 	}
 		.footer__text{
 			text-align: center;
+			color:#fff;
 		}
 		.footer__logo{
 			width: 70px;
