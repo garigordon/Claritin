@@ -351,6 +351,7 @@ Layout
 	.footer-menu{
 		list-style: none;
 		margin: 0 0 15px;
+		text-align:center;
 		&__item{
 			padding: 0 20px;
 			position: relative;
@@ -375,6 +376,7 @@ Layout
 		&__link{
 			color: var(--colorBlue);
 			font-size: 16px;
+			display: block;
 			text-decoration: none;
 			&--small{
 				font-size:14px;

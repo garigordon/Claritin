@@ -384,6 +384,7 @@ Layout
 .footer .footer-menu{
 		list-style: none;
 		margin: 0 0 15px;
+		text-align:center;
 	}
 .footer .footer-menu__item{
 			padding: 0 20px;
@@ -409,6 +410,7 @@ Layout
 .footer .footer-menu__link{
 			color: #275295;
 			font-size: 1rem;
+			display: block;
 			text-decoration: none;
 		}
 .footer .footer-menu__link--small{
