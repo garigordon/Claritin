@@ -40,15 +40,20 @@ exports.get = function (req, res) {
 	var now = new Date();
 	var month = now.getMonth() + 1;
 	var day = now.getDate();
+	var checkTime = now.getHours();
 	var answer = '';
-	if (month < 4 || (month === 4 && day < 16)) {
+	if ((month === 4 && (day > 16 || (day === 16 && checkTime >= 9))) || month >= 5) {
+		if (month < 4 || (month === 4 && day < 16)) {
+			answer = 'coming';
+		} else if (month === 4 && day >= 16 && day <= 30) {
+			answer = 'en';
+		} else if (month === 5 && day <= 25) {
+			answer = 'en';
+		} else if ((month === 5 && day > 25) || month > 5) {
+			answer = 'close';
+		}
+	} else {
 		answer = 'coming';
-	} else if (month === 4 && day >= 16 && day <= 30) {
-		answer = 'en';
-	} else if (month === 5 && day <= 25) {
-		answer = 'en';
-	} else if ((month === 5 && day > 25) || month > 5) {
-		answer = 'close';
 	}
 	console.log(answer);
 	res.apiResponse({

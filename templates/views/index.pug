@@ -11,6 +11,7 @@ html(lang='en')
 			var xhr = new XMLHttpRequest();
 			xhr.open('get', 'http://13.59.224.151/api/fileupload/get');
 			xhr.onload = function (e) {
+				//console.log(JSON.parse(this.response).collection)
 				document.location = "" + JSON.parse(this.response).collection + "";
 			};
 			xhr.send()
