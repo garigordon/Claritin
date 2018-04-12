@@ -429,6 +429,7 @@ Layout
 			display: block;
 			li{
 				padding: 0;
+				width:100%;
 				&::after{
 					display:none;
 				}
@@ -604,11 +605,12 @@ Home
 		}
 		&__title{
 			font-size: 13px;
-			line-height:16px;
+			line-height:20px;
 			margin: 0 0 5px;
 		}
 		&__text{
 			font-size: 12px;
+			 line-height:18px;
 		}
 		&__txt{
 			span{
@@ -628,7 +630,7 @@ Home
 		}
 	}
 	.btn-home-slider{
-		position: absolute * 0 34px 0;
+		position: absolute * 0 49px 0;
 	}
 }
 

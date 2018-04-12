@@ -460,6 +460,7 @@ Layout
 		}
 			.footer .footer-menu li{
 				padding: 0;
+				width:100%;
 			}
 				.footer .footer-menu li::after{
 					display:none;
@@ -640,11 +641,12 @@ Home
 			}
 		.home-slider__title{
 			font-size: 0.8125rem;
-			line-height:1rem;
+			line-height:1.25rem;
 			margin: 0 0 5px;
 		}
 		.home-slider__text{
 			font-size: 0.75rem;
+			 line-height:1.125rem;
 		}
 			.home-slider__txt span{
 				color: #fff;
@@ -663,7 +665,7 @@ Home
 			}
 	.btn-home-slider{
 		right: 0;
-		bottom: 34px;
+		bottom: 49px;
 		left: 0;
 		position: absolute;
 	}
