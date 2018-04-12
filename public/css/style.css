@@ -434,6 +434,9 @@ Layout
 	}
 
 @media (min-width: 768px) and (max-width: 992px){
+				.footer .footer-menu__item--padding{
+					padding:0 10px;
+				}
 			.footer .footer-menu__link{
 				font-size: 0.75rem;
 			}

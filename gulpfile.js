@@ -15,7 +15,7 @@ var cssnano = require('cssnano');
 gulp.task('css', function () {
 	var processors = [
 		autoprefixer({
-			browsers: ['> 5%', 'last 2 versions', 'Firefox >= 20'], add: true
+			browsers: ['last 2 Chrome versions', 'not ie <= 11', 'Firefox >= 20'], add: true
 		}),
 		nested,
 		short,
