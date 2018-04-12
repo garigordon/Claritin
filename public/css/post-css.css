@@ -354,6 +354,7 @@ Layout
 		margin: 0 0 15px;
 		text-align:center;
 		&__item{
+			font-size:Arial;
 			padding: 0 20px;
 			position: relative;
 		 	font-size:0px;
@@ -375,6 +376,7 @@ Layout
 			}
 		}
 		&__link{
+			font-size:Arial;
 			color: var(--colorBlue);
 			font-size: 16px;
 			display: block;
@@ -861,7 +863,7 @@ Home
 	&__image{
 		size: 100% auto;
 		&--visible-mobile{
-			display: none;font-size:Arial;
+			display: none;
 		}
 	}
 }
