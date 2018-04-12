@@ -112,13 +112,11 @@ function emailVerify () {
 }
 
 function checkFields () {
-		var response = grecaptcha.getResponse();
-		if (response.length === 0) {
-		} else {
+	
 			if (first_name.value !== "" && last_name.value !== "" && phone.value !== "" && phone_error.textContent !== "Phone Number is required." && phone.value.length === LENGTHPHONENUMBER && age.value !== "" && age.value >= ALLOWABLEAGE && checkEmail.test(Email.value) === true && chbox.checked) {
 				uploadFile();
 			}
-		}
+		
 }
 
 function uploadFile () {
