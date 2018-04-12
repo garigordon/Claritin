@@ -498,8 +498,7 @@ Home
 		font-weight: normal;
 		margin:0 0 6px;
 	 	&--fr{
-			 font-size: 22
-			 px;
+			 font-size: 22px;
 		}
 	 	&--large{
 			 font-size: 29px;
@@ -514,6 +513,7 @@ Home
 	}
 	&__text{
 		color: var(--colorBlue);
+		font-size:Arial;
 		font-size: 16px;
 		margin: 0 0 8px;  
 		&--large{
@@ -861,7 +861,7 @@ Home
 	&__image{
 		size: 100% auto;
 		&--visible-mobile{
-			display: none;
+			display: none;font-size:Arial;
 		}
 	}
 }

@@ -529,8 +529,7 @@ Home
 		margin:0 0 6px;
 	}
 .home-slider__title--fr{
-			 font-size: 22
-			 px;
+			 font-size: 1.375rem;
 		}
 .home-slider__title--large{
 			 font-size: 1.8125rem;
@@ -544,6 +543,7 @@ Home
 		}
 .home-slider__text{
 		color: #275295;
+		font-size:Arial;
 		font-size: 1rem;
 		margin: 0 0 8px;
 	}
@@ -937,7 +937,7 @@ Home
 	}
 
 .home-slider-banner__image--visible-mobile{
-			display: none;
+			display: none;font-size:Arial;
 		}
 
 @media (min-width: 768px) and (max-width: 992px){
