@@ -404,6 +404,11 @@ Layout
 @media (--ipadMin) and (--ipadMax){
 	.footer{
 		.footer-menu{
+			&__item{
+				&--padding{
+					padding:0 10px;
+				}
+			}
 			&__link{
 				font-size: 12px;
 			}
