@@ -530,9 +530,6 @@ Home
 		font-weight: 400;
 		margin:0 0 6px;
 	}
-.home-slider__title--fr{
-			 font-size: 1.375rem;
-		}
 .home-slider__title--large{
 			 font-size: 1.8125rem;
 			 line-height:1.8125rem;
@@ -545,13 +542,15 @@ Home
 		}
 .home-slider__text{
 		color: #275295;
-		font-size:Arial;
 		font-size: 1rem;
 		margin: 0 0 8px;
 	}
 .home-slider__text--large{
 			font-size: 1.0625rem;
 			margin: 0 0 15px;
+		}
+.home-slider__text--fr{
+			font-size: 1.125rem;
 		}
 .home-slider__txt{
 		bottom: 10px;

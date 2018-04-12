@@ -499,9 +499,6 @@ Home
 		font-size: 26px;
 		font-weight: normal;
 		margin:0 0 6px;
-	 	&--fr{
-			 font-size: 22px;
-		}
 	 	&--large{
 			 font-size: 29px;
 			 line-height:29px;
@@ -515,12 +512,14 @@ Home
 	}
 	&__text{
 		color: var(--colorBlue);
-		font-size:Arial;
 		font-size: 16px;
 		margin: 0 0 8px;  
 		&--large{
 			font-size: 17px;
 			margin: 0 0 15px;
+		}
+		&--fr{
+			font-size: 18px;
 		}
 	}
 	&__txt{
