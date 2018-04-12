@@ -388,13 +388,14 @@ Layout
 .footer .footer-menu__item{
 			padding: 0 20px;
 			position: relative;
+		 	font-size:0;
 		}
 .footer .footer-menu__item::after{
 				content:"";
 				background: #275295;
 				height: 12px;
 				width: 2px;
-				top: 6px;
+				top: 4px;
 				left: 0;
 				position: absolute;
 			}
@@ -620,6 +621,9 @@ Home
 			.home-slider__slogan--hidden-mobile{
 				display: none;
 			}
+		.home-slider__image{
+			min-height: 453px;
+		}
 			.home-slider__image--visible-mobile{
 				display: block;
 			}
@@ -627,14 +631,15 @@ Home
 				display: none;
 			}
 		.home-slider__content{
-			padding: 12px;
+			padding: 6px;
 			text-align: center;
 		}
 			.home-slider__content .column{
 				width: 100%;
 			}
 		.home-slider__title{
-			font-size: 0.875rem;
+			font-size: 0.8125rem;
+			line-height:1rem;
 			margin: 0 0 5px;
 		}
 		.home-slider__text{
@@ -1011,6 +1016,8 @@ Home
 }
 @media (max-width: 767px) {
 	.home-slider-banner{
+		background: url(../img/bg-slider-mob.png) no-repeat;
+		background-size: cover;
 		margin-bottom: 15px;
 	}
 		.home-slider-banner__item{
@@ -1025,14 +1032,18 @@ Home
 			}
 		.home-slider-banner img{
 			width:80%;
-			margin:0 auto;
+			margin:0 auto 15px;
+		}
+		.home-slider-banner__title{
+			font-size:1.125rem;
 		}
 		.home-slider-banner__title-list,
 		.home-slider-banner__top{
 			 width: 237px;
 			 display: block;
-			margin:0 auto 20px;
+			margin:0 auto 10px;
 			text-align: left;
+			font-size: 0.875rem;
 		}
 		.home-slider-banner__title-list{
 			margin:0 auto;
@@ -1041,6 +1052,7 @@ Home
 			display: inline-block;
 			text-align: left;
 			width: 237px;
+			font-size: 0.875rem;
 		}
 		.home-slider-banner__description{
 			 display: none;
@@ -1054,6 +1066,9 @@ Home
 		.home-slider-prize img{
 			float: left;
 			width:80%;
+		}
+		.home-slider-prize .title{
+			font-size: 1.875rem;
 		}
 		.home-slider-prize__item{
 			padding:0;
@@ -1069,7 +1084,7 @@ Home
 			right:10px;
 		}
 			.home-slider-prize__text p{
-				font-size:0.875rem;
+				font-size:0.6875rem;
 			}
 		.home-slider-prize .column{
 			width: 100%;
@@ -1081,10 +1096,10 @@ Home
 			text-align:center;
 		}
 			.home-slider-prize__title span{
-				font-size:2.8125rem;
+				font-size:1.875rem;
 		 	}
 		.home-slider-prize__description{
-			font-size:1.5625rem;
+			font-size:1.125rem;
 		}
 }
 
